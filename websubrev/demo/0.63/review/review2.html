@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML Transitional 4.01//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+
+<html><head>
+<link rel="stylesheet" type="text/css" href="../common/review.css" />
+<style type="text/css">
+h1 { text-align: center; }
+h2 { text-align: center; }
+tr { vertical-align: top; }
+</style>
+
+<script type="text/javascript" language="javascript">
+<!--
+  function expandCollapse(fld) {
+    var f = document.getElementById(fld);
+    if (f.className=="shown") { f.className="hidden"; }
+    else { f.className="shown"; f.focus(); }
+    return false;
+}
+  function hideAreas() {
+    document.getElementById("cmnt2PC").className="hidden";
+    document.getElementById("cmnt2chr").className="hidden";
+    document.getElementById("cmnt2slf").className="hidden";
+    document.getElementById("openCmnt2PC").className="shown";
+    document.getElementById("openCmnt2chr").className="shown";
+    document.getElementById("openCmnt2slf").className="shown";
+    return true;
+}
+
+// -->
+</script>
+
+<title>Review of Submission 5 (updated)</title></head>
+<body onload="hideAreas();">
+<div style="text-align: center;">
+[<a href="guidelines.html">Guidelines</a>] 
+[<a href="index2.html">Review Home</a>] 
+[<a href="listSubmissions2.html">List submissions</a>] 
+[<a href="password.html">Change Password</a>] 
+[<a href="../documentation/reviewer.html">Documentation</a>] 
+</div>
+
+<hr />
+<h1>Review of Submission 5 (updated)</h1>
+<h2><a target=_blank href="submission2.html">A sufficient condition for key-privacy</a></h2>
+
+<form action="http://people.csail.mit.edu/shaih/websubrev/demo/0.63/review/receiptReport2.html" enctype="multipart/form-data" method=post>
+
+<table cellspacing="3" cellpadding="2"><tbody>
+<tr><td>Reviewer:    </td> <td>Zinedine Zidane</td></tr>
+<tr><td>Sub-reviewer:</td>
+    <td><input name="subRev" type="text" value="Some One" size=60></td>
+</tr>
+</tbody></table>
+<br />
+
+<table cellspacing="0" cellpadding="2"><tbody>
+
+<!-- A header line with the numbers -->
+<tr style="text-align: center; background: lightgrey;">
+  <th style="text-align: left;"><small><a target=_blank href="guidelines.html#grades">Score&nbsp;semantics</a></small>&nbsp;&nbsp;&nbsp;&nbsp;</th> 
+  <th>ignore</th>
+  <th style="width:50px;">1<br/><small>(low)</small></th>
+  <th style="width:50px;">2</th>
+  <th style="width:50px;">3</th>
+  <th style="width:50px;">4</th>
+  <th style="width:50px;">5</th>
+  <th style="width:50px;">6<br/><small>(high)</small></th>
+</tr>
+
+<!-- A line of radio buttons for the score -->
+<tr style="text-align: center; background: rgb(240, 240, 240);">
+  <td style="text-align: right;">Score:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td><input type="radio" name="score" value="*"  title="Ignore my score">
+  </td>
+  <td><input type="radio" name="score" value="1" ></td>
+  <td><input type="radio" name="score" value="2" ></td>
+  <td><input type="radio" name="score" value="3" ></td>
+  <td><input type="radio" name="score" value="4" checked="checked"></td>
+  <td><input type="radio" name="score" value="5" ></td>
+  <td><input type="radio" name="score" value="6" ></td>
+</tr>
+
+<!-- A line of radio buttons for the confidence -->
+<tr style="text-align: center; background: lightgrey;">
+  <td style="text-align: right;">Confidence:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td><input type="radio" name="conf" value="*"  title="Zero confidence"></td>
+  <td><input type="radio" name="conf" value="1" ></td>
+  <td><input type="radio" name="conf" value="2" ></td>
+  <td><input type="radio" name="conf" value="3" checked="checked"></td>
+  <td colspan="3"></td>
+</tr>
+
+<tr><th style="text-align: left; background: lightgrey;" colspan="8"></th></tr>
+<!-- A line of radio buttons for the Technical -->
+<tr style="text-align: center; background: rgb(240, 240, 240);">
+  <td style="text-align: right;">Technical:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td><input type="radio"  name="grade_0" title="Ignore my grade" value="*"></td>
+  <td><input type="radio"  name="grade_0" value="1"></td>
+  <td><input type="radio"  name="grade_0" value="2"></td>
+  <td><input type="radio" checked="checked" name="grade_0" value="3"></td>
+  <td colspan="3"></td>
+</tr>
+
+<!-- A line of radio buttons for the Editorial -->
+<tr style="text-align: center; background: lightgrey;">
+  <td style="text-align: right;">Editorial:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td><input type="radio"  name="grade_1" title="Ignore my grade" value="*"></td>
+  <td><input type="radio"  name="grade_1" value="1"></td>
+  <td><input type="radio" checked="checked" name="grade_1" value="2"></td>
+  <td><input type="radio"  name="grade_1" value="3"></td>
+  <td colspan="3"></td>
+</tr>
+
+<!-- A line of radio buttons for the Suitability -->
+<tr style="text-align: center; background: rgb(240, 240, 240);">
+  <td style="text-align: right;">Suitability:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td><input type="radio"  name="grade_2" title="Ignore my grade" value="*"></td>
+  <td><input type="radio"  name="grade_2" value="1"></td>
+  <td><input type="radio"  name="grade_2" value="2"></td>
+  <td><input type="radio" checked="checked" name="grade_2" value="3"></td>
+  <td colspan="3"></td>
+</tr>
+
+</tbody></table>
+
+<h3>Comments to the Authors:</h3>
+<div ID="cmnt2athr">
+Attach a file with your review (<a target=documentation href="../documentation/reviewer.html#revAttach"><b>read this!</b></a>): <input type=file name=attach5 size=49><br/>
+ or <input type=checkbox name=keepAttach5 checked=checked> keep current <a target=_blank href="../subs/54.pdf">PDF attachment</a> (clear checkbox or attach a new file to discard existing attachment)<br/>
+<textarea name="comments2authors" rows=15 cols=80>Some caveats:
+-------------
+This software is currently a PHP/MySQL software, which means that to
+use it you must have a MySQL server and a PHP engine (and your web-server
+must supports PHP and MySQL). I tested the software with PHP 4.3.2 and
+MySQL 3.23 (both quite old now), as well as PHP 5.0.4 and MySQL 4.1.12.
+It may work with even older versions (but it may not). Also, the proper 
+functioning of this software depend on &quot;proper&quot; functioning of you web-server.
+In particular, two issues that I came across are:
+
+* The scripts must be able to write and create sub-directories in the
+  BASE directory. When using this software on on Linux with an Apache
+  server (running as user &quot;apache&quot;), I had to chdir to the BASE directory
+  and make sure the directory and all the files in it are owned by user
+  &quot;apache&quot;.
+
+* The web-server (and the PHP engine) must be willing to upload files.
+  For example, in one system that I used to test it, the PHP engine was
+  configured to only allow uploads of files upto 500KB (and I was wrecking
+  my brains as to why I can only upload pdf and not postscript files..) In
+  my case it turned out that I had to change the parameter LimitRequestBody
+  in php.conf (which on that system was somewhere under /etc/httpd/).</textarea>
+<br/>The authors and program-committee see these comments.
+</div>
+
+<h3>Comments to the Committee <a class="hidden" href="review2.html#" ID="openCmnt2PC" onclick="return expandCollapse('cmnt2PC');">(click to expand/collapse)</a></h3>
+<div ID="cmnt2PC">
+<textarea class="shown" name="comments2PC" rows=15 cols=80></textarea>
+<br />Only the program-committee sees these comments.
+</div>
+
+<h3>Comments to the Chair <a class="hidden" href="review2.html#" ID="openCmnt2chr" onclick="return expandCollapse('cmnt2chr');">(click to expand/collapse)</a></h3>
+<div ID="cmnt2chr">
+<textarea name="comments2chair" rows=15 cols=80></textarea>
+<br />Only the program chair sees these comments.
+</div>
+
+<h3>Notes to yourself <a class="hidden" href="review2.html#" ID="openCmnt2slf" onclick="return expandCollapse('cmnt2slf');">(click to expand/collapse)</a></h3>
+<div ID="cmnt2slf">
+<textarea name="comments2self" rows=15 cols=80></textarea><br/>
+No one else can see these comments
+</div>
+<br/>
+
+<input type="hidden" name="subId" value="5">
+<center>
+<table><tbody>
+<tr><td><input type="submit" value="Submit"></td>
+<td>
+<input type=checkbox name=add2watch> Add this submission to my watch list<br/>
+<input type=checkbox name=emilReview> Send my review back to me via email<br/>
+<input name="draft" type="checkbox"> Remind me to go back to this review (<a target=documentation href="../documentation/reviewer.html#draftReview">what&prime;s this?</a>)
+</td>
+</tr></tbody></table>
+</center>
+</form>
+<hr />
+<div style="text-align: center;">
+[<a href="guidelines.html">Guidelines</a>] 
+[<a href="index2.html">Review Home</a>] 
+[<a href="listSubmissions2.html">List submissions</a>] 
+[<a href="password.html">Change Password</a>] 
+[<a href="../documentation/reviewer.html">Documentation</a>] 
+</div>
+
+</body>
+</html>

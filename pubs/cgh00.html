@@ -1,0 +1,58 @@
+<HTML>
+<TITLE>Computing inverses over a shared secret modulus</TITLE>
+
+<!-- how to make comments -->
+
+<a name="CGH00-abstract"/> 
+
+<H2>Computing inverses over a shared secret modulus</H2>
+<hr/>
+
+<b>Authors:</b> 
+Dario Catalano, Rosario Gennaro, and Shai Halevi.
+
+<P>
+<b> Reference:</b> 
+<I> Advances in Cryptology - EUROCRYPT 2000.</i> 
+Lecture Notes in Computer Science, vol. 1807, Pages 190-206, 
+Springer-Verlag, 2000.
+</P>
+
+<P>
+<b> Abstract: </b> 
+We discuss the following problem: Given an integer <i>phi</i>, shared 
+secretly among <i>n</i> players and a prime number <i>e</i>, how can 
+the players efficiently compute a sharing of <i>e^{-1} mod phi</i>. 
+The most interesting case is when <i>phi</i> is the Euler function of 
+a known RSA modulus <i>N</i>, <i>phi = phi(N)</i>.  The problem has 
+several applications, among which the construction of threshold variants 
+for two recent signature schemes proposed by Gennaro-Halevi-Rabin and 
+Cramer-Shoup.</P>
+<P>
+We present new and efficient protocols to solve this problem, improving 
+over previous solutions by Boneh-Franklin and Frankel et al. Our basic 
+protocol (secure against honest but curious players) requires only two 
+rounds of communication and a single GCD computation.  The robust protocol 
+(secure against malicious players) adds only a couple of rounds and a few 
+modular exponentiations to the computation.
+</P>
+
+
+<P>
+<b> Keywords: </b>
+Mudular inversion, Threshold computation, RSA Signatures. 
+</P> 
+
+<P> 
+<b> Availability: </b> 
+Paper available as <a href="http://www.research.ibm.com/people/s/shaih/pubs/cgh00.ps.gz">Compressed PostScript</a> (51 Kbyte). 
+</P> 
+
+<P>
+<HR>
+<address> 
+<a href="http://alum.mit.edu/www/shaih/">
+Shai Halevi's home page.</a> 
+</address>
+</P>
+</HTML>

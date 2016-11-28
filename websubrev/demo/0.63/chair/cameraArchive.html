@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head><title>Create Camera-Ready Archive</title>
+<script type="text/javascript" src="../common/validate.js"></script>
+<script language="Javascript" type="text/javascript">
+<!--
+function checklncs() { // check the radio button for lncs
+  document.getElementById('lncs').checked=true;
+  return true;
+}
+// -->
+</script>
+</head>
+<body>
+<div style="text-align: center;">
+[<a href="index5.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+[<a href="undoLast.html">Undo/Redo</a>] 
+</div>
+<hr/>
+<h1 align=center>Create Camera-Ready Archive</h1>
+You can create the archive in one of two formats:
+<ul>
+<li><i>Default:</i> All the camera-ready files are in one directory.<br/>
+<br/></li>
+<li><i>LNCS:</i> Each file resides in its own sub-directory, and the
+sub-directory is named <i>XXXXnnnn</i> where <i>XXXX</i> is the volume
+number and <i>nnnn</i> is the first page of that submission.
+(For example, <i>40270015</i> for volume number 4027 and a paper that
+begins on page 15).<br/>
+<br/>
+Page numbers are calculated when you generate the LaTeX preface template.
+Accepted submissions for which the page number is not yet set, as well
+as the preface of the volume (if you uploaded it to the server), will
+be placed in the sub-directory <i>XXXX0000</i>.
+</li>
+</ul>
+
+<input type=radio name=format value="default" checked> Use the default format<br/>
+<input type=radio name=format value="lncs" id=lncs> Use LNCS format 
+       with volume number <input type=text name=volume size=5 onchange="return checkInt(this,1,99999);" onfocus="return checklncs();"><br/>
+<form action="cameraArchive2.html" method=GET>
+<input type=submit>
+</form>
+<hr/>
+<div style="text-align: center;">
+[<a href="index5.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+[<a href="undoLast.html">Undo/Redo</a>] 
+</div>
+</body></html>

@@ -1,0 +1,6 @@
+img { border: 0px; }
+
+.navigation { width: 110px; }
+.navigation a { text-decoration: none; }
+.navigation a:hover { background: blue; color: white; }
+.thispage { background: lightgrey; }

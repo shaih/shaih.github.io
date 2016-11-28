@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+
+
+<script language="Javascript" type="text/javascript">
+<!--
+function checkform( form )
+{
+  var pat = /^\s*$/;
+  // Checking that all the mandatory fields are present
+  st = 0;
+  if (pat.test(form.subId.value)) { st |= 1; }
+  if (pat.test(form.subPwd.value))   { st |= 2; }
+
+  if (st != 0) {
+    alert( "You must specify the submission-ID and password" );
+    if (st & 1) { form.subId.focus(); }
+    else if (st & 2) { form.subPwd.focus(); }
+    return false;
+  }
+  return true ;
+}
+//-->
+</script><title>Withdraw a Submission from TEST 2007</title>
+
+
+<link rel="stylesheet" type="text/css" href="../common/submission.css"></head><body>
+<div style="text-align: center;">
+[<a href="http://www.example.edu/test2007/">TEST 2007 Home</a>] 
+[<a href="index1.html">Instructions</a>] 
+[<a href="submit.html">New Submission Form</a>] 
+[<a href="revise1.html">Revision Form</a>] 
+[<span style="color: gray;">Withdrawal Form</span>] 
+[<a href="../documentation/submitter.html">Documentation</a>] 
+</div>
+
+<hr>
+<h1 style="text-align: center;">Withdraw a Submission from TEST 2007</h1>
+<h3 class="timeleft">Deadline is Sat, 15 Sep 2007 22:00:00 +0000 (UTC)<br>
+Time left: 75 days and 01:18:27</h3>
+
+<form name="withdraw" onsubmit="return checkform(this);" action="http://people.csail.mit.edu/shaih/websubrev/demo/0.63/submit/withdrawn.html" enctype="multipart/form-data" method="post">
+
+<table cellspacing="6">
+<tbody>
+  <tr>
+    <td style="text-align: right;"><small>(*)</small> Submission-ID:</td>
+    <td> <input name="subId" size="4" value="101" type="string">
+         The submission-ID, as returned when the paper was first submitted.
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;"><small>(*)</small> Password:</td>
+    <td><input name="subPwd" size="11" value="iBLWQvmPXe" type="string">
+        The password that was returned with the original submission.
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><input value="I want to withdraw my submission" type="submit">
+    </td>
+  </tr>
+</tbody>
+</table>
+</form>
+<hr>
+<div style="text-align: center;">
+[<a href="http://www.example.edu/test2007/">TEST 2007 Home</a>] 
+[<a href="index1.html">Instructions</a>] 
+[<a href="submit.html">New Submission Form</a>] 
+[<a href="revise1.html">Revision Form</a>] 
+[<span style="color: gray;">Withdrawal Form</span>] 
+[<a href="../documentation/submitter.html">Documentation</a>] 
+</div>
+
+</body></html>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Homomorphic Encryption and Secure Computation, TAU-0368-4174-01, Spring 2011</title>
+<style type="text/css">
+tr {vertical-align:text-top}
+th {text-align:right}
+</style>
+</head> 
+<!-- End of Header    --> 
+<body>
+<center>
+<h2>School of Computer Science, Tel Aviv University<br/>
+    Spring 2011, 0368-4147-01</h2>
+
+<h1>Homomorphic Encryption and Lattices</h1> 
+</center>
+<h4>Thursdays 10am-1pm, Ornstein 110<br/>
+Instructor: Shai Halevi</h4>
+
+This class will cover several results in cryptography (many from the
+last few years) that I found interesting, loosely related to homomorphic
+encryption schemes and lattice-based schemes. The format may be a mix
+of a regular class and a seminar: I plan to give most of the lectures
+myself, but some of the lectures may also be given by students (see
+below). 
+
+<h4>Schedule</h4>
+<table border=1 cellpadding=2 cellspacing=1> 
+<tr><th>February&nbsp;24</th>
+<td><i>Fully-homomorphic encryption over the integers</i>
+[vDGHV, Eurocrypt 2010].
+    Slides in <a href="../pubs/FHE-winter-school.pptx">PPTX</a> or
+    <a href="../pubs/FHE-winter-school.pdf">PDF</a>.
+</td></tr>
+<tr><th>March&nbsp;3</th>
+<td><i>Introduction to Lattices.</i> 
+  <a href="http://www.cs.tau.ac.il/~odedr/teaching/lattices_fall_2004/ln/introduction.pdf">Lecture notes</a> from <a href="http://www.cs.tau.ac.il/~odedr/teaching/lattices_fall_2004/">Oded Regev's course</a>
+</td></tr>
+<tr><th>March&nbsp;10</th>
+<td>&bullet; </i>The Hermite normal form.</i>
+  Material contained in notes of
+  <a href="http://disopt.epfl.ch/files/content/sites/disopt/files/shared/IntPoints2009/lattices.pdf">lecture 4</a> and
+  <a href="http://disopt.epfl.ch/files/content/sites/disopt/files/shared/IntPoints2009/hnf.pdf">lecture 5</a>
+  from <a href="http://disopt.epfl.ch/page-10548.html">Gennady Shmonin's course</a> in EPFL.<br/>
+  &bullet; <i>The LLL algorithm</i>, <a href="http://www.cs.tau.ac.il/~odedr/teaching/lattices_fall_2004/ln/lll.pdf"> lecture notes</a> from Oded Regev's course.</li>
+  </ul>
+</td></tr>
+<tr><th>March&nbsp;17</th>
+<td><i>Lattice-Based Cryptanalysis.</i> Specifically:<br/>
+&bullet; Simultaneous Diophantine Approximations (SDA) and application to
+the approximate-GCD problem 
+(<a href="sda-notes.pdf">hand-written notes - 2MB</a>).<br/>
+&bullet; Coppersmith's Method (<a href="coppersmith-notes.pdf">hand-written
+notes - 1.7MB</a>).<br/>
+Most of the material can be found in 
+<a href="http://www.math.auckland.ac.nz/~sgal018/crypto-book/ch20.pdf">
+Chapter 20</a> of 
+<a href="http://www.math.auckland.ac.nz/~sgal018/crypto-book/crypto-book.html">
+Steven Galbraith's book</a> on Mathematics of Public Key Cryptography.
+</td></tr>
+<tr><th>March&nbsp;24</th>
+<td>Ajtai's worst-case/average-case connection.</i>
+The Small Integer Solution problem (SIS), Relation to worst-case
+SVP, SIVP, SIS-based collision-resistant hashing. <a href="http://www.cs.tau.ac.il/~odedr/teaching/lattices_fall_2004/ln/averagecase.pdf">Lecture notes</a> from Oded Regev's course</a>.
+</td></tr>
+<tr><th>April&nbsp;7<br/>
+<a href="notes/Lattice_TDs.pdf">Lecture&nbsp;Notes</a>
+</th>
+<td><i>Lattice Trapdoor Constructions: Ajtai, Alwen-Peikert, 
+Micciancio-Peikert.</i>
+</td></tr>
+<tr><th>April&nbsp;28</th>
+<td>Learning with Errors (LWE). 
+Based on <a href="http://www.cs.tau.ac.il/~odedr/papers/qcrypto.pdf">[Regev, JACM 2009]</a> and <a href="http://www.cc.gatech.edu/~cpeikert/pubs/svpcrypto.pdf">[Peikert, STOC 2009]</a>. See also <a href="http://www.cs.tau.ac.il/~odedr/papers/lwesurvey.pdf">Oded Regev's survey</a>. (Hand-written <a href="notes-LWE.pdf">class notes</a>, 5.2MB). 
+</td></tr>
+<tr><th>May&nbsp;5<br/>
+<a href="notes/Regev-LWE-lemma.pdf">Lecture&nbsp;Notes</a><br/>
+<a href="notes/quadHE-GHV.pdf">Lecture&nbsp;Notes</a>
+</th>
+<td><i>More Learning with Errors:</i><br/>
+&bullet; Regev's main average-case to worst-case lemma.<br/>
+&bullet; The GHV <a href="http://eprint.iacr.org/2010/182">quadratic-homomorphic
+encryption scheme</a> based on LWE. 
+</tr>
+<tr><th>May&nbsp;12<br/>
+<a href="notes/ideal_hash.pdf">Lecture&nbsp;Notes</a>
+</th>
+<td><i>Ideal lattices.</i> Background: rings, ideals, and ideal-lattices. The collision-resistant hashing from [PR, TCC 2006] and [LM, ICALP 2006]. Material mostly from <a href="http://www.di.ens.fr/~lyubash/papers/dissertation_singlespaced.pdf">Vadim Lyubashevsky's PhD thesis</a>, Chapters 2(C-F) and 3.
+<!-- Hand written class notes: <a href="May12-ideals.pdf">background</a>,
+and hash-functions <a href="May12-hash1.pdf">part 1</a> and
+<a href="May12-hash2.pdf">part 2</a>. -->
+</td>
+</tr>
+<tr><th>May&nbsp;19<br/>
+<a href="notes/Gentrys-SWHE.pdf">Lecture&nbsp;Notes</a>
+</th>
+<td>The somewhat-homomorphic encryption scheme from [Gentry 2009] (material mostly from <a href="http://crypto.stanford.edu/craig/">Craig Gentry's PhD thesis</a>). 
+</td>
+</td></tr>
+<tr><th>May&nbsp;26</th>
+<td>The Smart-Vercauteren/Gentry-Halevi variants of Gentry's SWHE, and optimizations. Material mostly from the Gentry-Halevi <a href="http://eprint.iacr.org/2010/520">EUROCRYPT 2011 paper</a>.
+(See also <a href="inv-poly.pdf">this printout</a>.)
+</td>
+</td></tr>
+<tr><th>June&nbsp;2<br/>
+<a href="notes/SWHEtoFHE.pdf">Lecture&nbsp;Notes</a>
+</th>
+<td>&bullet; The somewhat-to-fully homomorphic transformation, as applied
+  specifically to the Gentry-Halevi variant.<br/>
+&bullet; FHE without squashing using the new 
+  <a href="http://eprint.iacr.org/2011/279">"Chimeric scheme"</a>
+  of Gentry-Halevi.
+</td></tr>
+<tr><th>June&nbsp;9<br/>
+<a href="notes/FHE-wo-bootstrapping.pdf">Lecture&nbsp;Notes</a>
+</th>
+<td>&bullet; The Brakerski-Vaikuntanathan SWHE/FHE scheme from LWE, and
+  Gentry's "leveled-FHE" without bootstrapping. Material taken from
+  <a href="http://eprint.iacr.org/2011/277"> Gentry's manuscript</a>.
+</td></tr>
+</table>
+
+
+<h4>Homework</h4>
+<ol><li><a href="ps1.pdf">Problem-set #1</a> and
+    <a href="lattices-and-HE-class/ps1-solutions.pdf">solutions</a>.
+</li>
+<li><a href="ps2.pdf">Problem-set #2</a> and
+    <a href="lattices-and-HE-class/ps2-solutions.pdf">solutions</a>.
+</li>
+<li><a href="ps3.pdf">Problem-set #3</a> and
+    <a href="lattices-and-HE-class/ps3-solutions.pdf">solutions</a>.
+</li>
+<li><a href="ps4.pdf">Problem-set #4</a> and
+    <a href="lattices-and-HE-class/ps4-solutions.pdf">solutions</a>.
+</li>
+<li><a href="ps5.pdf">Problem-set #5</a>, 
+    due June 16.
+    <!-- and <a href="ps5-solutions.pdf">solutions</a>. -->
+</li>
+</ol>
+
+<h3>PRE-REQUISITES:</h3>
+<p>The main pre-requisite for this class is general familiarity with
+modern theory of cryptography, such as obtained by taking the class
+Foundation of Cryptography (0368-4162-01). For example, I assume 
+that students are familiar with the notion of semantic-security 
+of encryption schemes (CPA-security), know about standard hardness
+assumptions (e.g., factoring), and are comfortable with reduction-
+based proofs of security. I also assume good command of linear 
+algebra (e.g., matrices and their rank, the determinant, Gaussian
+elimination, etc.) To the extent that we need more advanced algebra,
+we will cover it in class.
+</p>
+
+<h3>GRADING:</h3>
+<p>Grade will be based on a combination of class participation, scribe
+notes, and optionally also presentation of a paper. I also plan to
+give out a few homework sets, but it is not clear if they will be
+graded.</p>
+
+<p>Scribe notes: each student must scribe at least one lecture, or more
+if the need arises. The scribe notes should be a cleaned-up summary of
+the lecture (possibly with some additional details that were omitted
+in class).</p>
+
+<p>Paper Presentation: I am considering having 3-4 of the lectures given
+by students, on recent papers related to the general topic of the 
+class. Students who want to present a paper in class should contact
+me.</p>
+
+<h3>SYLLABUS:</h3>
+<p>Below is a very tentative course plan. There are likely to be
+significant changes to this plan as the semester goes on.</p>
+
+<ol>
+<li> Prelude: The somewhat-homomorphic encryption scheme "over the
+integers" from (van Dijk et al. EUROCRYPT 2010), and a reduction to
+the approximate-GCD problem.<br/>
+<br/></li>
+
+<li>Introduction to lattices and lattice reduction. Lattices, 
+bases, duality, Hermite-normal-form. The problems (Gap-)SVP, SIVP, 
+BDD. Known approximation algorithms for SVP/SIVP/BDD. (This may or may
+not include describing the LLL algorithm itself.)<br/>
+<br/>
+Using SVP approximation to solve simultaneous Diophantine-approximation
+(SDA), and using SDA to solve approximate-GCD. Assessing the security
+of the van Dijk et al. scheme.<br/>
+<br/></li>
+
+<li>Lattice-based crypto, part 1. The Short-Integer-Solution problem
+(SIS), using it to get collision-resistant hashing, Ajtai's reduction
+of SIVP-approximation to SIS. Maybe Ajtai/Peikert-Alwen trapdoor
+construction.<br/>
+<br/></li>
+
+<li>Lattice-based crypto, part 2: The Learning-With-Errors problem 
+(LWE), Regev's LWE-based encryption scheme. Peikert's reduction of
+Gap-SVP to LWE (STOC 2009). Maybe GPV signatures and the dual Regev
+cryptosystem (Gentry-Peikert-Vaikuntanathan STOC 2008).<br/>
+<br/></li>
+
+<li>LWE-based encryption that supports quadratic formulas over
+encrypted data (Gentry-Halevi-Vaikuntanathan, EUROCRYPT 2010). Maybe
+extending it to higher degrees using "d-operand multiplication" 
+(Aguilar-Gaborit-Herranz CRYPTO 2010).<br/>
+<br/></li>
+
+<li>Ideal lattices: Micciancio's reduction of Ideal-SIVP to Ideal-SIS  
+(FOCS 2002), maybe hashing from ideal-SIS (Peikert-Rosen TCC 2006,
+Lyubashevsky-Micciancio ICALP 2006), maybe Ideal-LWE 
+(Lyubashevsky-Peikert-Regev EUROCRYPT 2010). Maybe an attack on
+Ideal-SIVP (Gentry-Szydlo EUROCRYPT 2002).<br/>
+<br/></li>
+
+<li>Somewhat-homomorphic encryption from Ideal lattices (Gentry STOC
+2009). Variants and implementations (Smart-Vercauteren PKC 2010, 
+Gentry-Halevi 2010).<br/>
+<br/></li>
+
+<li>Worst-case to average-case reduction for Gentry's somewhat 
+homomorphic cryptosystem (Gentry CRYPTO 2010).<br/>
+<br/></li>
+
+<li>From somewhat- to fully-homomorphic encryption (Gentry STOC 2009).
+<br/><br/></li>
+
+<li>Other methods for computing on encrypted data: Yao circuits,
+branching programs (Ishai-Pasking TCC 2007). Re-randomizable Yao 
+circuits (Gentry-Halevi-Vaikuntanathan CRYPTO 2010)</li>
+</ol>
+</body> 
+</html>
+

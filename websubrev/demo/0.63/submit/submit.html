@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+
+
+<link rel="stylesheet" type="text/css" href="../common/submission.css">
+
+<style type="text/css">
+tr { vertical-align: top; }
+</style>
+
+<script type="text/javascript" src="../common/validate.js"></script>
+<script language="Javascript" type="text/javascript">
+<!--
+function checkform( form )
+{
+  var pat = /^\s*$/;
+  // Checking that all the mandatory fields are present
+  var st = 0;
+  if (pat.test(form.title.value))    { st |= 1; }
+  if (pat.test(form.authors.value))  { st |= 2; }
+  if (pat.test(form.contact.value))  { st |= 4; }
+  if (pat.test(form.abstract.value)) { st |= 8; }
+  if (pat.test(form.sub_file.value)) { st |= 16; }
+
+  if (st != 0) {
+    alert( "You must specify all the fields that are marked with (*)" );
+    if (st & 1) { form.title.focus(); }
+    else if (st & 2) { form.authors.focus(); }
+    else if (st & 4) { form.contact.focus(); }
+    else if (st & 8) { form.abstract.focus(); }
+    else if (st & 16) { form.sub_file.focus(); }
+    return false;
+  }
+  return true ;
+}
+//-->
+</script><title>New Submission to TEST 2007</title></head><body>
+<div style="text-align: center;">
+[<a href="http://www.example.edu/test2007/">TEST 2007 Home</a>] 
+[<a href="index1.html">Instructions</a>] 
+[<span style="color: gray;">New Submission Form</span>] 
+[<a href="revise1.html">Revision Form</a>] 
+[<a href="withdraw.html">Withdrawal Form</a>] 
+[<a href="../documentation/submitter.html">Documentation</a>] 
+</div>
+
+<hr>
+<h1>New Submission to TEST 2007</h1>
+<h3 class="timeleft">Deadline is Sat, 15 Sep 2007 22:00:00 +0000 (UTC)<br>
+Time left: 75 days and 01:23:47</h3>
+
+<form name="submit" onsubmit="return checkform(this);" action="http://people.csail.mit.edu/shaih/websubrev/demo/0.63/submit/receipt1.html" enctype="multipart/form-data" method="post">
+<input name="MAX_FILE_SIZE" value="20000000" type="hidden">
+
+<table cellpadding="6">
+<tbody>
+  <tr><td></td>
+    <td style="color: green; text-align: right;">
+     Mandatory fields are marked with a (*)</td>
+  </tr>
+  <tr>
+    <td style="text-align: right;"><small>(*)</small>&nbsp;Submission&nbsp;Title:</td>
+    <td><input name="title" size="90" type="string"><br>
+        The title of the paper that you are submitting</td>
+  </tr>
+  <tr>
+    <td style="text-align: right;"><small>(*)</small> Authors:</td>
+    <td><input name="authors" size="90" type="string"><br>
+        Separate multiple authors with '<i>and</i>' (e.g., Alice First 
+	<i>and</i> Bob T. Second <i>and</i> C. P. Third). <br>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;">Affiliations:</td>
+        <td><input name="affiliations" size="70" type="string">
+  </td></tr>
+  <tr>
+    <td style="text-align: right;"><small>(*)</small> Contact Email(s):</td>
+    <td><input name="contact" size="70" onchange="return checkEmailList(this)" type="string"><br>
+        Comma-separated list with <b>at least one valid email address</b> of the form user@domain; for example:<br/>
+	<tt>first-author@university.edu, secondAuthor@company.com, third.one@somewhere.org</tt><br/>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;"><small>(*)</small> Abstract:</td>
+    <td><textarea name="abstract" rows="15" cols="80"></textarea><br>
+        Use only plain ASCII and LaTeX conventions for math, but no HTML tags.
+        <br>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;">
+	<small>(*)</small>&nbsp;Submission&nbsp;File: </td>
+    <td><input name="sub_file" size="70" type="file"><br>
+        The submission itself, in one of the supported formats
+	(pdf, ps, <a href="index1.html#formats">click for details</a>).
+        <br>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;">Category:</td>
+    <td><select name="category">
+        <option selected="selected" value="None">(no category)</option>
+        <option value="foundations">foundations</option>
+        <option value="secret-key cryptography">secret-key cryptography</option>
+        <option value="public-key cryptography">public-key cryptography</option>
+        <option value="cryptographic protocols">cryptographic protocols</option>
+        <option value="implementation">implementation</option>
+        <option value="applications">applications</option>
+      </select>
+    </td>
+  </tr>
+<tr>
+    <td style="text-align: right;">Keywords:</td>
+    <td><input name="keywords" size="90" type="string"><br></td>
+  </tr>
+  <tr>
+    <td style="text-align: right;">Comments to Chair: </td>
+    <td><textarea name="comment" rows="4" cols="80"></textarea><br>
+        This message will only be seen by the program chair(s).
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><input value="Submit" type="submit">
+    </td>
+  </tr>
+</tbody>
+</table>
+</form>
+<hr>
+<div style="text-align: center;">
+[<a href="http://www.example.edu/test2007/">TEST 2007 Home</a>] 
+[<a href="index1.html">Instructions</a>] 
+[<span style="color: gray;">New Submission Form</span>] 
+[<a href="revise1.html">Revision Form</a>] 
+[<a href="withdraw.html">Withdrawal Form</a>] 
+[<a href="../documentation/submitter.html">Documentation</a>] 
+</div>
+
+</body></html>

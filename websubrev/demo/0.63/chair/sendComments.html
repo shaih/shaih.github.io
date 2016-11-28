@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<style type="text/css">
+h1 {text-align: center;}
+h2 {text-align: center;}
+</style>
+<title>Send Comments to Authors</title>
+</head>
+<body>
+<div style="text-align: center;">
+[<a href="index2.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+[<a href="undoLast.html">Undo/Redo</a>] 
+</div>
+<hr />
+<h1>Send Comments to Authors</h1>
+<h2>TEST 2007</h2>
+The comments-for-authors will be send when you hit the "Send Comments"
+button at the bottom of this page. You can customize the header of
+these emails below.<br />
+<br />
+
+(Note that the keywords <code>&lt;&#36;authors&gt;</code>,
+<code>&lt;&#36;title&gt;</code>, and <code>&lt;&#36;comments&gt;</code>
+will be replaced by the authors and title as specified by the
+submitters and by the list of comments, respectively. To be recognized
+as keywords, these words MUST include the '&lt;' and '&gt;' characters
+and the dollar-sign.)<br/>
+
+<textarea name="commentsLetter" cols=80 rows=16>Dear <$authors>,
+
+Below please find the reviewer comments on your paper
+
+  "<$title>"
+
+That was submitted to TEST 2007. Thank you again for submitting
+your work to TEST 2007.
+
+Sincerely,
+
+The program chair(s)
+************************************************************************
+
+<$comments></textarea>
+
+<h3>Send comments to only a few submissions</h3>
+To send comments only to certain submissions, put a comma-separated
+list of submission-IDs in the line below. Leaving the line empty will
+send comments to the authors of all the submissions.<br /><br />
+
+Send comments only for these submissions:
+<input type="text" name="subIds2send" size="70">
+<br /><br />
+
+<form action="index2.html" enctype="multipart/form-data" method="get">
+<input type="submit" value="Send Comments">
+<input type=checkbox name=withGrades value=yes> Check to include score
+and confidence in the email sent to the authors
+</form>
+
+<hr />
+<div style="text-align: center;">
+[<a href="index2.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+[<a href="undoLast.html">Undo/Redo</a>] 
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<head>
+<TITLE>On Seed-Incompressible Functions</TITLE>
+</head>
+<body>
+<!-- how to make comments -->
+
+<a name="HMR08-abstract"/> 
+
+<H2>On Seed-Incompressible Functions</H2>
+<hr/>
+
+<b>Authors:</b> 
+Shai Halevi, Steven Myers, and Charles Rackoff
+
+<P>
+<b>Reference:</b> 
+<i>The 5nd Theory of Cryptography Conference - TCC'08.</i> 
+Lecture Notes in Computer Science, vol. 4948, pages 19-36, Springer, 2008.
+</P>
+
+<P>
+<b>Abstract: </b> 
+We investigate a new notion of security for "cryptographic functions" that
+we term <i>seed incompressibility</i> (SI). We argue that this notion
+captures some of the intuition for the alleged security of constructions
+in the random-oracle model, and indeed we show that seed incompressibility
+suffices for some applications of the random oracle methodology. Very
+roughly, a function family <i>f_s</i>(*) with <i>|s|=n</i> is seed
+incompressible if given (say) <i>n/2</i> bits of advice (that can depend
+on the seed <i>s</i>) and an oracle access to <i>f_s</i>(*), an adversary
+cannot "break <i>f_s</i>(*)" any better than given only oracle access to
+<i>f_s</i>(*) and no advice.</P> 
+
+<P>
+The strength of this notion depends on what we mean by "breaking 
+<i>f_s</i>(*)". We first show that for any family <i>f_s</i> there exists
+an adversary that can distinguish <i>f_s</i>(*) from a random function
+using <i>n/2</i> bits of advice, so seed incompressible pseudo-random
+functions do not exist. Then we consider the weaker notion of
+seed-incompressible correlation intractability. We show that although
+the negative results can be partially extended also to this weaker
+notion, they cannot rule it out altogether. More importantly, the
+settings that we cannot rule out still suffice for many applications.
+In particular, we show that they suffice for constructing
+collision-resistant hash functions and for removing interaction from
+&Sigma;-protocols (3-round honest verifier zero-knowledge protocols).
+</P>
+
+
+<P> 
+<b> Availability: </b> 
+Paper available as <a href="HMR08.pdf">PDF</a> (253 Kbyte). 
+</P> 
+
+<HR>
+<address> 
+<a href="http://alum.mit.edu/www/shaih/">
+Shai Halevi's home page.</a> 
+</address>
+</body>
+</HTML>

@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../common/autosuggest.css" />        
+<script type="text/javascript">
+  /**
+   * Provides suggestions for PC member names 
+   * @class
+   * @scope public
+   */
+  function Suggestions() {
+    this.suggest = [ "David Beckham",
+    "Fabio Cannavaro",
+    "Angelos Charisteas",
+    "Joy Fawcett",
+    "Danielle Fotopoulos",
+    "Julie Foudy",
+    "Stylianos Giannakopoulos",
+    "Mia Hamm",
+    "Devvyn Hawkins",
+    "Angela Hucles",
+    "Jena Kluegel",
+    "Amy LePeilbet",
+    "Paolo Maldini",
+    "Antonios Nikopolidis",
+    "Michael Owen",
+    "Francesco Totti",
+    "Zinedine Zidane" ];
+  }
+
+  window.onload = function () {
+    var nForms = document.forms.length;
+    for (i=0; i<nForms; i++) {
+      nFlds = document.forms[i].elements.length;
+      for (j=0; j<nFlds; j++) {
+        fld = document.forms[i].elements[j];
+	if (fld.name.substring(0,5)=="cList") {
+	  var oTextbox = new AutoSuggestControl(fld, new Suggestions()); 
+	}
+      }
+    }
+  };
+</script>
+<script type="text/javascript" src="../common/autosuggest.js"></script>
+
+<title>Manual Assignments: List Interface</title>
+</head>
+
+<body>
+<div style="text-align: center;">
+[<a href="assignments.html">Assignments</a>] 
+[<a href="index2.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+[<a href="undoLast.html">Undo/Redo</a>] 
+
+</div>
+<hr />
+<h1 align=center>Manual Assignments: List Interface</h1>
+Use the list interface below to assign submissions to reviewers.
+When submitting this form, the server will only update its "scratch
+copy" of the assignments (namely, the copy that is only visible to the
+chair and not the reviewers). To make the assignments visible to reviewers,
+you need to check also the box next to the submit button. You can also
+use the <a href="assignmentMatrix.html">matrix interface</a>, or go back to
+the <a href="assignments.html">top assignment page</a> where you have
+buttons to clear all assignments or reset the scratch assignments to the
+assignments that are currently visible to the reviewers.<br/>
+<br/>You can have the software automatically compute an assignment of
+submissions to reviewers from the reviewer preferences by going to
+<a href="autoAssign.html">the Auto-Assignment page</a>. Also, the the
+matrix interface below shows you the reviewers&prime; preferences, as
+well as any preference that you entered: the check-boxes themselves are
+colored <span style="color: green;">green</span>  if you indicated a
+preference for the PC-member to review the submission or <span
+style="color: red;">red</span> if you indicated a preference that the
+PC-member do not review the submission.<br/>
+
+<br/>For each submission you should provide a <b>semi-colon-separated</b> list
+of PC members that are assigned to review that submission. When listing
+PC members, you should provide the name of the PC member as recorded in
+the database. You can specify only a prefix of the name, as long as it
+is sufficient to uniquely identify a single member (e.g., if you have a
+committee member named Wawrzyniec C. Antroponimiczna, it may be enough
+to write "Waw"). For example, to assign Attila T. Hun and John Doe to
+review submission number 132, you may use the following line:
+
+<ol>
+<li value="132"> The title of submission number 132<br/>
+  <input size=85 value="Attila; John D" readonly="on"/><br/></li>
+</ol>
+
+<h3>Current PC members:</h3>
+<table width=100%><tbody>
+<tr>
+  <td style="font-weight: normal; text-align: left;">David Beckham</td>
+
+  <td style="font-weight: normal; text-align: left;">Fabio Cannavaro</td>
+  <td style="font-weight: normal; text-align: left;">Angelos Charisteas</td>
+  <td style="font-weight: normal; text-align: left;">Joy Fawcett</td>
+</tr>
+<tr>
+  <td style="font-weight: normal; text-align: left;">Danielle Fotopoulos</td>
+  <td style="font-weight: normal; text-align: left;">Julie Foudy</td>
+
+  <td style="font-weight: normal; text-align: left;">Stylianos Giannakopoulos</td>
+  <td style="font-weight: normal; text-align: left;">Mia Hamm</td>
+</tr>
+<tr>
+  <td style="font-weight: normal; text-align: left;">Devvyn Hawkins</td>
+  <td style="font-weight: normal; text-align: left;">Angela Hucles</td>
+  <td style="font-weight: normal; text-align: left;">Jena Kluegel</td>
+
+  <td style="font-weight: normal; text-align: left;">Amy LePeilbet</td>
+</tr>
+<tr>
+  <td style="font-weight: normal; text-align: left;">Paolo Maldini</td>
+  <td style="font-weight: normal; text-align: left;">Antonios Nikopolidis</td>
+  <td style="font-weight: normal; text-align: left;">Michael Owen</td>
+  <td style="font-weight: normal; text-align: left;">Francesco Totti</td>
+
+</tr>
+<tr>
+  <td style="font-weight: normal; text-align: left;">Zinedine Zidane</td>
+  <td colspan=3></td>
+</tr>
+</tbody></table>
+
+<h3>List of submissions</h3>
+<form action="http://people.csail.mit.edu/shaih/websubrev/demo/0.63/chair/doAssignments.html" enctype="multipart/form-data" method=post autocomplete=off>
+<ol>
+  <li value="1">
+    <a href="../review/submission1.html@subId=1">On Obfuscating Point Functions</a><br/>
+
+    <input type="text" name="cList1" size=85 value="Mia Hamm; Antonios Nikopolidis; Michael Owen"><br/><br/>
+  </li>
+  <li value="2">
+    <a href="../review/submission1.html@subId=2">Logcrypt: Forward Security and Public Verification for Secure Audit Logs</a><br/>
+    <input type="text" name="cList2" size=85 value="Jena Kluegel; Angelos Charisteas; Danielle Fotopoulos"><br/><br/>
+  </li>
+  <li value="3">
+    <a href="../review/submission1.html@subId=3">Cryptanalysis of Hiji-bij-bij (HBB)</a><br/>
+
+    <input type="text" name="cList3" size=85 value="Michael Owen; Danielle Fotopoulos; Julie Foudy"><br/><br/>
+  </li>
+  <li value="4">
+    <a href="../review/submission1.html@subId=4">Benes and Butterfly schemes revisited</a><br/>
+    <input type="text" name="cList4" size=85 value="Devvyn Hawkins; Angelos Charisteas; Stylianos Giannakopoulos"><br/><br/>
+  </li>
+  <li value="5">
+    <a href="../review/submission1.html@subId=5">A sufficient condition for key-privacy</a><br/>
+
+    <input type="text" name="cList5" size=85 value="Antonios Nikopolidis; Zinedine Zidane; Angelos Charisteas"><br/><br/>
+  </li>
+  <li value="6">
+    <a href="../review/submission1.html@subId=6">A Metric on the Set of Elliptic Curves over ${mathbf F}_p$.</a><br/>
+    <input type="text" name="cList6" size=85 value="Julie Foudy; Stylianos Giannakopoulos; Francesco Totti"><br/><br/>
+  </li>
+  <li value="7">
+    <a href="../review/submission1.html@subId=7">The Misuse of RC4 in Microsoft Word and Excel</a><br/>
+
+    <input type="text" name="cList7" size=85 value="Paolo Maldini; Joy Fawcett; Danielle Fotopoulos; Stylianos Giannakopoulos"><br/><br/>
+  </li>
+  <li value="8">
+    <a href="../review/submission1.html@subId=8">Comments on &quot;Distributed Symmetric Key Management for Mobile Ad hoc Networks&quot; from INFOCOM 2004</a><br/>
+    <input type="text" name="cList8" size=85 value="Devvyn Hawkins; Mia Hamm; Amy LePeilbet"><br/><br/>
+  </li>
+  <li value="9">
+
+    <a href="../review/submission1.html@subId=9">Mixing properties of triangular feedback shift registers</a><br/>
+    <input type="text" name="cList9" size=85 value="Jena Kluegel; Amy LePeilbet; Joy Fawcett"><br/><br/>
+  </li>
+  <li value="10">
+    <a href="../review/submission1.html@subId=10">Update on SHA-1</a><br/>
+    <input type="text" name="cList10" size=85 value="Angela Hucles; Francesco Totti; Zinedine Zidane"><br/><br/>
+  </li>
+  <li value="11">
+
+    <a href="../review/submission1.html@subId=11">An Improved Elegant Method to Re-initialize Hash Chains</a><br/>
+    <input type="text" name="cList11" size=85 value="Jena Kluegel; Fabio Cannavaro; Francesco Totti"><br/><br/>
+  </li>
+  <li value="12">
+    <a href="../review/submission1.html@subId=12">Efficient Certificateless Public Key Encryption</a><br/>
+    <input type="text" name="cList12" size=85 value="Angelos Charisteas; Fabio Cannavaro; Devvyn Hawkins"><br/><br/>
+  </li>
+  <li value="13">
+
+    <a href="../review/submission1.html@subId=13">Comments: Insider attack on Cheng et al.s pairing-based tripartite key agreement protocols</a><br/>
+    <input type="text" name="cList13" size=85 value="Antonios Nikopolidis; Mia Hamm; Devvyn Hawkins"><br/><br/>
+  </li>
+  <li value="14">
+    <a href="../review/submission1.html@subId=14">A Chosen Ciphertext Attack on a Public Key Cryptosystem Based on Lyndon Words</a><br/>
+    <input type="text" name="cList14" size=85 value="David Beckham; Fabio Cannavaro; Joy Fawcett"><br/><br/>
+  </li>
+  <li value="15">
+
+    <a href="../review/submission1.html@subId=15">Hierarchical Identity Based Encryption with Constant Size Ciphertext</a><br/>
+    <input type="text" name="cList15" size=85 value="Angela Hucles; Fabio Cannavaro; Danielle Fotopoulos"><br/><br/>
+  </li>
+  <li value="16">
+    <a href="../review/submission1.html@subId=16">Narrow T-functions</a><br/>
+    <input type="text" name="cList16" size=85 value="Antonios Nikopolidis; Mia Hamm; David Beckham"><br/><br/>
+  </li>
+  <li value="17">
+
+    <a href="../review/submission1.html@subId=17">Side Channel Attacks on Implementations of Curve-Based Cryptographic Primitives</a><br/>
+    <input type="text" name="cList17" size=85 value="Danielle Fotopoulos; Julie Foudy; Stylianos Giannakopoulos"><br/><br/>
+  </li>
+  <li value="18">
+    <a href="../review/submission1.html@subId=18">Collusion Resistant Broadcast Encryption With Short Ciphertexts and Private Keys</a><br/>
+    <input type="text" name="cList18" size=85 value="Jena Kluegel; Michael Owen; Angelos Charisteas"><br/><br/>
+  </li>
+  <li value="19">
+
+    <a href="../review/submission1.html@subId=19">The Full Abstraction of the UC Framework</a><br/>
+    <input type="text" name="cList19" size=85 value="Antonios Nikopolidis; Zinedine Zidane; Julie Foudy"><br/><br/>
+  </li>
+  <li value="20">
+    <a href="../review/submission1.html@subId=20">(De)Compositions of Cryptographic Schemes and their Applications to Protocols</a><br/>
+    <input type="text" name="cList20" size=85 value="Devvyn Hawkins; Michael Owen; Danielle Fotopoulos"><br/><br/>
+  </li>
+  <li value="21">
+
+    <a href="../review/submission1.html@subId=21">Partial Hiding in Public-Key Cryptography</a><br/>
+    <input type="text" name="cList21" size=85 value="Devvyn Hawkins; Paolo Maldini; Zinedine Zidane; Stylianos Giannakopoulos"><br/><br/>
+  </li>
+  <li value="22">
+    <a href="../review/submission1.html@subId=22">An Improved and Efficient Countermeasure against Power Analysis Attacks</a><br/>
+    <input type="text" name="cList22" size=85 value="Angela Hucles; Michael Owen; Francesco Totti"><br/><br/>
+  </li>
+  <li value="23">
+
+    <a href="../review/submission1.html@subId=23">A Construction of Public-Key Cryptosystem Using Algebraic Coding on the Basis of Superimposition and Randomness</a><br/>
+    <input type="text" name="cList23" size=85 value="Paolo Maldini; David Beckham; Stylianos Giannakopoulos"><br/><br/>
+  </li>
+  <li value="24">
+    <a href="../review/submission1.html@subId=24">On the Diffie-Hellman problem over $GL_{n}$</a><br/>
+    <input type="text" name="cList24" size=85 value="Angela Hucles; Amy LePeilbet; Francesco Totti"><br/><br/>
+  </li>
+  <li value="25">
+
+    <a href="../review/submission1.html@subId=25">Analysis of Affinely Equivalent Boolean Functions</a><br/>
+    <input type="text" name="cList25" size=85 value="Zinedine Zidane; Angelos Charisteas; Danielle Fotopoulos"><br/><br/>
+  </li>
+  <li value="26">
+    <a href="../review/submission1.html@subId=26">Techniques for random maskin in hardware</a><br/>
+    <input type="text" name="cList26" size=85 value="Angelos Charisteas; Danielle Fotopoulos; Julie Foudy"><br/><br/>
+  </li>
+  <li value="27">
+
+    <a href="../review/submission1.html@subId=27">Tag-KEM/DEM: A New Framework for Hybrid Encryption</a><br/>
+    <input type="text" name="cList27" size=85 value="Devvyn Hawkins; Joy Fawcett; Mia Hamm"><br/><br/>
+  </li>
+  <li value="28">
+    <a href="../review/submission1.html@subId=28">Improved Proxy Re-Encryption Schemes with Applications to Secure Distributed Storage</a><br/>
+    <input type="text" name="cList28" size=85 value="Devvyn Hawkins; Angelos Charisteas; Mia Hamm"><br/><br/>
+  </li>
+  <li value="29">
+
+    <a href="../review/submission1.html@subId=29">A model and architecture for pseudo-random generation with applications to /dev/random</a><br/>
+    <input type="text" name="cList29" size=85 value="Joy Fawcett; Zinedine Zidane; Paolo Maldini"><br/><br/>
+  </li>
+  <li value="30">
+    <a href="../review/submission1.html@subId=30">Weak keys of pairing based Diffie Hellman schemes on elliptic curves</a><br/>
+    <input type="text" name="cList30" size=85 value="David Beckham; Fabio Cannavaro; Mia Hamm"><br/><br/>
+  </li>
+  <li value="31">
+
+    <a href="../review/submission1.html@subId=31">The Vector Decomposition Problem for Elliptic and Hyperelliptic Curves</a><br/>
+    <input type="text" name="cList31" size=85 value="Angelos Charisteas; Antonios Nikopolidis; Michael Owen"><br/><br/>
+  </li>
+  <li value="32">
+    <a href="../review/submission1.html@subId=32">On the Notion of Statistical Security in Simulatability Definitions</a><br/>
+    <input type="text" name="cList32" size=85 value="Jena Kluegel; Mia Hamm; Julie Foudy"><br/><br/>
+  </li>
+  <li value="33">
+
+    <a href="../review/submission1.html@subId=33">A Flexible Framework for Secret Handshakes</a><br/>
+    <input type="text" name="cList33" size=85 value="Fabio Cannavaro; Joy Fawcett; Stylianos Giannakopoulos"><br/><br/>
+  </li>
+  <li value="34">
+    <a href="../review/submission1.html@subId=34">An Efficient CDH-based Signature Scheme With a Tight Security Reduction</a><br/>
+    <input type="text" name="cList34" size=85 value="Jena Kluegel; David Beckham; Joy Fawcett"><br/><br/>
+  </li>
+  <li value="35">
+
+    <a href="../review/submission1.html@subId=35">Concurrent Composition of Secure Protocols in the Timing Model</a><br/>
+    <input type="text" name="cList35" size=85 value="Paolo Maldini; Fabio Cannavaro; Stylianos Giannakopoulos"><br/><br/>
+  </li>
+  <li value="36">
+    <a href="../review/submission1.html@subId=36">Improving Secure Server Performance by Re-balancing SSL/TLS Handshakes</a><br/>
+    <input type="text" name="cList36" size=85 value="Paolo Maldini; Antonios Nikopolidis; Stylianos Giannakopoulos"><br/><br/>
+  </li>
+  <li value="37">
+
+    <a href="../review/submission1.html@subId=37">Distinguishing Stream Ciphers with Convolutional Filters</a><br/>
+    <input type="text" name="cList37" size=85 value="Devvyn Hawkins; David Beckham; Zinedine Zidane"><br/><br/>
+  </li>
+  <li value="38">
+    <a href="../review/submission1.html@subId=38">Unfairness of a protocol for certified delivery</a><br/>
+    <input type="text" name="cList38" size=85 value="Jena Kluegel; Michael Owen; Julie Foudy"><br/><br/>
+  </li>
+  <li value="39">
+
+    <a href="../review/submission1.html@subId=39">On the Security of a Group Signature Scheme with Strong Separability</a><br/>
+    <input type="text" name="cList39" size=85 value="Amy LePeilbet; Angelos Charisteas; Julie Foudy"><br/><br/>
+  </li>
+  <li value="40">
+    <a href="../review/submission1.html@subId=40">Polyhedrons over Finite Abelian Groups and Their Cryptographic Applications</a><br/>
+    <input type="text" name="cList40" size=85 value="Devvyn Hawkins; Amy LePeilbet; David Beckham"><br/><br/>
+  </li>
+  <li value="41">
+
+    <a href="../review/submission1.html@subId=41">An Efficient Solution to The Millionaires Problem Based on Homomorphic Encryption</a><br/>
+    <input type="text" name="cList41" size=85 value="Angela Hucles; David Beckham; Fabio Cannavaro; Paolo Maldini"><br/><br/>
+  </li>
+  <li value="42">
+    <a href="../review/submission1.html@subId=42">On the affine classification of cubic bent functions</a><br/>
+    <input type="text" name="cList42" size=85 value="Amy LePeilbet; Antonios Nikopolidis; Francesco Totti"><br/><br/>
+  </li>
+  <li value="43">
+
+    <a href="../review/submission1.html@subId=43">Choosing Parameter Sets for NTRUEncrypt with NAEP and SVES-3</a><br/>
+    <input type="text" name="cList43" size=85 value="Amy LePeilbet; Michael Owen; Stylianos Giannakopoulos"><br/><br/>
+  </li>
+  <li value="44">
+    <a href="../review/submission1.html@subId=44">New Approaches for Deniable Authentication</a><br/>
+    <input type="text" name="cList44" size=85 value="Paolo Maldini; Zinedine Zidane; Jena Kluegel"><br/><br/>
+  </li>
+  <li value="45">
+
+    <a href="../review/submission1.html@subId=45">Cryptanalysis of an anonymous wireless authentication and conference key distribution scheme</a><br/>
+    <input type="text" name="cList45" size=85 value="Paolo Maldini; Danielle Fotopoulos; Julie Foudy"><br/><br/>
+  </li>
+  <li value="46">
+    <a href="../review/submission1.html@subId=46">Cryptanalysis of two identification schemes based on an ID-based cryptosystem</a><br/>
+    <input type="text" name="cList46" size=85 value="Amy LePeilbet; Francesco Totti; David Beckham"><br/><br/>
+  </li>
+  <li value="47">
+
+    <a href="../review/submission1.html@subId=47">Adversarial Model for Radio Frequency Identification</a><br/>
+    <input type="text" name="cList47" size=85 value="Angela Hucles; Jena Kluegel; Danielle Fotopoulos"><br/><br/>
+  </li>
+  <li value="48">
+    <a href="../review/submission1.html@subId=48">David Chaum's Voter Verification using Encrypted Paper Receipts</a><br/>
+    <input type="text" name="cList48" size=85 value="Angela Hucles; Antonios Nikopolidis; Fabio Cannavaro"><br/><br/>
+  </li>
+  <li value="49">
+
+    <a href="../review/submission1.html@subId=49">A Note on Shor's Quantum  Algorithm for Prime Factorization</a><br/>
+    <input type="text" name="cList49" size=85 value="Angela Hucles; David Beckham; Joy Fawcett"><br/><br/>
+  </li>
+  <li value="50">
+    <a href="../review/submission1.html@subId=50">Picking Virtual Pockets using Relay Attacks on Contactless Smartcard Systems</a><br/>
+    <input type="text" name="cList50" size=85 value="Amy LePeilbet; Francesco Totti; Joy Fawcett"><br/><br/>
+  </li>
+  <li value="51">
+
+    <a href="../review/submission1.html@subId=51">An Approach Towards Rebalanced RSA-CRT with Short Public Exponent</a><br/>
+    <input type="text" name="cList51" size=85 value="Jena Kluegel; Joy Fawcett; Julie Foudy"><br/><br/>
+  </li>
+  <li value="53">
+    <a href="../review/submission1.html@subId=53">Untraceability of Two Group Signature Schemes</a><br/>
+    <input type="text" name="cList53" size=85 value="Francesco Totti; Zinedine Zidane; Mia Hamm"><br/><br/>
+  </li>
+  <li value="54">
+
+    <a href="../review/submission1.html@subId=54">Key Derivation and Randomness Extraction</a><br/>
+    <input type="text" name="cList54" size=85 value="Fabio Cannavaro; Mia Hamm; Angela Hucles; Amy LePeilbet"><br/><br/>
+  </li>
+  <li value="101">
+    <a href="../review/submission1.html@subId=101">Hierarchical Identity Based Encryption with Polynomially Many Levels</a><br/>
+    <input type="text" name="cList101" size=85 value="Antonios Nikopolidis; Michael Owen; Angela Hucles"><br/><br/>
+  </li>
+  <li value="104">
+
+    <a href="../review/submission1.html@subId=104">More On Key Wrapping</a><br/>
+    <input type="text" name="cList104" size=85 value="Michael Owen; Francesco Totti; Zinedine Zidane; Paolo Maldini"><br/><br/>
+  </li>
+</ol>
+<input type="submit" name="manualAssign" value="Save Assignments in List Interface">
+<input type="checkbox" name="visible" value="on">
+Make these assignments visible to the reviewers
+</form>
+<hr/>
+<div style="text-align: center;">
+[<a href="assignments.html">Assignments</a>] 
+[<a href="index2.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+[<a href="undoLast.html">Undo/Redo</a>] 
+
+</div>
+</body>
+</html>

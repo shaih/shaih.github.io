@@ -1,0 +1,69 @@
+<HTML>
+<TITLE>A Cryptographic Solution to a Game Theoretic Problem</TITLE>
+
+<!-- how to make comments -->
+
+<a name="DHR00-abstract"></a> 
+
+<H2>A Cryptographic Solution to a Game Theoretic Problem</H2>
+<hr/>
+
+<b>Authors:</b> 
+Yevgeniy Dodis, Shai Halevi, and Tal Rabin. 
+
+<P>
+<b> Reference:</b> 
+<I> Advances in Cryptology - Crypto 2000</I>. LNCS vol. 1880, 
+Pages 112-130, Springer-Verlag, 2000. 
+</P>
+
+<P>
+<b> Abstract: </b> 
+In this work we use cryptography to solve a game-theoretic problem
+which arises naturally in the area of two party strategic games.
+The standard game-theoretic solution concept for such games is that of
+an <i>equilibrium</i>, which is a pair of "self-enforcing" strategies
+making each player's strategy an optimal response to the other player's 
+strategy. It is known that for many games the expected equilibrium 
+payoffs can be much higher when a trusted third party (a "mediator") 
+assists the players in choosing their moves (correlated equilibria), 
+than when each player has to choose its move on its own (Nash equilibria). 
+It is natural to ask whether there exists a mechanism that eliminates the 
+need for the mediator yet allows the players to maintain the high payoffs 
+offered by mediator-assisted strategies.  
+We answer this question affirmatively provided the players are
+computationally bounded and can have free communication (so-called
+"cheap talk") prior to playing the game.</P>
+
+<P>
+The main building block of our solution is an efficient cryptographic
+protocol to the following <i>Correlated element selection</i> problem, 
+which is of independent interest. Both Alice and Bob know a list of pairs 
+<i>(a1,b1)...(an,bn)</i> (possibly with repetitions), and they want to 
+pick a random index <i>i</i> such that Alice learns only <i>ai</i> and
+Bob learns only <i>bi</i>. Our solution to this problem has constant
+number of rounds, negligible error probability, and uses only very
+simple zero-knowledge proofs.  We then show how to incorporate our 
+cryptographic protocol back into a game-theoretic setting, which 
+highlights some interesting parallels between cryptographic protocols 
+and extensive form games.
+</P>
+
+<P>
+<b> Keywords: </b>Game throery, Cryptography. 
+</P> 
+
+<P> 
+<b> Availability: </b> 
+Paper available as <a href="http://www.research.ibm.com/people/s/shaih/pubs/dhr00.ps.gz">Compressed PostScript</a> 
+(67 Kbyte). 
+</P> 
+
+<P>
+<HR>
+<address> 
+<a href="http://alum.mit.edu/www/shaih/">
+Shai Halevi's home page.</a> 
+</address>
+</P>
+</HTML>

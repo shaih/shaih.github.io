@@ -1,0 +1,237 @@
+# SCORECARD for Zinedine Zidane, reviews for TEST 2007
+#################################################################
+# A line that begins with the symbol '#' is considered a
+# comment line and is ignored by the software. 
+# 
+# See the bottom of this file for formatting information, and
+# try not to deviate significantly from the specified format.
+
+5: A sufficient condition for key-privacy
+AUTHORS: Shai Halevi
+SUBREVIEWER: Some One
+SCORE: 4
+CONFIDENCE: 3
+Technical: 3
+Editorial: 2
+Suitability: 3
+AUTHOR-COMMENTS: 
+Some caveats:
+-------------
+This software is currently a PHP/MySQL software, which means that to
+use it you must have a MySQL server and a PHP engine (and your web-server
+must supports PHP and MySQL). I tested the software with PHP 4.3.2 and
+MySQL 3.23 (both quite old now), as well as PHP 5.0.4 and MySQL 4.1.12.
+It may work with even older versions (but it may not). Also, the proper 
+functioning of this software depend on "proper" functioning of you
+web-server.
+In particular, two issues that I came across are:
+
+* The scripts must be able to write and create sub-directories in the
+  BASE directory. When using this software on on Linux with an Apache
+  server (running as user "apache"), I had to chdir to the BASE directory
+  and make sure the directory and all the files in it are owned by user
+  "apache".
+
+* The web-server (and the PHP engine) must be willing to upload files.
+  For example, in one system that I used to test it, the PHP engine was
+  configured to only allow uploads of files upto 500KB (and I was
+wrecking
+  my brains as to why I can only upload pdf and not postscript files..)
+In
+  my case it turned out that I had to change the parameter
+LimitRequestBody
+  in php.conf (which on that system was somewhere under /etc/httpd/).
+PC-COMMENTS: 
+CHAIR-COMMENTS: 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+8: Comments on "Distributed Symmetric Key Management for Mobile A...
+AUTHORS: J. Wu and R. Wei
+SUBREVIEWER: 
+SCORE: 
+CONFIDENCE: 
+Technical: 
+Editorial: 
+Suitability: 
+AUTHOR-COMMENTS: 
+PC-COMMENTS: 
+CHAIR-COMMENTS: 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+10: Update on SHA-1
+AUTHORS: Vincent Rijmen and Elisabeth Oswald
+SUBREVIEWER: 
+SCORE: 
+CONFIDENCE: 
+Technical: 
+Editorial: 
+Suitability: 
+AUTHOR-COMMENTS: 
+PC-COMMENTS: 
+CHAIR-COMMENTS: 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+12: Efficient Certificateless Public Key Encryption
+AUTHORS: Zhaohui Cheng and Richard Comley
+SUBREVIEWER: 
+SCORE: 
+CONFIDENCE: 
+Technical: 
+Editorial: 
+Suitability: 
+AUTHOR-COMMENTS: 
+PC-COMMENTS: 
+CHAIR-COMMENTS: 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+16: Narrow T-functions
+AUTHORS: Magnus Daum
+SUBREVIEWER: 
+SCORE: 
+CONFIDENCE: 
+Technical: 
+Editorial: 
+Suitability: 
+AUTHOR-COMMENTS: 
+Bush Commutes Libby’s Prison Sentence
+Doug Mills/The New York Times
+
+WASHINGTON, July 2 — President Bush said today that he had used his power
+of clemency to commute the 30-month sentence for I. Lewis Libby Jr., the
+former top aide to Vice President Dick Cheney, who was convicted of
+perjury in March and was due to begin serving his time within weeks.
+
+The action, announced just hours after a federal appeals court denied Mr.
+Libby’s request to allow him to remain free while his case is on appeal,
+spares Mr. Libby his prison term, but it does not excuse him from stiff
+fines or probation.
+
+In a statement issued early this evening announcing his decision, Mr. Bush
+said he had listened to both critics and defenders of Mr. Libby, who was
+convicted of four felony counts for lying during a C.I.A. leak
+investigation.
+
+“I respect the jury’s verdict,” Mr. Bush said. “But I have concluded that
+the prison sentence given to Mr. Libby is excessive. Therefore, I am
+commuting the portion of Mr. Libby’s sentence that required him to spend
+30 months in prison.”
+PC-COMMENTS: 
+CHAIR-COMMENTS: 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+19: The Full Abstraction of the UC Framework
+AUTHORS: Jes{\'u}s F. Almansa
+SUBREVIEWER: 
+SCORE: 
+CONFIDENCE: 
+Technical: 
+Editorial: 
+Suitability: 
+AUTHOR-COMMENTS: 
+PC-COMMENTS: 
+CHAIR-COMMENTS: 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+25: Analysis of Affinely Equivalent Boolean Functions
+AUTHORS: Meng Qing-shu and Yang min and Zhang Huan-guo and Liu Yu-zhen
+SUBREVIEWER: 
+SCORE: 
+CONFIDENCE: 
+Technical: 
+Editorial: 
+Suitability: 
+AUTHOR-COMMENTS: 
+PC-COMMENTS: 
+CHAIR-COMMENTS: 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+30: Weak keys of pairing based Diffie Hellman schemes on elliptic ...
+AUTHORS: A. A. Kalele and V. R. Sule
+SUBREVIEWER: 
+SCORE: 
+CONFIDENCE: 
+Technical: 
+Editorial: 
+Suitability: 
+AUTHOR-COMMENTS: 
+PC-COMMENTS: 
+CHAIR-COMMENTS: 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+44: New Approaches for Deniable Authentication
+AUTHORS: Mario Di Raimondo and Rosario Gennaro
+SUBREVIEWER: 
+SCORE: 
+CONFIDENCE: 
+Technical: 
+Editorial: 
+Suitability: 
+AUTHOR-COMMENTS: 
+PC-COMMENTS: 
+CHAIR-COMMENTS: 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+47: Adversarial Model for Radio Frequency Identification
+AUTHORS: Gildas Avoine
+SUBREVIEWER: 
+SCORE: 
+CONFIDENCE: 
+Technical: 
+Editorial: 
+Suitability: 
+AUTHOR-COMMENTS: 
+PC-COMMENTS: 
+CHAIR-COMMENTS: 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+#################################################################
+# Formatting information
+#################################################################
+# The reviews should look as follows:
+# 
+#     num: Title
+#     AUTHORS: names (optional)
+#     SUBREVIEWER: name (optional)
+#     SCORE: num
+#     CONFIDENCE: num
+#     aux-criteria-1: num
+#     aux-criteria-2: num
+#     [...]
+#     AUTHOR-COMMENTS: anything here is considered comments to the
+#       authors
+#     PC-COMMENTS: anything here is considered comments to 
+#       the program committee
+#     CHAIR-COMMENTS: anything here is considered comments
+#       to the program chair
+#     SELF-COMMENTS: anything here is considered notes to yourself,
+#       no one else can see these comments
+#     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#  
+# Different reviews in the same file are separated with a line of '+'
+# symbols (at least 20 '+' symbols, with no white-spaces or anything
+# else). 
+# 
+# Each review starts by a line containing the submission number and
+# optionally the title. The software ignores the title and only uses
+# the submission number to identify the submission that you are
+# reviewing. (It will, however, display a warning if you supply a
+# title that is "too far from the right one"). You can optionally put
+# the authors names in the next line, the software will ignore this.
+# 
+# Next you can put the name of a sub-reviewer. If this line is
+# missing or the name left empty, the software will record no
+# sub-reviewer for this review. 
+# 
+# Next comes lines for the score and confidence. If the num is not
+# supplied, the software will record the special symbol 'ignore'.
+# Next you can put lines for the other evaluation criteria that the
+# chair specified (e.g., Technical, Editorial quality, etc). If the
+# software does not recognize a criterion it will ignore that line
+# and display a warning. 
+#
+# Next comes the comments. Anything after the tag "AUTHOR-COMMENTS:"
+# (which must be at the beginning of a line) and on the following
+# lines is considered comments-to-authors, until the end of the
+# review or until a line that begins with "PC-COMMENTS:" or
+# "CHAIR-COMMENTS:". Similarly, these two tags denote the beginning
+# of the comments-to-committee or comments-to-chair, respectively.

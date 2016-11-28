@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<style type="text/css">
+h1 {text-align: center;}
+h2 {text-align: center;}
+</style>
+<title>Generate Accept/Reject Letters</title>
+</head>
+<body>
+<div style="text-align: center;">
+[<a href="index2.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+[<a href="undoLast.html">Undo/Redo</a>] 
+</div>
+<hr />
+<h1>Generate Accept/Reject Letters</h1>
+<h2>TEST 2007</h2>
+Use the form below to customize your accept/reject letters. The email
+notifications will be sent when you hit the "Send Notification" button
+at the bottom of this page. You can also make changes to the text of
+these letetrs and then save it without sending the email yet by using
+this button: <input type="submit" name="saveText" value="Save Text"><br/>
+<br/>
+(Note that the keywords <code>&lt;&#36;authors&gt;</code>, 
+<code>&lt;&#36;title&gt;</code>,  <code>&lt;&#36;subId&gt;</code>
+and <code>&lt;&#36;subPwd&gt;</code> will be replaced by the authors,
+title and the submission-ID and password as they appear in the
+database. To be recognized as keywords, these words MUST include the
+'&lt;' and '&gt;' characters and the dollar-sign.)
+
+<h3>Acceptance letters</h3>
+<textarea name="accLetter" cols=80 rows=13>Dear &lt;$authors&gt;,
+
+It is our pleasure to inform you that your submission
+
+  &quot;&lt;$title&gt;&quot;
+
+was accepted to TEST 2007. Congratulations.
+
+Please confirm receipt of this email, and provide us with the
+(corrected) title and complete list of authors and affiliations.
+This will allow us to distribute the list of accepted papers.
+
+The selection of the papers was a challenging and difficult task. The
+Program Committee members have put in a significant effort in order to
+provide useful feedback to the authors, but due to time constraints, this
+was not always possible.
+
+In a few days, we will forward the comments on your paper and the
+instructions for producing and sending the final version. You will
+need your submission-ID and password in order to upload the camera-ready
+version. These are:
+
+Submission-ID: &lt;$subId&gt;
+Password:      &lt;$subPwd&gt;
+
+In order to be included in the proceedings, the final version of your paper
+must be received no later than Thu, 15 Nov 2007 23:00:00 +0000 (UTC).
+This is a firm deadline.
+
+Thank you very much for contributing to TEST 2007.
+We are looking forward to seeing you at the conference.
+
+Sincerely,
+
+TEST 2007 program chair(s)</textarea>
+
+<h3>Rejection letters</h3>
+<textarea name="rejLetter" cols=80 rows=13>Dear &lt;$authors&gt;,
+
+We are sorry to inform you that your submission
+
+  &quot;&lt;$title&gt;&quot;
+
+was not accepted to TEST 2007.
+
+We received many good submissions, but could only accept a small number
+of them to the program.
+
+The selection of the papers was a challenging and difficult task. The
+Program Committee members have put in a significant effort in order to
+provide useful feedback to the authors, but due to time constraints, this
+was not always possible. We will send you the comments on your paper in a
+few days. 
+
+Thank you very much for submitting your work to TEST 2007,
+and we hope to see you at the conference.
+
+Sincerely,
+
+TEST 2007 program chair(s)</textarea>
+<br /><br />
+
+<h3>Notify only a few submissions</h3>
+To send notifications only to certain submissions, put a comma-separated
+list of submission-IDs in the line below. Leaving the line empty will send
+notification letters to all the accepted and rejected submissions.<br/>
+<br/>
+Notify only these submissions:
+<input type="text" name="subIds2notify" size="70">
+<br /><br />
+
+<form action="index2.html" enctype="multipart/form-data" method="get">
+<input type="submit" value="Send Notifications">
+</form>
+
+<hr />
+<div style="text-align: center;">
+[<a href="index2.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+[<a href="undoLast.html">Undo/Redo</a>] 
+</div>
+</body>
+</html>

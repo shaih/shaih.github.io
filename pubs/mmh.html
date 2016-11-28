@@ -1,0 +1,61 @@
+<HTML>
+<TITLE>Halevi-Krawczyk 1997: MMH</TITLE>
+
+<!-- how to make comments -->
+
+<a name="hk97-abstract"> 
+
+<H2>MMH: Software Message Authentication in the Gbit/second Rates
+<hr>
+</H2>
+
+<b> Authors:</b> 
+Shai Halevi and Hugo Krawczyk.
+<P>
+
+<b> Reference:</b> 
+<I> Proceedings of the 4th Workshop on Fast Software Encryption,</i> 
+LNCS vol. 1267, Springer, 1997. Pages 172-189.
+<P>
+
+<b> Abstract: </b> 
+We describe a construction of almost universal hash functions suitable
+for very fast software implementation and applicable to the hashing of
+variable size data and fast cryptographic message authentication.  Our
+construction
+uses fast single precision arithmetic which is increasingly supported
+by modern processors due to the growing needs for fast arithmetic posed
+by multimedia applications.
+
+<p>
+We report on hand-optimized assembly implementations on a 150 MHz PowerPC
+604 and a 150 MHz Pentium-Pro, which achieve hashing speeds of 350 to 820
+Mbit/sec, depending on the desired level of security (or collision
+probability), and a rate of more than 1 Gbit/sec on a 200 MHz Pentium-Pro.
+This represents a significant speed-up over current software implementations
+of universal hashing and other message authentication techniques (e.g.,
+MD5-based). Moreover, our construction is specifically designed to take
+advantage of emerging microprocessor technologies (such as Intel's MMX,
+64-bit architectures and others) and then best suited to accommodate the
+growing performance needs of cryptographic (and other universal hashing)
+applications.
+
+<p>
+The construction is based on techniques due to Carter and Wegman for
+universal hashing using modular multilinear functions that we carefully
+modify to allow for fast software implementation. We prove the resultant
+construction to retain the necessary mathematical properties required for
+its use in hashing and message authentication.
+<P>
+
+<b> Availability: </b> 
+Paper available as 
+    <a href="mmh.ps.gz">Gzipped PostScript</a> (66 Kbyte). 
+
+<P>
+<HR>
+<address> 
+<a href="http://alum.mit.edu/www/shaih/">
+Shai Halevi's home page.</a> 
+</address>
+

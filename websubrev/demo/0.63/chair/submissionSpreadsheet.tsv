@@ -1,0 +1,55 @@
+subId	Title	Authors	Contact
+1	On Obfuscating Point Functions	Hoeteck Wee	some-email@address.edu
+2	Logcrypt: Forward Security and Public Verification for Secure Audit Logs	Jason E. Holt and Kent E. Seamons	some-email@address.edu
+3	Cryptanalysis of Hiji-bij-bij (HBB)	Vlastimil Klima	some-email@address.edu
+4	Benes and Butterfly schemes revisited	Jacques Patarin and Audrey Montreuil	some-email@address.edu
+5	A sufficient condition for key-privacy	Shai Halevi	some-email@address.edu
+6	A Metric on the Set of Elliptic Curves over ${mathbf F}_p$.	Pradeep Kumar Mishra and Kishan Chand Gupta	some-email@address.edu
+7	The Misuse of RC4 in Microsoft Word and Excel	Hongjun Wu	some-email@address.edu
+8	"Comments on ""Distributed Symmetric Key Management for Mobile Ad hoc Networks"" from INFOCOM 2004"	J. Wu and R. Wei	some-email@address.edu
+9	Mixing properties of triangular feedback shift registers	Bernd Schomburg	some-email@address.edu
+10	Update on SHA-1	Vincent Rijmen and Elisabeth Oswald	some-email@address.edu
+11	An Improved Elegant Method to Re-initialize Hash Chains	Yuanchao Zhao and Daoben Li	some-email@address.edu
+12	Efficient Certificateless Public Key Encryption	Zhaohui Cheng and Richard Comley	some-email@address.edu
+13	Comments: Insider attack on Cheng et al.s pairing-based tripartite key agreement protocols	Hung-Yu Chien	some-email@address.edu
+14	A Chosen Ciphertext Attack on a Public Key Cryptosystem Based on Lyndon Words	Ludovic Perret	some-email@address.edu
+15	Hierarchical Identity Based Encryption with Constant Size Ciphertext	Dan Boneh and Xavier Boyen and Eu-Jin Goh	some-email@address.edu
+16	Narrow T-functions	Magnus Daum	some-email@address.edu
+17	Side Channel Attacks on Implementations of Curve-Based Cryptographic Primitives	Roberto M. Avanzi	some-email@address.edu
+18	Collusion Resistant Broadcast Encryption With Short Ciphertexts and Private Keys	Dan Boneh and Craig Gentry  and Brent Waters	some-email@address.edu
+19	The Full Abstraction of the UC Framework	Jes{\'u}s F. Almansa	some-email@address.edu
+20	(De)Compositions of Cryptographic Schemes and their Applications to Protocols	R. Janvier and Y. Lakhnech and L. Mazare	some-email@address.edu
+21	Partial Hiding in Public-Key Cryptography	Eabhnat N'{i} Fhloinn and Michael Purser	some-email@address.edu
+22	An Improved and Efficient Countermeasure against Power Analysis Attacks	ChangKyun Kim and JaeCheol Ha and SangJae Moon and Sung-Ming Yen and Wei-Chih Lien and  Sung-Hyun Kim	some-email@address.edu
+23	A Construction of Public-Key Cryptosystem Using Algebraic Coding on the Basis of Superimposition and Randomness	Masao Kasahara	some-email@address.edu
+24	On the Diffie-Hellman problem over $GL_{n}$	A. A. Kalele and V. R. Sule	some-email@address.edu
+25	Analysis of Affinely Equivalent Boolean Functions	Meng Qing-shu and Yang min and Zhang Huan-guo and Liu Yu-zhen	some-email@address.edu
+26	Techniques for random maskin in hardware	Jovan Dj. Golic	some-email@address.edu
+27	Tag-KEM/DEM: A New Framework for Hybrid Encryption	Masayuki ABE and Rosario Gennaro and Kaoru Kurosawa	some-email@address.edu
+28	Improved Proxy Re-Encryption Schemes with Applications to Secure Distributed Storage	Giuseppe Ateniese and Kevin Fu and Matthew Green and Susan Hohenberger	some-email@address.edu
+29	A model and architecture for pseudo-random generation with applications to /dev/random	Boaz Barak and Shai Halevi	some-email@address.edu
+30	Weak keys of pairing based Diffie Hellman schemes on elliptic curves	A. A. Kalele and V. R. Sule	some-email@address.edu
+31	The Vector Decomposition Problem for Elliptic and Hyperelliptic Curves	Iwan Duursma and Negar Kiyavash	some-email@address.edu
+32	On the Notion of Statistical Security in Simulatability Definitions	Dennis Hofheinz and Dominique Unruh	some-email@address.edu
+33	A Flexible Framework for Secret Handshakes	Gene Tsudik and Shouhuai Xu	some-email@address.edu
+34	An Efficient CDH-based Signature Scheme With a Tight Security Reduction	Benoit Chevallier-Mames	some-email@address.edu
+35	Concurrent Composition of Secure Protocols in the Timing Model	Yael Kalai and Yehuda Lindell and Manoj Prabhakaran	some-email@address.edu
+36	Improving Secure Server Performance by Re-balancing SSL/TLS Handshakes	Claude Castelluccia and Einar Mykletun and Gene Tsudik	some-email@address.edu
+37	Distinguishing Stream Ciphers with Convolutional Filters	Joan Daemen and Gilles Van Assche	some-email@address.edu
+38	Unfairness of a protocol for certified delivery	Juan M. Estevez-Tapiador and Almudena Alcaide	some-email@address.edu
+39	On the Security of a Group Signature Scheme with Strong Separability	Lihua Liu and Zhengjun Cao	some-email@address.edu
+40	Polyhedrons over Finite Abelian Groups and Their Cryptographic Applications	Logachev~O.A. and Salnikov~A.A. and Yaschenko~V.V.	some-email@address.edu
+41	An Efficient Solution to The Millionaires Problem Based on Homomorphic Encryption	Hsiao-Ying Lin and Wen-Guey Tzeng	some-email@address.edu
+42	On the affine classification of cubic bent functions	Sergey Agievich	some-email@address.edu
+43	Choosing Parameter Sets for NTRUEncrypt with NAEP and SVES-3	Nick Howgrave-Graham and Joseph H. Silverman and William Whyte	some-email@address.edu
+44	New Approaches for Deniable Authentication	Mario Di Raimondo and Rosario Gennaro	some-email@address.edu
+45	Cryptanalysis of an anonymous wireless authentication and conference key distribution scheme	Qiang Tang and Chris J. Mitchell	some-email@address.edu
+46	Cryptanalysis of two identification schemes based on an ID-based cryptosystem	Qiang Tang and Chris J. Mitchell	some-email@address.edu
+47	Adversarial Model for Radio Frequency Identification	Gildas Avoine	some-email@address.edu
+48	David Chaum's Voter Verification using Encrypted Paper Receipts	Poorvi L. Vora	some-email@address.edu
+49	A Note on Shor's Quantum  Algorithm for Prime Factorization	Zhengjun Cao	some-email@address.edu
+50	Picking Virtual Pockets using Relay Attacks on Contactless Smartcard Systems	Ziv Kfir and Avishai Wool	some-email@address.edu
+51	An Approach Towards Rebalanced RSA-CRT with Short Public Exponent	Hung-Min Sun and Mu-En Wu	some-email@address.edu
+53	Untraceability of Two Group Signature Schemes	Zhengjun Cao	some-email@address.edu
+54	Key Derivation and Randomness Extraction	Olivier Chevassut and Pierre-Alain Fouque and Pierrick Gaudry and David Pointcheval	some-email@address.edu
+101	A sufficient condition for key-privacy	Shai Halevi	some-email.address.edu

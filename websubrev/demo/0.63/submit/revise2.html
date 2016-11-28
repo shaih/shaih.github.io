@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+
+
+<style type="text/css">
+h1 { text-align: center; }
+h3 { text-align: center; color: blue; }
+tr { vertical-align: top; }
+</style>
+
+<script type="text/javascript" src="../common/validate.js"></script>
+<script language="Javascript" type="text/javascript">
+<!--
+function checkform( form )
+{
+  var pat = /^\s*$/;
+  // Checking that all the mandatory fields are present
+  st = 0;
+  if (pat.test(form.subId.value)) { st |= 1; }
+  if (pat.test(form.subPwd.value))   { st |= 2; }
+
+  if (st != 0) {
+    alert( "You must specify the submission-ID and password" );
+    if (st & 1) { form.subId.focus(); }
+    else if (st & 2) { form.subPwd.focus(); }
+    return false;
+  }
+  return true ;
+}
+//-->
+</script><title>Revise a Submission to TEST 2007</title>
+
+
+<link rel="stylesheet" type="text/css" href="../common/submission.css"></head><body>
+<div style="text-align: center;">
+[<a href="http://www.example.edu/test2007/">TEST 2007 Home</a>] 
+[<a href="../submit/index1.html">Instructions</a>] 
+[<a href="../submit/submit.html">New Submission Form</a>] 
+[<span style="color: gray;">Revision Form</span>] 
+[<a href="../submit/withdraw.html">Withdrawal Form</a>] 
+[<a href="../documentation/submitter.html">Documentation</a>] 
+</div>
+
+<hr>
+<h1>Revise a Submission to TEST 2007</h1>
+<h3 class="timeleft">Deadline is Sat, 15 Sep 2007 22:00:00 +0000 (UTC)<br>
+Time left: 75 days and 01:19:15</h3>
+<form name="revise" onsubmit="return checkform(this);" action="receipt1.html" enctype="multipart/form-data" method="post">
+<input name="MAX_FILE_SIZE" value="20000000" type="hidden">
+<input name="referer" value="revise.html" type="hidden">
+<table cellspacing="6">
+<tbody>
+  <tr>
+    <td style="text-align: right;">
+         <small>(*)</small>&nbsp;Submission&nbsp;ID:</td>
+    <td> <input name="subId" size="4" value="101" type="text">
+         The submission-ID, as returned when the paper was first submitted.
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;"><small>(*)</small> Password:</td>
+    <td><input name="subPwd" size="11" value="iBLWQvmPXe" type="text">
+        The password that was returned with the original submission.
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" style="text-align: center;"><hr>
+        <big>Any input below will overwrite existing information;
+             no input means the old content remains intact.</big><br><br>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;">Title:</td>
+    <td><input name="title" size="90" value="A sufficient condition for key-privacy" type="text"><br>
+        The title of your submission</td>
+  </tr>
+  <tr>
+    <td style="text-align: right;">Authors:</td>
+    <td><input name="authors" size="90" value="Shai Halevi" type="text"><br>
+        Separate multiple authors with '<i>and</i>' (e.g., Alice First 
+	<i>and</i> Bob T. Second <i>and</i> C. P. Third). <br>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;">Affiliations:</td>
+        <td><input name="affiliations" size="70" value="IBM" type="text">
+  </td></tr>
+  <tr>
+    <td style="text-align: right;">Contact Email(s):</td>
+    <td><input name="contact" size="70" value="some-email@example.edu" onchange="return checkEmailList(this)" type="text"><br>
+    Comma-separated list with <b>at least one valid email address</b> of the form user@domain; for example:<br/>
+    <tt>first-author@university.edu, secondAuthor@company.com, third.one@somewhere.org</tt><br/>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;">Abstract:</td>
+    <td><textarea name="abstract" rows="15" cols="80">The notion of \emph{key privacy} for encryption schemes was defined 
+formally by Bellare, Boldyreva, Desai and Pointcheval in Asiacrypt 2001. 
+This notion seems useful in settings where anonymity is important. 
+In this short note we describe a (very simple) sufficient condition
+for key privacy. In a nutshell, a scheme that provides data privacy is
+guaranteed to provide also key privacy if the distribution of \emph{a
+random encryption of a random message} is independent of the public
+key that is used for the encryption.</textarea><br>
+        Use only plain ASCII and LaTeX conventions for math, but no HTML tags.
+        <br> <br>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;">Submission&nbsp;File: </td>
+    <td><input name="sub_file" size="70" type="file"><br>
+        The submission itself, in one of the supported formats
+	(pdf, ps, <a href="../submit/index1.html#formats">click for details</a>).
+        <br>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;">Category:</td>
+    <td><select name="category">
+        <option value="">(no change)</option>
+        <option value="foundations">foundations</option>
+        <option value="secret-key cryptography">secret-key cryptography</option>
+        <option selected="selected" value="public-key cryptography">public-key cryptography</option>
+        <option value="cryptographic protocols">cryptographic protocols</option>
+        <option value="implementation">implementation</option>
+        <option value="applications">applications</option>
+        <option value="None">Reset to (no category)</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;">Keywords:</td>
+    <td><input name="keywords" size="90" value="anonymity, key privacy" type="text">
+        <br><br></td>
+  </tr>
+  <tr>
+    <td style="text-align: right;">Comments to Chair: </td>
+    <td><textarea name="comment" rows="4" cols="80"></textarea><br>
+        This message will only be seen by the program chair(s).
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><input value="Revise Submission" name="reviseSub" type="submit">
+    </td>
+  </tr>
+</tbody>
+</table>
+</form>
+<hr>
+<div style="text-align: center;">
+[<a href="http://www.example.edu/test2007/">TEST 2007 Home</a>] 
+[<a href="../submit/index1.html">Instructions</a>] 
+[<a href="../submit/submit.html">New Submission Form</a>] 
+[<span style="color: gray;">Revision Form</span>] 
+[<a href="../submit/withdraw.html">Withdrawal Form</a>] 
+[<a href="../documentation/submitter.html">Documentation</a>] 
+</div>
+
+</body></html>

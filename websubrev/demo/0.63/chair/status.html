@@ -1,0 +1,1323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../common/review.css" />
+<link rel="stylesheet" type="text/css" href="../common/tooltips.css" />
+<style type="text/css">
+h1 {text-align: center;}
+a.tooltips { color: blue; }
+a.tooltips:hover span { width: 250px; }
+</style>
+
+<script type="text/javascript" language="javascript">
+<!--
+  function expandCollapse(fid) {
+    fld = document.getElementById(fid);
+    if (fld.className=="shown") { fld.className="hidden"; }
+    else { fld.className="shown"; }
+    return false;
+}
+
+  function expand(fid) {
+    fld = document.getElementById(fid);
+    fld.className="shown"; 
+    return true;
+}
+
+  function hideHistory() {
+    document.getElementById("history").className="hidden";
+    document.getElementById("openHistory").className="shown";
+    return true;
+}
+// -->
+</script>
+
+<title>TEST 2007 Set Submission Status</title>
+</head>
+<body onload="hideHistory();">
+<div style="text-align: center;">
+[<a href="index2.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+[<a href="undoLast.html">Undo/Redo</a>] 
+</div>
+<hr />
+<h1>TEST 2007 Set Submission Status</h1>
+<center>
+<div style="float: left; font-size: 80%;"><br/>Hover mouse over<br/>bullets for history</div>
+<table style="text-align: center;" border=1><tbody><tr>
+  <td class="setNO"><b>None<br />7</b></td>
+  <td class="setRE"><b>Reject<br />4</b></td>
+  <td class="setMR"><b>Maybe Reject<br />10</b></td>
+  <td class="setDI"><b>Discuss<br />18</b></td>
+  <td class="setMA"><b>Maybe Accept<br />11</b></td>
+  <td class="setAC"><b>Accept<br />4</b></td>
+</tr></tbody></table></center>
+<br/>
+<table style="width: 100%;"><tbody><tr>
+  <th style="width: 60px;">Status</th><th>Num</th>
+  <th class="setNO" style="width: 20px;">NO</th>
+  <th class="setRE" style="width: 20px;">RE</th>
+  <th class="setMR" style="width: 20px;">MR</th>
+  <th class="setDI" style="width: 20px;">DI</th>
+  <th class="setMA" style="width: 20px;">MA</th>
+  <th class="setAC" style="width: 20px;">AC</th>
+  <th style="text-align: left;">Title</th>
+</tr>
+<tr><td><a style="z-index: 100;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-19 17:51: NO => MA</span></a>  <span class=MA><img alt="[MA]" title="Status: maybe accept" src="../common/MA.gif" border=0></span></td>
+  <th style="width: 20px;">1.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts1" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts1" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts1" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts1" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts1" value="Maybe Accept" checked="checked">
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts1" value="Accept" >
+  </td>
+  <td>On Obfuscating Point Functions</td>
+</tr>
+<tr><td><a style="z-index: 99;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MR</span></a>  <span class=MR><img alt="[MR]" title="Status: maybe reject" src="../common/MR.gif" border=0></span></td>
+  <th style="width: 20px;">2.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts2" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts2" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts2" value="Perhaps Reject" checked="checked">
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts2" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts2" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts2" value="Accept" >
+  </td>
+  <td>Logcrypt: Forward Security and Public Verification for Secure Audit Logs</td>
+</tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class=NO><img alt="[NO]" title="Status: none" src="../common/NO.gif" border=0></span></td>
+  <th style="width: 20px;">3.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts3" value="None" checked="checked">
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts3" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts3" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts3" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts3" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts3" value="Accept" >
+  </td>
+  <td>Cryptanalysis of Hiji-bij-bij (HBB)</td>
+</tr>
+<tr><td><a style="z-index: 97;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => DI</span></a>  <span class=DI><img alt="[DI]" title="Status: needs discussion" src="../common/DI.gif" border=0></span></td>
+  <th style="width: 20px;">4.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts4" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts4" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts4" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts4" value="Needs Discussion" checked="checked">
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts4" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts4" value="Accept" >
+  </td>
+  <td>Benes and Butterfly schemes revisited</td>
+</tr>
+<tr><td><a style="z-index: 96;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => DI</span></a>  <span class=DI><img alt="[DI]" title="Status: needs discussion" src="../common/DI.gif" border=0></span></td>
+  <th style="width: 20px;">5.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts5" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts5" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts5" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts5" value="Needs Discussion" checked="checked">
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts5" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts5" value="Accept" >
+  </td>
+  <td>A sufficient condition for key-privacy</td>
+</tr>
+<tr><td><a style="z-index: 95;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MA</span></a>  <span class=MA><img alt="[MA]" title="Status: maybe accept" src="../common/MA.gif" border=0></span></td>
+  <th style="width: 20px;">6.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts6" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts6" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts6" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts6" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts6" value="Maybe Accept" checked="checked">
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts6" value="Accept" >
+  </td>
+  <td>A Metric on the Set of Elliptic Curves over ${mathbf F}_p$.</td>
+</tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class=NO><img alt="[NO]" title="Status: none" src="../common/NO.gif" border=0></span></td>
+  <th style="width: 20px;">7.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts7" value="None" checked="checked">
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts7" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts7" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts7" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts7" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts7" value="Accept" >
+  </td>
+  <td>The Misuse of RC4 in Microsoft Word and Excel</td>
+</tr>
+<tr><td><a style="z-index: 93;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MR</span></a>  <span class=MR><img alt="[MR]" title="Status: maybe reject" src="../common/MR.gif" border=0></span></td>
+  <th style="width: 20px;">8.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts8" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts8" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts8" value="Perhaps Reject" checked="checked">
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts8" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts8" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts8" value="Accept" >
+  </td>
+  <td>Comments on &quot;Distributed Symmetric Key Management for Mobile Ad hoc Networks&quot; from INFOCOM 2004</td>
+</tr>
+<tr><td><a style="z-index: 92;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MR</span></a>  <span class=MR><img alt="[MR]" title="Status: maybe reject" src="../common/MR.gif" border=0></span></td>
+  <th style="width: 20px;">9.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts9" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts9" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts9" value="Perhaps Reject" checked="checked">
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts9" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts9" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts9" value="Accept" >
+  </td>
+  <td>Mixing properties of triangular feedback shift registers</td>
+</tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class=NO><img alt="[NO]" title="Status: none" src="../common/NO.gif" border=0></span></td>
+  <th style="width: 20px;">10.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts10" value="None" checked="checked">
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts10" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts10" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts10" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts10" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts10" value="Accept" >
+  </td>
+  <td>Update on SHA-1</td>
+</tr>
+<tr><td><a style="z-index: 90;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => AC</span></a>  <span class=AC><img alt="[AC]" title="Status: accept" src="../common/AC.gif" border=0></span></td>
+  <th style="width: 20px;">11.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts11" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts11" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts11" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts11" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts11" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts11" value="Accept" checked="checked">
+  </td>
+  <td>An Improved Elegant Method to Re-initialize Hash Chains</td>
+</tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class=NO><img alt="[NO]" title="Status: none" src="../common/NO.gif" border=0></span></td>
+  <th style="width: 20px;">12.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts12" value="None" checked="checked">
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts12" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts12" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts12" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts12" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts12" value="Accept" >
+  </td>
+  <td>Efficient Certificateless Public Key Encryption</td>
+</tr>
+<tr><td><a style="z-index: 88;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-19 17:47: NO => DI</span></a>  <span class=DI><img alt="[DI]" title="Status: needs discussion" src="../common/DI.gif" border=0></span></td>
+  <th style="width: 20px;">13.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts13" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts13" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts13" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts13" value="Needs Discussion" checked="checked">
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts13" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts13" value="Accept" >
+  </td>
+  <td>Comments: Insider attack on Cheng et al.s pairing-based tripartite key agreement protocols</td>
+</tr>
+<tr><td><a style="z-index: 87;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => DI</span></a>  <span class=DI><img alt="[DI]" title="Status: needs discussion" src="../common/DI.gif" border=0></span></td>
+  <th style="width: 20px;">14.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts14" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts14" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts14" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts14" value="Needs Discussion" checked="checked">
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts14" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts14" value="Accept" >
+  </td>
+  <td>A Chosen Ciphertext Attack on a Public Key Cryptosystem Based on Lyndon Words</td>
+</tr>
+<tr><td><a style="z-index: 86;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => DI</span></a>  <span class=DI><img alt="[DI]" title="Status: needs discussion" src="../common/DI.gif" border=0></span></td>
+  <th style="width: 20px;">15.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts15" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts15" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts15" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts15" value="Needs Discussion" checked="checked">
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts15" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts15" value="Accept" >
+  </td>
+  <td>Hierarchical Identity Based Encryption with Constant Size Ciphertext</td>
+</tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class=NO><img alt="[NO]" title="Status: none" src="../common/NO.gif" border=0></span></td>
+  <th style="width: 20px;">16.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts16" value="None" checked="checked">
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts16" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts16" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts16" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts16" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts16" value="Accept" >
+  </td>
+  <td>Narrow T-functions</td>
+</tr>
+<tr><td><a style="z-index: 84;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MR</span></a>  <span class=MR><img alt="[MR]" title="Status: maybe reject" src="../common/MR.gif" border=0></span></td>
+  <th style="width: 20px;">17.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts17" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts17" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts17" value="Perhaps Reject" checked="checked">
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts17" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts17" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts17" value="Accept" >
+  </td>
+  <td>Side Channel Attacks on Implementations of Curve-Based Cryptographic Primitives</td>
+</tr>
+<tr><td><a style="z-index: 83;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MA</span></a>  <span class=MA><img alt="[MA]" title="Status: maybe accept" src="../common/MA.gif" border=0></span></td>
+  <th style="width: 20px;">18.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts18" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts18" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts18" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts18" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts18" value="Maybe Accept" checked="checked">
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts18" value="Accept" >
+  </td>
+  <td>Collusion Resistant Broadcast Encryption With Short Ciphertexts and Private Keys</td>
+</tr>
+<tr><td><a style="z-index: 82;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MA</span></a>  <span class=MA><img alt="[MA]" title="Status: maybe accept" src="../common/MA.gif" border=0></span></td>
+  <th style="width: 20px;">19.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts19" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts19" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts19" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts19" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts19" value="Maybe Accept" checked="checked">
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts19" value="Accept" >
+  </td>
+  <td>The Full Abstraction of the UC Framework</td>
+</tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class=NO><img alt="[NO]" title="Status: none" src="../common/NO.gif" border=0></span></td>
+  <th style="width: 20px;">20.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts20" value="None" checked="checked">
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts20" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts20" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts20" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts20" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts20" value="Accept" >
+  </td>
+  <td>(De)Compositions of Cryptographic Schemes and their Applications to Protocols</td>
+</tr>
+<tr><td><a style="z-index: 80;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => AC</span></a>  <span class=AC><img alt="[AC]" title="Status: accept" src="../common/AC.gif" border=0></span></td>
+  <th style="width: 20px;">21.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts21" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts21" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts21" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts21" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts21" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts21" value="Accept" checked="checked">
+  </td>
+  <td>Partial Hiding in Public-Key Cryptography</td>
+</tr>
+<tr><td><a style="z-index: 79;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => DI</span></a>  <span class=DI><img alt="[DI]" title="Status: needs discussion" src="../common/DI.gif" border=0></span></td>
+  <th style="width: 20px;">22.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts22" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts22" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts22" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts22" value="Needs Discussion" checked="checked">
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts22" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts22" value="Accept" >
+  </td>
+  <td>An Improved and Efficient Countermeasure against Power Analysis Attacks</td>
+</tr>
+<tr><td><a style="z-index: 78;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => DI</span></a>  <span class=DI><img alt="[DI]" title="Status: needs discussion" src="../common/DI.gif" border=0></span></td>
+  <th style="width: 20px;">23.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts23" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts23" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts23" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts23" value="Needs Discussion" checked="checked">
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts23" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts23" value="Accept" >
+  </td>
+  <td>A Construction of Public-Key Cryptosystem Using Algebraic Coding on the Basis of Superimposition and Randomness</td>
+</tr>
+<tr><td><a style="z-index: 77;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MR</span></a>  <span class=MR><img alt="[MR]" title="Status: maybe reject" src="../common/MR.gif" border=0></span></td>
+  <th style="width: 20px;">24.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts24" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts24" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts24" value="Perhaps Reject" checked="checked">
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts24" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts24" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts24" value="Accept" >
+  </td>
+  <td>On the Diffie-Hellman problem over $GL_{n}$</td>
+</tr>
+<tr><td><a style="z-index: 76;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MA</span></a>  <span class=MA><img alt="[MA]" title="Status: maybe accept" src="../common/MA.gif" border=0></span></td>
+  <th style="width: 20px;">25.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts25" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts25" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts25" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts25" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts25" value="Maybe Accept" checked="checked">
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts25" value="Accept" >
+  </td>
+  <td>Analysis of Affinely Equivalent Boolean Functions</td>
+</tr>
+<tr><td><a style="z-index: 75;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => RE</span></a>  <span class=RE><img alt="[RE]" title="Status: reject" src="../common/RE.gif" border=0></span></td>
+  <th style="width: 20px;">26.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts26" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts26" value="Reject" checked="checked">
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts26" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts26" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts26" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts26" value="Accept" >
+  </td>
+  <td>Techniques for random maskin in hardware</td>
+</tr>
+<tr><td><a style="z-index: 74;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => DI</span></a>  <span class=DI><img alt="[DI]" title="Status: needs discussion" src="../common/DI.gif" border=0></span></td>
+  <th style="width: 20px;">27.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts27" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts27" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts27" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts27" value="Needs Discussion" checked="checked">
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts27" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts27" value="Accept" >
+  </td>
+  <td>Tag-KEM/DEM: A New Framework for Hybrid Encryption</td>
+</tr>
+<tr><td><a style="z-index: 73;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => DI</span></a>  <span class=DI><img alt="[DI]" title="Status: needs discussion" src="../common/DI.gif" border=0></span></td>
+  <th style="width: 20px;">28.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts28" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts28" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts28" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts28" value="Needs Discussion" checked="checked">
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts28" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts28" value="Accept" >
+  </td>
+  <td>Improved Proxy Re-Encryption Schemes with Applications to Secure Distributed Storage</td>
+</tr>
+<tr><td><a style="z-index: 72;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => AC</span></a>  <span class=AC><img alt="[AC]" title="Status: accept" src="../common/AC.gif" border=0></span></td>
+  <th style="width: 20px;">29.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts29" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts29" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts29" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts29" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts29" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts29" value="Accept" checked="checked">
+  </td>
+  <td>A model and architecture for pseudo-random generation with applications to /dev/random</td>
+</tr>
+<tr><td><a style="z-index: 71;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => RE</span></a>  <span class=RE><img alt="[RE]" title="Status: reject" src="../common/RE.gif" border=0></span></td>
+  <th style="width: 20px;">30.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts30" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts30" value="Reject" checked="checked">
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts30" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts30" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts30" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts30" value="Accept" >
+  </td>
+  <td>Weak keys of pairing based Diffie Hellman schemes on elliptic curves</td>
+</tr>
+<tr><td><a style="z-index: 70;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => DI</span></a>  <span class=DI><img alt="[DI]" title="Status: needs discussion" src="../common/DI.gif" border=0></span></td>
+  <th style="width: 20px;">31.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts31" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts31" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts31" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts31" value="Needs Discussion" checked="checked">
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts31" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts31" value="Accept" >
+  </td>
+  <td>The Vector Decomposition Problem for Elliptic and Hyperelliptic Curves</td>
+</tr>
+<tr><td><a style="z-index: 69;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => DI</span></a>  <span class=DI><img alt="[DI]" title="Status: needs discussion" src="../common/DI.gif" border=0></span></td>
+  <th style="width: 20px;">32.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts32" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts32" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts32" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts32" value="Needs Discussion" checked="checked">
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts32" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts32" value="Accept" >
+  </td>
+  <td>On the Notion of Statistical Security in Simulatability Definitions</td>
+</tr>
+<tr><td><a style="z-index: 68;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => DI</span></a>  <span class=DI><img alt="[DI]" title="Status: needs discussion" src="../common/DI.gif" border=0></span></td>
+  <th style="width: 20px;">33.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts33" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts33" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts33" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts33" value="Needs Discussion" checked="checked">
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts33" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts33" value="Accept" >
+  </td>
+  <td>A Flexible Framework for Secret Handshakes</td>
+</tr>
+<tr><td><a style="z-index: 67;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MA</span></a>  <span class=MA><img alt="[MA]" title="Status: maybe accept" src="../common/MA.gif" border=0></span></td>
+  <th style="width: 20px;">34.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts34" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts34" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts34" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts34" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts34" value="Maybe Accept" checked="checked">
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts34" value="Accept" >
+  </td>
+  <td>An Efficient CDH-based Signature Scheme With a Tight Security Reduction</td>
+</tr>
+<tr><td><a style="z-index: 66;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MR</span></a>  <span class=MR><img alt="[MR]" title="Status: maybe reject" src="../common/MR.gif" border=0></span></td>
+  <th style="width: 20px;">35.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts35" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts35" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts35" value="Perhaps Reject" checked="checked">
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts35" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts35" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts35" value="Accept" >
+  </td>
+  <td>Concurrent Composition of Secure Protocols in the Timing Model</td>
+</tr>
+<tr><td><a style="z-index: 65;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MR</span></a>  <span class=MR><img alt="[MR]" title="Status: maybe reject" src="../common/MR.gif" border=0></span></td>
+  <th style="width: 20px;">36.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts36" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts36" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts36" value="Perhaps Reject" checked="checked">
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts36" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts36" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts36" value="Accept" >
+  </td>
+  <td>Improving Secure Server Performance by Re-balancing SSL/TLS Handshakes</td>
+</tr>
+<tr><td><a style="z-index: 64;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MR</span></a>  <span class=MR><img alt="[MR]" title="Status: maybe reject" src="../common/MR.gif" border=0></span></td>
+  <th style="width: 20px;">37.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts37" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts37" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts37" value="Perhaps Reject" checked="checked">
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts37" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts37" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts37" value="Accept" >
+  </td>
+  <td>Distinguishing Stream Ciphers with Convolutional Filters</td>
+</tr>
+<tr><td><a style="z-index: 63;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MR</span></a>  <span class=MR><img alt="[MR]" title="Status: maybe reject" src="../common/MR.gif" border=0></span></td>
+  <th style="width: 20px;">38.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts38" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts38" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts38" value="Perhaps Reject" checked="checked">
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts38" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts38" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts38" value="Accept" >
+  </td>
+  <td>Unfairness of a protocol for certified delivery</td>
+</tr>
+<tr><td><a style="z-index: 62;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => RE</span></a>  <span class=RE><img alt="[RE]" title="Status: reject" src="../common/RE.gif" border=0></span></td>
+  <th style="width: 20px;">39.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts39" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts39" value="Reject" checked="checked">
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts39" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts39" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts39" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts39" value="Accept" >
+  </td>
+  <td>On the Security of a Group Signature Scheme with Strong Separability</td>
+</tr>
+<tr><td><a style="z-index: 61;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MA</span></a>  <span class=MA><img alt="[MA]" title="Status: maybe accept" src="../common/MA.gif" border=0></span></td>
+  <th style="width: 20px;">40.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts40" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts40" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts40" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts40" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts40" value="Maybe Accept" checked="checked">
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts40" value="Accept" >
+  </td>
+  <td>Polyhedrons over Finite Abelian Groups and Their Cryptographic Applications</td>
+</tr>
+<tr><td><a style="z-index: 60;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => AC</span></a>  <span class=AC><img alt="[AC]" title="Status: accept" src="../common/AC.gif" border=0></span></td>
+  <th style="width: 20px;">41.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts41" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts41" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts41" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts41" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts41" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts41" value="Accept" checked="checked">
+  </td>
+  <td>An Efficient Solution to The Millionaires Problem Based on Homomorphic Encryption</td>
+</tr>
+<tr><td><a style="z-index: 59;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => DI</span></a>  <span class=DI><img alt="[DI]" title="Status: needs discussion" src="../common/DI.gif" border=0></span></td>
+  <th style="width: 20px;">42.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts42" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts42" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts42" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts42" value="Needs Discussion" checked="checked">
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts42" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts42" value="Accept" >
+  </td>
+  <td>On the affine classification of cubic bent functions</td>
+</tr>
+<tr><td><a style="z-index: 58;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => DI</span></a>  <span class=DI><img alt="[DI]" title="Status: needs discussion" src="../common/DI.gif" border=0></span></td>
+  <th style="width: 20px;">43.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts43" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts43" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts43" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts43" value="Needs Discussion" checked="checked">
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts43" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts43" value="Accept" >
+  </td>
+  <td>Choosing Parameter Sets for NTRUEncrypt with NAEP and SVES-3</td>
+</tr>
+<tr><td><a style="z-index: 57;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => DI</span></a>  <span class=DI><img alt="[DI]" title="Status: needs discussion" src="../common/DI.gif" border=0></span></td>
+  <th style="width: 20px;">44.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts44" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts44" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts44" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts44" value="Needs Discussion" checked="checked">
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts44" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts44" value="Accept" >
+  </td>
+  <td>New Approaches for Deniable Authentication</td>
+</tr>
+<tr><td><a style="z-index: 56;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => DI</span></a>  <span class=DI><img alt="[DI]" title="Status: needs discussion" src="../common/DI.gif" border=0></span></td>
+  <th style="width: 20px;">45.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts45" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts45" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts45" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts45" value="Needs Discussion" checked="checked">
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts45" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts45" value="Accept" >
+  </td>
+  <td>Cryptanalysis of an anonymous wireless authentication and conference key distribution scheme</td>
+</tr>
+<tr><td><a style="z-index: 55;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MA</span></a>  <span class=MA><img alt="[MA]" title="Status: maybe accept" src="../common/MA.gif" border=0></span></td>
+  <th style="width: 20px;">46.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts46" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts46" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts46" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts46" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts46" value="Maybe Accept" checked="checked">
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts46" value="Accept" >
+  </td>
+  <td>Cryptanalysis of two identification schemes based on an ID-based cryptosystem</td>
+</tr>
+<tr><td><a style="z-index: 54;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MA</span></a>  <span class=MA><img alt="[MA]" title="Status: maybe accept" src="../common/MA.gif" border=0></span></td>
+  <th style="width: 20px;">47.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts47" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts47" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts47" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts47" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts47" value="Maybe Accept" checked="checked">
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts47" value="Accept" >
+  </td>
+  <td>Adversarial Model for Radio Frequency Identification</td>
+</tr>
+<tr><td><a style="z-index: 53;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MR</span></a>  <span class=MR><img alt="[MR]" title="Status: maybe reject" src="../common/MR.gif" border=0></span></td>
+  <th style="width: 20px;">48.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts48" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts48" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts48" value="Perhaps Reject" checked="checked">
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts48" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts48" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts48" value="Accept" >
+  </td>
+  <td>David Chaum's Voter Verification using Encrypted Paper Receipts</td>
+</tr>
+<tr><td><a style="z-index: 52;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => RE</span></a>  <span class=RE><img alt="[RE]" title="Status: reject" src="../common/RE.gif" border=0></span></td>
+  <th style="width: 20px;">49.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts49" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts49" value="Reject" checked="checked">
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts49" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts49" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts49" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts49" value="Accept" >
+  </td>
+  <td>A Note on Shor's Quantum  Algorithm for Prime Factorization</td>
+</tr>
+<tr><td><a style="z-index: 51;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => DI</span></a>  <span class=DI><img alt="[DI]" title="Status: needs discussion" src="../common/DI.gif" border=0></span></td>
+  <th style="width: 20px;">50.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts50" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts50" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts50" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts50" value="Needs Discussion" checked="checked">
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts50" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts50" value="Accept" >
+  </td>
+  <td>Picking Virtual Pockets using Relay Attacks on Contactless Smartcard Systems</td>
+</tr>
+<tr><td><a style="z-index: 50;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => DI</span></a>  <span class=DI><img alt="[DI]" title="Status: needs discussion" src="../common/DI.gif" border=0></span></td>
+  <th style="width: 20px;">51.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts51" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts51" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts51" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts51" value="Needs Discussion" checked="checked">
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts51" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts51" value="Accept" >
+  </td>
+  <td>An Approach Towards Rebalanced RSA-CRT with Short Public Exponent</td>
+</tr>
+<tr><td><a style="z-index: 48;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MA</span></a>  <span class=MA><img alt="[MA]" title="Status: maybe accept" src="../common/MA.gif" border=0></span></td>
+  <th style="width: 20px;">53.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts53" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts53" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts53" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts53" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts53" value="Maybe Accept" checked="checked">
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts53" value="Accept" >
+  </td>
+  <td>Untraceability of Two Group Signature Schemes</td>
+</tr>
+<tr><td><a style="z-index: 47;" class=tooltips href="status.html#openHistory" onclick="return expand('history');">&nbsp;&bull;&nbsp;&nbsp;<span>Oct-23 11:59: NO => MA</span></a>  <span class=MA><img alt="[MA]" title="Status: maybe accept" src="../common/MA.gif" border=0></span></td>
+  <th style="width: 20px;">54.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts54" value="None" >
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts54" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts54" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts54" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts54" value="Maybe Accept" checked="checked">
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts54" value="Accept" >
+  </td>
+  <td>Key Derivation and Randomness Extraction</td>
+</tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class=NO><img alt="[NO]" title="Status: none" src="../common/NO.gif" border=0></span></td>
+  <th style="width: 20px;">101.</th>
+  <td class="setNO" style="width: 20px;">
+    <input type="radio" name="subStts101" value="None" checked="checked">
+  </td>
+  <td class="setRE" style="width: 20px;">
+    <input type="radio" name="subStts101" value="Reject" >
+  </td>
+  <td class="setMR" style="width: 20px;">
+    <input type="radio" name="subStts101" value="Perhaps Reject" >
+  </td>
+  <td class="setDI" style="width: 20px;">
+    <input type="radio" name="subStts101" value="Needs Discussion" >
+  </td>
+  <td class="setMA" style="width: 20px;">
+    <input type="radio" name="subStts101" value="Maybe Accept" >
+  </td>
+  <td class="setAC" style="width: 20px;">
+    <input type="radio" name="subStts101" value="Accept" >
+  </td>
+  <td>One More Cup of Coffee</td>
+</tr>
+</tbody></table>
+<form action="status.html" enctype="multipart/form-data" method="get">
+<input type="submit" name="noAnchor" value="Set Status">
+</form>
+
+<h3>Complete Revision History <a class=hidden name="openHistory" href="status.html#openHistory" Id="openHistory" onclick="return expandCollapse('history');">(click to expand/collapse)</a></h3>
+<div Id="history"><table><tbody>
+<tr align=left><th>Num</th><th>When</th><th> What</th></tr>
+<tr><td><b>2.</b></td><td>Oct-23 11:59: </td><td> NO => MR</td></tr>
+<tr><td><b>4.</b></td><td>Oct-23 11:59: </td><td> NO => DI</td></tr>
+<tr><td><b>5.</b></td><td>Oct-23 11:59: </td><td> NO => DI</td></tr>
+<tr><td><b>6.</b></td><td>Oct-23 11:59: </td><td> NO => MA</td></tr>
+<tr><td><b>8.</b></td><td>Oct-23 11:59: </td><td> NO => MR</td></tr>
+<tr><td><b>9.</b></td><td>Oct-23 11:59: </td><td> NO => MR</td></tr>
+<tr><td><b>11.</b></td><td>Oct-23 11:59: </td><td> NO => AC</td></tr>
+<tr><td><b>14.</b></td><td>Oct-23 11:59: </td><td> NO => DI</td></tr>
+<tr><td><b>15.</b></td><td>Oct-23 11:59: </td><td> NO => DI</td></tr>
+<tr><td><b>17.</b></td><td>Oct-23 11:59: </td><td> NO => MR</td></tr>
+<tr><td><b>18.</b></td><td>Oct-23 11:59: </td><td> NO => MA</td></tr>
+<tr><td><b>19.</b></td><td>Oct-23 11:59: </td><td> NO => MA</td></tr>
+<tr><td><b>21.</b></td><td>Oct-23 11:59: </td><td> NO => AC</td></tr>
+<tr><td><b>22.</b></td><td>Oct-23 11:59: </td><td> NO => DI</td></tr>
+<tr><td><b>23.</b></td><td>Oct-23 11:59: </td><td> NO => DI</td></tr>
+<tr><td><b>24.</b></td><td>Oct-23 11:59: </td><td> NO => MR</td></tr>
+<tr><td><b>25.</b></td><td>Oct-23 11:59: </td><td> NO => MA</td></tr>
+<tr><td><b>26.</b></td><td>Oct-23 11:59: </td><td> NO => RE</td></tr>
+<tr><td><b>27.</b></td><td>Oct-23 11:59: </td><td> NO => DI</td></tr>
+<tr><td><b>28.</b></td><td>Oct-23 11:59: </td><td> NO => DI</td></tr>
+<tr><td><b>29.</b></td><td>Oct-23 11:59: </td><td> NO => AC</td></tr>
+<tr><td><b>30.</b></td><td>Oct-23 11:59: </td><td> NO => RE</td></tr>
+<tr><td><b>31.</b></td><td>Oct-23 11:59: </td><td> NO => DI</td></tr>
+<tr><td><b>32.</b></td><td>Oct-23 11:59: </td><td> NO => DI</td></tr>
+<tr><td><b>33.</b></td><td>Oct-23 11:59: </td><td> NO => DI</td></tr>
+<tr><td><b>34.</b></td><td>Oct-23 11:59: </td><td> NO => MA</td></tr>
+<tr><td><b>35.</b></td><td>Oct-23 11:59: </td><td> NO => MR</td></tr>
+<tr><td><b>36.</b></td><td>Oct-23 11:59: </td><td> NO => MR</td></tr>
+<tr><td><b>37.</b></td><td>Oct-23 11:59: </td><td> NO => MR</td></tr>
+<tr><td><b>38.</b></td><td>Oct-23 11:59: </td><td> NO => MR</td></tr>
+<tr><td><b>39.</b></td><td>Oct-23 11:59: </td><td> NO => RE</td></tr>
+<tr><td><b>40.</b></td><td>Oct-23 11:59: </td><td> NO => MA</td></tr>
+<tr><td><b>41.</b></td><td>Oct-23 11:59: </td><td> NO => AC</td></tr>
+<tr><td><b>42.</b></td><td>Oct-23 11:59: </td><td> NO => DI</td></tr>
+<tr><td><b>43.</b></td><td>Oct-23 11:59: </td><td> NO => DI</td></tr>
+<tr><td><b>44.</b></td><td>Oct-23 11:59: </td><td> NO => DI</td></tr>
+<tr><td><b>45.</b></td><td>Oct-23 11:59: </td><td> NO => DI</td></tr>
+<tr><td><b>46.</b></td><td>Oct-23 11:59: </td><td> NO => MA</td></tr>
+<tr><td><b>47.</b></td><td>Oct-23 11:59: </td><td> NO => MA</td></tr>
+<tr><td><b>48.</b></td><td>Oct-23 11:59: </td><td> NO => MR</td></tr>
+<tr><td><b>49.</b></td><td>Oct-23 11:59: </td><td> NO => RE</td></tr>
+<tr><td><b>50.</b></td><td>Oct-23 11:59: </td><td> NO => DI</td></tr>
+<tr><td><b>51.</b></td><td>Oct-23 11:59: </td><td> NO => DI</td></tr>
+<tr><td><b>53.</b></td><td>Oct-23 11:59: </td><td> NO => MA</td></tr>
+<tr><td><b>54.</b></td><td>Oct-23 11:59: </td><td> NO => MA</td></tr>
+<tr><td><b>1.</b></td><td>Oct-19 17:51: </td><td> NO => MA</td></tr>
+<tr><td><b>13.</b></td><td>Oct-19 17:47: </td><td> NO => DI</td></tr>
+</tbody></table></div>
+
+<hr />
+<div style="text-align: center;">
+[<a href="index2.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+[<a href="undoLast.html">Undo/Redo</a>] 
+</div>
+</body></html>

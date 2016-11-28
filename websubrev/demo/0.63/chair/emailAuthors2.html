@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<style type="text/css">
+h1 {text-align: center;}
+</style>
+<title>Send Email to Authors of Submissions to TEST 2007</title>
+</head>
+<body>
+<div style="text-align: center;">
+[<a href="index4.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+[<a href="undoLast.html">Undo/Redo</a>] 
+</div>
+<hr />
+<h1>Send Email to Authors of Submissions to TEST 2007</h1>
+<form name="emailToAuthors" action="index4.html"
+      enctype="multipart/form-data" method="post">
+
+Subject: <input type=text size=80 name=subject value="Please remember to submit the camera-ready version by next week"><br/><br/>
+You can use the keywords <tt>&lt;$subId&gt;, &lt;$subPwd&gt;, 
+&lt;$authors&gt;,</tt> and <tt>&lt;$title&gt;</tt> in the message body.
+They will be replaced by the authors, title and the submission-ID and
+password as they appear in the database. (To be recognized as keywords,
+these words MUST include the '<' and '>' characters and the dollar-sign.)<br/>
+<textarea cols=80 rows=20 name=message>Dear &lt;$authors&gt;,
+
+Just a gentel reminder that the carema-ready deadline for TEST 2007 is
+next week. Please submit the final version of your paper 
+
+  &lt;$title&gt;
+
+by the deadline. 
+</textarea><br/>
+<br/>
+Click <input type="submit" value="Send email"> to send the message
+above to the authors of all the accepted submissions. 
+</form>
+<hr />
+<div style="text-align: center;">
+[<a href="index2.html">Administer</a>] 
+[<a href="http://people.csail.mit.edu/shaih/websubrev/demo/0.63/review/index4.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+[<a href="undoLast.html">Undo/Redo</a>] 
+</div>
+</body>
+</html>

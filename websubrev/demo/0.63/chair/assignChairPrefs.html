@@ -1,0 +1,583 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<style type="text/css">h1 { text-align:center; }</style>
+<link rel="stylesheet" type="text/css" href="../common/autosuggest.css" />        
+<script type="text/javascript">
+  /**
+   * Provides suggestions for PC member names
+   * @class
+   * @scope public
+   */
+  function Suggestions() {
+    this.suggest = [ "David Beckham",
+    "Fabio Cannavaro",
+    "Angelos Charisteas",
+    "Joy Fawcett",
+    "Danielle Fotopoulos",
+    "Julie Foudy",
+    "Stylianos Giannakopoulos",
+    "Mia Hamm",
+    "Devvyn Hawkins",
+    "Angela Hucles",
+    "Jena Kluegel",
+    "Amy LePeilbet",
+    "Paolo Maldini",
+    "Antonios Nikopolidis",
+    "Michael Owen",
+    "Francesco Totti",
+    "Zinedine Zidane" ];
+  }
+
+  window.onload = function () {
+    var nForms = document.forms.length;
+    for (i=0; i<nForms; i++) {
+      nFlds = document.forms[i].elements.length;
+      for (j=0; j<nFlds; j++) {
+        fld = document.forms[i].elements[j];
+	if (fld.name.substring(0,5)=="cList") {
+	  var oTextbox = new AutoSuggestControl(fld, new Suggestions()); 
+	}
+      }
+    }
+  };
+</script>
+<script type="text/javascript" src="../common/autosuggest.js"></script>
+
+<title>Chair Assignment Preferences</title>
+</head>
+<body>
+<div style="text-align: center;">
+[<a href="assignments.html">Assignments</a>] 
+[<a href="index2.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+[<a href="undoLast.html">Undo/Redo</a>] 
+
+</div>
+<hr/>
+<h1>Chair Assignment Preferences</h1>
+<p>
+You can use this form to specify your own preferences as to who should
+(or should not) review what submission. These preferences are non-binding,
+they are used just to keep notes for yourself: the choices you make here
+will be shown in the <a href="assignmentMatrix.html">matrix interface</a>.
+Specifically, the check-boxes are colored <span style="color: green;">
+green</span> when you indicate that the PC-member should review the submission
+or <span style="color: red;">red</span> when you indicate that the PC-member
+should not review the submission.</p>
+<p>
+
+For each submission you may provide a <b>semi-colon-separated</b> list
+of PC members that you would like to review that submission, and another
+list of members that you prefer will <i>not</i> review that submission. 
+When listing PC members, you should provide the name of the PC member as
+recorded in the database. You can specify only a prefix of the name, as long
+as it is sufficient to uniquely identify a single member (e.g., if you have
+a committee member named Wawrzyniec C. Antroponimiczna, it may be enough to
+write "Waw"). For example, to specify that you would like Attila T. Hun and
+Britney Spears to review submission number 132, but not George W. Bush, you
+may use the following line:
+
+<ol>
+<li value="132"> The title of submission number 132<br/>
+  Yes:<input size=85 value="Attila; Britney S" readonly="on"/><br/> 
+  No: <input size=85 value="George W. B" readonly="on"/><br/></li>
+</ol>
+
+<h3>Current PC members:</h3>
+<table width=100%><tbody>
+<tr>
+  <td>David Beckham</td>
+  <td>Fabio Cannavaro</td>
+  <td>Angelos Charisteas</td>
+  <td>Joy Fawcett</td>
+
+</tr>
+<tr>
+  <td>Danielle Fotopoulos</td>
+  <td>Julie Foudy</td>
+  <td>Stylianos Giannakopoulos</td>
+  <td>Mia Hamm</td>
+</tr>
+<tr>
+  <td>Devvyn Hawkins</td>
+
+  <td>Angela Hucles</td>
+  <td>Jena Kluegel</td>
+  <td>Amy LePeilbet</td>
+</tr>
+<tr>
+  <td>Paolo Maldini</td>
+  <td>Antonios Nikopolidis</td>
+
+  <td>Michael Owen</td>
+  <td>Francesco Totti</td>
+</tr>
+<tr>
+  <td>Zinedine Zidane</td>
+  <td colspan=3></td>
+</tr>
+</tbody></table>
+
+<h3>List of submissions</h3>
+
+<form action="assignments.html" enctype="multipart/form-data" method=post autocomplete=off>
+<ol>  <li value="1">
+    <a href="../review/submission1.html@subId=1">On Obfuscating Point Functions</a><br/>
+    Yes:<input type="text" name="cListYes1" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo1" size=85 value="">
+    <br/><br/>
+  </li>
+
+  <li value="2">
+    <a href="../review/submission1.html@subId=2">Logcrypt: Forward Security and Public Verification for Secure Audit Logs</a><br/>
+    Yes:<input type="text" name="cListYes2" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo2" size=85 value="">
+    <br/><br/>
+  </li>
+
+  <li value="3">
+    <a href="../review/submission1.html@subId=3">Cryptanalysis of Hiji-bij-bij (HBB)</a><br/>
+    Yes:<input type="text" name="cListYes3" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo3" size=85 value="">
+    <br/><br/>
+  </li>
+
+  <li value="4">
+    <a href="../review/submission1.html@subId=4">Benes and Butterfly schemes revisited</a><br/>
+    Yes:<input type="text" name="cListYes4" size=85 value="Angelos Charisteas">
+    <br/>
+    No: <input type="text" name="cListNo4" size=85 value="Michael Owen">
+    <br/><br/>
+  </li>
+
+  <li value="5">
+    <a href="../review/submission1.html@subId=5">A sufficient condition for key-privacy</a><br/>
+    Yes:<input type="text" name="cListYes5" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo5" size=85 value="">
+    <br/><br/>
+  </li>
+
+  <li value="6">
+    <a href="../review/submission1.html@subId=6">A Metric on the Set of Elliptic Curves over ${mathbf F}_p$.</a><br/>
+    Yes:<input type="text" name="cListYes6" size=85 value="Julie Foudy">
+    <br/>
+    No: <input type="text" name="cListNo6" size=85 value="">
+    <br/><br/>
+  </li>
+
+  <li value="7">
+    <a href="../review/submission1.html@subId=7">The Misuse of RC4 in Microsoft Word and Excel</a><br/>
+    Yes:<input type="text" name="cListYes7" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo7" size=85 value="">
+    <br/><br/>
+  </li>
+
+  <li value="8">
+    <a href="../review/submission1.html@subId=8">Comments on &quot;Distributed Symmetric Key Management for Mobile Ad hoc Networks&quot; from INFOCOM 2004</a><br/>
+    Yes:<input type="text" name="cListYes8" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo8" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="9">
+    <a href="../review/submission1.html@subId=9">Mixing properties of triangular feedback shift registers</a><br/>
+    Yes:<input type="text" name="cListYes9" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo9" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="10">
+    <a href="../review/submission1.html@subId=10">Update on SHA-1</a><br/>
+    Yes:<input type="text" name="cListYes10" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo10" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="11">
+    <a href="../review/submission1.html@subId=11">An Improved Elegant Method to Re-initialize Hash Chains</a><br/>
+    Yes:<input type="text" name="cListYes11" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo11" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="12">
+    <a href="../review/submission1.html@subId=12">Efficient Certificateless Public Key Encryption</a><br/>
+    Yes:<input type="text" name="cListYes12" size=85 value="Angelos Charisteas">
+    <br/>
+    No: <input type="text" name="cListNo12" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="13">
+    <a href="../review/submission1.html@subId=13">Comments: Insider attack on Cheng et al.s pairing-based tripartite key agreement protocols</a><br/>
+    Yes:<input type="text" name="cListYes13" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo13" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="14">
+    <a href="../review/submission1.html@subId=14">A Chosen Ciphertext Attack on a Public Key Cryptosystem Based on Lyndon Words</a><br/>
+    Yes:<input type="text" name="cListYes14" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo14" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="15">
+    <a href="../review/submission1.html@subId=15">Hierarchical Identity Based Encryption with Constant Size Ciphertext</a><br/>
+    Yes:<input type="text" name="cListYes15" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo15" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="16">
+    <a href="../review/submission1.html@subId=16">Narrow T-functions</a><br/>
+    Yes:<input type="text" name="cListYes16" size=85 value="David Beckham">
+    <br/>
+    No: <input type="text" name="cListNo16" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="17">
+    <a href="../review/submission1.html@subId=17">Side Channel Attacks on Implementations of Curve-Based Cryptographic Primitives</a><br/>
+    Yes:<input type="text" name="cListYes17" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo17" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="18">
+    <a href="../review/submission1.html@subId=18">Collusion Resistant Broadcast Encryption With Short Ciphertexts and Private Keys</a><br/>
+    Yes:<input type="text" name="cListYes18" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo18" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="19">
+    <a href="../review/submission1.html@subId=19">The Full Abstraction of the UC Framework</a><br/>
+    Yes:<input type="text" name="cListYes19" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo19" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="20">
+    <a href="../review/submission1.html@subId=20">(De)Compositions of Cryptographic Schemes and their Applications to Protocols</a><br/>
+    Yes:<input type="text" name="cListYes20" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo20" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="21">
+    <a href="../review/submission1.html@subId=21">Partial Hiding in Public-Key Cryptography</a><br/>
+    Yes:<input type="text" name="cListYes21" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo21" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="22">
+    <a href="../review/submission1.html@subId=22">An Improved and Efficient Countermeasure against Power Analysis Attacks</a><br/>
+    Yes:<input type="text" name="cListYes22" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo22" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="23">
+    <a href="../review/submission1.html@subId=23">A Construction of Public-Key Cryptosystem Using Algebraic Coding on the Basis of Superimposition and Randomness</a><br/>
+    Yes:<input type="text" name="cListYes23" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo23" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="24">
+    <a href="../review/submission1.html@subId=24">On the Diffie-Hellman problem over $GL_{n}$</a><br/>
+    Yes:<input type="text" name="cListYes24" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo24" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="25">
+    <a href="../review/submission1.html@subId=25">Analysis of Affinely Equivalent Boolean Functions</a><br/>
+    Yes:<input type="text" name="cListYes25" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo25" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="26">
+    <a href="../review/submission1.html@subId=26">Techniques for random maskin in hardware</a><br/>
+    Yes:<input type="text" name="cListYes26" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo26" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="27">
+    <a href="../review/submission1.html@subId=27">Tag-KEM/DEM: A New Framework for Hybrid Encryption</a><br/>
+    Yes:<input type="text" name="cListYes27" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo27" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="28">
+    <a href="../review/submission1.html@subId=28">Improved Proxy Re-Encryption Schemes with Applications to Secure Distributed Storage</a><br/>
+    Yes:<input type="text" name="cListYes28" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo28" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="29">
+    <a href="../review/submission1.html@subId=29">A model and architecture for pseudo-random generation with applications to /dev/random</a><br/>
+    Yes:<input type="text" name="cListYes29" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo29" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="30">
+    <a href="../review/submission1.html@subId=30">Weak keys of pairing based Diffie Hellman schemes on elliptic curves</a><br/>
+    Yes:<input type="text" name="cListYes30" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo30" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="31">
+    <a href="../review/submission1.html@subId=31">The Vector Decomposition Problem for Elliptic and Hyperelliptic Curves</a><br/>
+    Yes:<input type="text" name="cListYes31" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo31" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="32">
+    <a href="../review/submission1.html@subId=32">On the Notion of Statistical Security in Simulatability Definitions</a><br/>
+    Yes:<input type="text" name="cListYes32" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo32" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="33">
+    <a href="../review/submission1.html@subId=33">A Flexible Framework for Secret Handshakes</a><br/>
+    Yes:<input type="text" name="cListYes33" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo33" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="34">
+    <a href="../review/submission1.html@subId=34">An Efficient CDH-based Signature Scheme With a Tight Security Reduction</a><br/>
+    Yes:<input type="text" name="cListYes34" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo34" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="35">
+    <a href="../review/submission1.html@subId=35">Concurrent Composition of Secure Protocols in the Timing Model</a><br/>
+    Yes:<input type="text" name="cListYes35" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo35" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="36">
+    <a href="../review/submission1.html@subId=36">Improving Secure Server Performance by Re-balancing SSL/TLS Handshakes</a><br/>
+    Yes:<input type="text" name="cListYes36" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo36" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="37">
+    <a href="../review/submission1.html@subId=37">Distinguishing Stream Ciphers with Convolutional Filters</a><br/>
+    Yes:<input type="text" name="cListYes37" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo37" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="38">
+    <a href="../review/submission1.html@subId=38">Unfairness of a protocol for certified delivery</a><br/>
+    Yes:<input type="text" name="cListYes38" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo38" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="39">
+    <a href="../review/submission1.html@subId=39">On the Security of a Group Signature Scheme with Strong Separability</a><br/>
+    Yes:<input type="text" name="cListYes39" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo39" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="40">
+    <a href="../review/submission1.html@subId=40">Polyhedrons over Finite Abelian Groups and Their Cryptographic Applications</a><br/>
+    Yes:<input type="text" name="cListYes40" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo40" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="41">
+    <a href="../review/submission1.html@subId=41">An Efficient Solution to The Millionaires Problem Based on Homomorphic Encryption</a><br/>
+    Yes:<input type="text" name="cListYes41" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo41" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="42">
+    <a href="../review/submission1.html@subId=42">On the affine classification of cubic bent functions</a><br/>
+    Yes:<input type="text" name="cListYes42" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo42" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="43">
+    <a href="../review/submission1.html@subId=43">Choosing Parameter Sets for NTRUEncrypt with NAEP and SVES-3</a><br/>
+    Yes:<input type="text" name="cListYes43" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo43" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="44">
+    <a href="../review/submission1.html@subId=44">New Approaches for Deniable Authentication</a><br/>
+    Yes:<input type="text" name="cListYes44" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo44" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="45">
+    <a href="../review/submission1.html@subId=45">Cryptanalysis of an anonymous wireless authentication and conference key distribution scheme</a><br/>
+    Yes:<input type="text" name="cListYes45" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo45" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="46">
+    <a href="../review/submission1.html@subId=46">Cryptanalysis of two identification schemes based on an ID-based cryptosystem</a><br/>
+    Yes:<input type="text" name="cListYes46" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo46" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="47">
+    <a href="../review/submission1.html@subId=47">Adversarial Model for Radio Frequency Identification</a><br/>
+    Yes:<input type="text" name="cListYes47" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo47" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="48">
+    <a href="../review/submission1.html@subId=48">David Chaum's Voter Verification using Encrypted Paper Receipts</a><br/>
+    Yes:<input type="text" name="cListYes48" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo48" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="49">
+    <a href="../review/submission1.html@subId=49">A Note on Shor's Quantum  Algorithm for Prime Factorization</a><br/>
+    Yes:<input type="text" name="cListYes49" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo49" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="50">
+    <a href="../review/submission1.html@subId=50">Picking Virtual Pockets using Relay Attacks on Contactless Smartcard Systems</a><br/>
+    Yes:<input type="text" name="cListYes50" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo50" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="51">
+    <a href="../review/submission1.html@subId=51">An Approach Towards Rebalanced RSA-CRT with Short Public Exponent</a><br/>
+    Yes:<input type="text" name="cListYes51" size=85 value="Jena Kluegel">
+    <br/>
+    No: <input type="text" name="cListNo51" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="53">
+    <a href="../review/submission1.html@subId=53">Untraceability of Two Group Signature Schemes</a><br/>
+    Yes:<input type="text" name="cListYes53" size=85 value="">
+    <br/>
+    No: <input type="text" name="cListNo53" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="54">
+    <a href="../review/submission1.html@subId=54">Key Derivation and Randomness Extraction</a><br/>
+    Yes:<input type="text" name="cListYes54" size=85 value="Fabio Cannavaro; Angela Hucles">
+    <br/>
+    No: <input type="text" name="cListNo54" size=85 value="Joy Fawcett">
+    <br/><br/>
+
+  </li>
+  <li value="101">
+    <a href="../review/submission1.html@subId=101">Hierarchical Identity Based Encryption with Polynomially Many Levels</a><br/>
+    Yes:<input type="text" name="cListYes101" size=85 value="Angela Hucles; Michael Owen">
+    <br/>
+    No: <input type="text" name="cListNo101" size=85 value="">
+    <br/><br/>
+
+  </li>
+  <li value="104">
+    <a href="../review/submission1.html@subId=104">More On Key Wrapping</a><br/>
+    Yes:<input type="text" name="cListYes104" size=85 value="Paolo Maldini; Zinedine Zidane">
+    <br/>
+    No: <input type="text" name="cListNo104" size=85 value="">
+    <br/><br/>
+
+  </li>
+</ol>
+<input type="submit" name="saveChairPrefs" value="Save Chair Preferences">
+</form>
+<hr/>
+<div style="text-align: center;">
+[<a href="assignments.html">Assignments</a>] 
+[<a href="index2.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+[<a href="undoLast.html">Undo/Redo</a>] 
+
+</div>
+</body>
+</html>

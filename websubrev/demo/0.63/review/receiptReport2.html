@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML><HEAD><TITLE>Review for submission 5</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<STYLE type=text/css>
+ H1 {	TEXT-ALIGN: center }
+ H2 {	TEXT-ALIGN: center }
+ .rjust { TEXT-ALIGN: right }
+ DIV.fixed { FONT: 14px monospace; WIDTH: 90% }
+</STYLE>
+</HEAD>
+<BODY>
+<DIV style="TEXT-ALIGN: center">
+[<A href="../review/guidelines.html">Guidelines</A>] 
+[<A href="../review/index2.html">Review Home</A>] 
+[<A href="../review/listSubmissions2.html">List submissions</A>] 
+[<A href="../review/password.html">Change Password</A>] 
+[<A href="../documentation/reviewer.html">Documentation</A>] 
+</DIV>
+<HR>
+
+<H1>Review for submission 5 </H1>
+<H2>A sufficient condition for key-privacy</H2>
+<H3 style="TEXT-ALIGN: center">Zinedine Zidane (Some One)</H3><B>Score:</B> 4, 
+&nbsp; <B>Confidence:</B> 3, &nbsp; <B>Technical:</B> 3, &nbsp; 
+<B>Editorial:</B> 2, &nbsp; <B>Suitability:</B> 3 
+<H3>Comments to Authors</H3>
+<DIV class=fixed>Some caveats:<BR>-------------<BR>This software is currently a 
+PHP/MySQL software, which means that to<BR>use it you must have a MySQL server 
+and a PHP engine (and your web-server<BR>must supports PHP and MySQL). I tested 
+the software with PHP 4.3.2 and<BR>MySQL 3.23 (both quite old now), as well as 
+PHP 5.0.4 and MySQL 4.1.12.<BR>It may work with even older versions (but it may 
+not). Also, the proper <BR>functioning of this software depend on "proper" 
+functioning of you web-server.<BR>In particular, two issues that I came across 
+are:<BR><BR>* The scripts must be able to write and create sub-directories in 
+the<BR>BASE directory. When using this software on on Linux with an 
+Apache<BR>server (running as user "apache"), I had to chdir to the BASE 
+directory<BR>and make sure the directory and all the files in it are owned by 
+user<BR>"apache".<BR><BR>* The web-server (and the PHP engine) must be willing 
+to upload files.<BR>For example, in one system that I used to test it, the PHP 
+engine was<BR>configured to only allow uploads of files upto 500KB (and I was 
+wrecking<BR>my brains as to why I can only upload pdf and not postscript 
+files..) In<BR>my case it turned out that I had to change the parameter 
+LimitRequestBody<BR>in php.conf (which on that system was somewhere under 
+/etc/httpd/).<BR><BR><A href="../subs/1.txt">TXT attachment</A> 
+</DIV>
+<H3>Comments to Committee</H3>
+<DIV class=fixed></DIV>
+<H3>Comments to Chair</H3>
+<DIV class=fixed></DIV>
+<H3>Notes to myself</H3>
+<DIV class=fixed></DIV>
+<HR>
+
+<DIV style="TEXT-ALIGN: center">
+[<A href="../review/guidelines.html">Guidelines</A>] 
+[<A href="../review/index2.html">Review Home</A>] 
+[<A href="../review/listSubmissions2.html">List submissions</A>] 
+[<A href="../review/password.html">Change Password</A>] 
+[<A href="../documentation/reviewer.html">Documentation</A>] 
+</DIV></BODY></HTML>

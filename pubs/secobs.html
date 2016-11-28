@@ -1,0 +1,75 @@
+<HTML>
+<TITLE>A Two Layered Approach for Securing an Object Store Network</TITLE>
+
+<!-- how to make comments -->
+
+<a name="SecOBS-abstract"/> 
+
+<H2>A Two Layered Approach for Securing an Object Store Network</H2>
+<hr/>
+
+<b>Authors:</b> 
+Alain Azagury, Ran Canetti, Michael Factor, Shai Halevi, Ealan Henis, 
+Dalit Naor, Noam Rinetzky, Ohad Rodeh, and Julian Satran.
+
+<P>
+<b> Reference:</b> 
+<I> 1st International IEEE Security in Storage Workshop (SISW 2002)</I>
+</P>
+
+<P>
+<b> Abstract: </b> 
+Storage Area Networks (SAN) are based on direct interaction
+between clients and storage servers. This unmediated access
+exposes the storage server to network attacks, necessitating a
+verification, by the server, that the client requests conform with
+the system protection policy. Solutions today can only enforce
+access control at the granularity of entire storage servers. This
+is an outcome of the way storage servers abstract storage: an
+array of fixed size blocks. Providing access control at the
+granularity of blocks is infeasible -- there are too many active
+blocks in the server. Thus, the coarse granularity of entire
+servers is used. Object stores (e.g., the NASD system) on the 
+other hand provide means to address these issues. An object store 
+control unit presents an abstraction of a dynamic collection of 
+<i>objects</i>, each can be seen as a different array of blocks, 
+thus providing the basis for protection at the object level.
+</P>
+
+<P>
+In this paper we present a security model for the object store
+which leverages on existing security infrastructure. We give a
+simple generic mechanism capable of enforcing an arbitrary access
+control policy at object granularity. This mechanism is
+specifically designed to achieve low overhead by minimizing the
+cost of validating an operation along the critical data path, and
+lends itself for optimizations such as caching. The key idea of
+the model is to separate the mechanisms for transport security
+from the one used for access control and to maximize the use
+standard security protocols when possible. We utilize a standard
+industry protocol for authentication, integrity and privacy on the
+communication channel (IPSec for IP networks) and define a
+proprietary protocol for authorization on top of the secure
+communication layer.
+
+</P>
+
+<P>
+<b> Keywords: </b>
+SAN, Object Store Device, Storage Security.
+</P> 
+
+<P> 
+<b> Availability: </b> 
+Paper available as <a href="http://www.research.ibm.com/people/s/shaih/pubs/secobs.ps.gz">Compressed PostScript</a> 
+(142 Kbyte) and <a href="http://www.research.ibm.com/people/s/shaih/pubs/secobs.pdf">PDF</a> (485 Kbyte). 
+</P> 
+
+<P>
+<HR>
+<address> 
+<a href="http://alum.mit.edu/www/shaih/">
+Shai Halevi's home page.</a> 
+</address>
+</P>
+</HTML>

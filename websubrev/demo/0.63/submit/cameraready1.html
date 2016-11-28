@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<style type="text/css">
+tr { vertical-align: top; }
+</style>
+<link rel="stylesheet" type="text/css" href="../common/submission.css"/>
+
+<script type="text/javascript" src="../common/validate.js"></script>
+<script language="Javascript" type="text/javascript">
+<!--
+function checkform( form )
+{
+  var pat = /^\s*$/;
+  // Checking that all the mandatory fields are present
+  st = 0;
+  if (pat.test(form.subId.value)) { st |= 1; }
+  if (pat.test(form.subPwd.value))   { st |= 2; }
+
+  if (st != 0) {
+    alert( "You must specify the submission number and password" );
+    if (st & 1) { form.subId.focus(); }
+    else if (st & 2) { form.subPwd.focus(); }
+    return false;
+  }
+  return true ;
+}
+//-->
+</script>
+
+<title>Camera-Ready Revision for TEST 2007</title>
+</head>
+<body>
+<div style="text-align: center;">
+[<a href="http://www.example.edu/test2007/">TEST 2007 Home</a>] 
+[<a href="index2.html">Instructions</a>] 
+[<span style="color: gray;">Camera-Ready Form</span>] 
+[<a href="../documentation/submitter.html">Documentation</a>] 
+</div>
+
+<hr />
+<h1>Camera-Ready Revision for TEST 2007</h1>
+<h3 class=timeleft>Deadline is Thu, 15 Nov 2007 23:00:00 +0000 (UTC)<br/>
+Time left: 135 days and 21:58:10</h3>
+
+<input type="hidden" name="MAX_FILE_SIZE" value="20000000">
+<input type="hidden" name="referer" value="cameraready.html">
+<table cellspacing="6">
+<tbody>
+  <tr>
+    <td style="text-align: right;">
+         <small>(*)</small>&nbsp;Submission&nbsp;ID:</td>
+    <td> <input name="subId" size="4" type="text"
+                value="">
+         The submission number, as returned when the paper was first submitted.
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;"><small>(*)</small> Password:</td>
+    <td><input name="subPwd" size="11" value="" type="text">
+        The password that was returned with the original submission.
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><form action="http://people.csail.mit.edu/shaih/websubrev/demo/0.63/submit/cameraready2.html" method="get">
+<input value="Reload Form with Submission Details (Submission-ID and Password must be specified)" type="submit" name="loadDetails">
+    (<a href="http://people.csail.mit.edu/shaih/websubrev/demo/0.63/submit/documentation/submitter.html#camera" target="documentation" title="this button reloads the revision form with all the submission details filled-in">what's this?</a>)</form>
+    </td>
+  </tr>  <tr>
+    <td colspan="2" style="text-align: center;"><hr />
+        <big>Any input below will overwrite existing information;
+             no input means the old content remains intact.</big><br /><br />
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;">Number&nbsp;of&nbsp;Pages:</td>
+    <td><input name="nPages" size="3" type="text" value="">
+     Will be used by the chair to
+     automatically generate the table-of-contents and author index.
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;">Title:</td>
+    <td><input name="title" size="90" type="text" value=""><br/>
+        The title of your submission</td>
+  </tr>
+  <tr>
+    <td style="text-align: right;">Authors:</td>
+    <td><input name="authors" size="90" type="text" value=""><br/>
+        Separate multiple authors with '<i>and</i>' (e.g., Alice First 
+	<i>and</i> Bob T. Second <i>and</i> C. P. Third). <br />
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;">Affiliations:</td>
+        <td><input name="affiliations" size="70" type="text" value="">
+  </tr>
+  <tr>
+    <td style="text-align: right;">Contact Email(s):</td>
+    <td><input name="contact" size="70" type="text" value=""
+         onchange="return checkEmailList(this)"><br />
+    <u><b>Make sure that these are valid addresses</b></u>, they will be used for communication with the publisher.<br/><br/>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;">Abstract:</td>
+    <td><textarea name="abstract" rows="15" cols="80"></textarea><br/>
+        Use only plain ASCII and LaTeX conventions for math, but no HTML tags.
+        <br/><br/>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;">Submission&nbsp;File: </td>
+    <td><input name="sub_file" size="70" type="file"><br />
+        The archive file (tar, tzg, etc.) with all the necessary files.
+        See <a href="cameraInstructions.html">the instructions</a>.<br/><br/>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><form name="cameraready" action="http://people.csail.mit.edu/shaih/websubrev/demo/0.63/submit/receipt2.html">
+<input value="Submit camera-ready revision" type="submit"></form>
+    </td>
+  </tr>
+</tbody>
+</table>
+<hr />
+<div style="text-align: center;">
+[<a href="http://www.example.edu/test2007/">TEST 2007 Home</a>] 
+[<a href="index2.html">Instructions</a>] 
+[<span style="color: gray;">Camera-Ready Form</span>] 
+[<a href="../documentation/submitter.html">Documentation</a>] 
+</div>
+
+</body>
+</html>

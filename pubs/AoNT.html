@@ -1,0 +1,74 @@
+<HTML>
+<TITLE>Exposure-Resilient Functions and All-Or-Nothing Transforms</TITLE>
+
+<!-- how to make comments -->
+
+<a name="CDHKS00-abstract"> 
+
+<H2>Exposure-Resilient Functions and All-Or-Nothing Transforms</H2>
+<hr/>
+
+<b>Authors:</b> 
+Ran Canetti, Yevgeniy Dodis, Shai Halevi, Eyal Kushilevitz, Amit Sahai.
+<P>
+
+<b> Reference:</b> 
+<I> Advances in Cryptology - EUROCRYPT 2000.</i> 
+Lecture Notes in Computer Science, vol. 1807, Pages 453-469, 
+Springer-Verlag, 2000.
+
+<P>
+<b> Abstract: </b> 
+We study the problem of <i>partial key exposure</i>. Standard 
+cryptographic definitions and constructions do not guarantee any 
+security even if a tiny fraction of the secret key is compromised. 
+We show how to build cryptographic primitives that remain secure 
+even when an adversary is able to learn <i>almost all</i> of the 
+secret key.
+</P>
+
+<P>
+The key to our approach is a new primitive of independent interest, 
+which we call an <i>Exposure-Resilient Function</i> (ERF) -- a 
+deterministic function whose output appears random (in a perfect, 
+statistical or computational sense) even if almost all the bits of 
+the input are known. ERF's by themselves efficiently solve the partial 
+key exposure problem in the setting where the secret is simply a random 
+value, like in private-key cryptography. They can also be viewed as very 
+secure pseudorandom generators, and have many other applications.
+</P>
+
+<P>
+To solve the general partial key exposure problem, we use the
+(generalized) notion of an <i>All-Or-Nothing Transform</i> (AoNT), an
+invertible (randomized) transformation <i>T</i> which, nevertheless,
+reveals "no information" about <i>x</i> even if almost all the bits
+of <i>T(x)</i> are known.  By applying an AoNT to the secret key of 
+any cryptographic system, we obtain security against partial key exposure.
+To date, the only known security analyses of AoNT candidates were made 
+in the random oracle model.
+We show how to construct ERF's and AoNT's with nearly optimal
+parameters. Our computational constructions are based on any one-way
+function. We also provide several applications and additional
+properties concerning these notions.
+</P>
+
+
+<P>
+<b> Keywords: </b>
+Key exposure, All-or-nothing transforms, Exposure-resilient functions. 
+</P> 
+
+<P> 
+<b> Availability: </b> 
+Paper available as <a href="http://www.research.ibm.com/people/s/shaih/pubs/AoNT.ps.gz">Compressed PostScript</a> (105 Kbyte). 
+</P> 
+
+<P>
+<HR>
+<address> 
+<a href="http://alum.mit.edu/www/shaih/">
+Shai Halevi's home page.</a> 
+</address>
+</P>
+</HTML>

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML Transitional 4.01//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<style type="text/css">
+h1 { text-align: center; }
+</style>
+<title>Manage archive files</title>
+</head>
+<body>
+<div style="text-align: center;">
+[<a href="index2.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+[<a href="undoLast.html">Undo/Redo</a>] 
+</div>
+<hr />
+<h1>Manage archive files</h1>
+Use this page to generate an archive file that contains all the
+submissions, so reviewers do not have to download each one individually.
+
+<h2>Automatically creating archive files</h2>
+This script will attempt to use the Archive_Tar package (which is part of
+PEAR) to automatically generate the archive file. If this package is not
+installed, it will then try to use the utility program <tt>tar</tt>, and
+failing that it will try to use the program <tt>zip</tt>. 
+<ul>
+<li>If support for compression is installed on the server, then you
+    can generate a gzipped tar file called <i>all_in_one.tgz</i> by
+    <a href="archive1.html@makeTar=yes">following this link</a>.</li>
+
+<li>If the link above does not work, you can try to generate a 
+    non-compressed tar file called <i>all_in_one.tar</i> by
+    <a href="archive1.html@makeTar=yes&amp;noZip=no">following this
+    alternate link</a>.</li>
+</ul>
+You can test the resulting archive file by <a href="../review/index2.html">going to
+the review page</a> and looking for a link to "Download submissions
+in one file". That link will point to the file <i>all_in_one.tgz</i> if it
+exists, and failing that it will first try <i>all_in_one.zip</i> and then
+<i>all_in_one.tar</i>. (If none of these files exist, the link will not
+show on the review page.)
+
+<h2>Manually creating archive files</h2>
+If the above methods for creating an archive file do not work, and if you
+have administrative access to the server, you can manually create an archive
+file in one of these three formats and put it in the submission directory
+(which is <code>C:/Program Files/xampp/htdocs/websubrev/trunk/webtree/subs</code>). The file must be called either
+<i>all_in_one.tgz</i>, <i>all_in_one.zip</i>, or <i>all_in_one.tar</i>.
+<br/><br/>
+As a last resort, if you do not have have administrative access to the
+server, you can download all the submission files to your local machine,
+then create the archive file locally and upload it to the server. The
+extension of the local archive file must be either .tgz, .tar, or .zip
+for this method to work.<br/> 
+<form action="archive2.html" enctype="multipart/form-data" method=post>
+<input type=hidden name="MAX_FILE_SIZE" value=200000000>
+Local archive file:<input name=sub_archive size=50 type="file">
+<input name=submit type=submit value="Upload">
+</form>
+
+<h2>Removing archive files</h2>
+If you want to delete archive files, follow one of these links to 
+	 <a href="archive3.html">delete all_in_one.tgz</a>,
+	 <a href="archive3.html">delete all_in_one.zip</a>,
+or       <a href="archive3.html">delete all_in_one.tar</a>
+(if they exist).
+
+<hr />
+<div style="text-align: center;">
+[<a href="index2.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+[<a href="undoLast.html">Undo/Redo</a>] 
+</div>
+</body>
+</html>

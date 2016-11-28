@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+
+<style type="text/css">
+h1 { text-align: center; }
+tr { vertical-align: top; }
+</style><title>Managing Submissions Site</title></head><body>
+<div style="text-align: center;">
+[<a href="index1.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+</div>
+<hr>
+<h1>Managing Submissions Site</h1>
+<table cellpadding="6"><tbody>
+<tr><td><big><b>The&nbsp;Conference:</b></big></td><td></td>
+</tr>
+<tr><td style="text-align: right;">Conference&nbsp;Name:</td>
+  <td><input name="longName" size="90" value="July 2007 Test" type="text"></td>
+</tr>
+<tr><td style="text-align: right;">Short&nbsp;Name:</td>
+  <td><input name="shortName" size="30" value="TEST" type="text">
+    e.g., BASKET, &nbsp; &nbsp; &nbsp; &nbsp;Year: <input name="confYear" size="4" maxlength="4" value="2007" type="text"></td>
+</tr>
+<tr><td style="text-align: right;">Conference&nbsp;URL:</td>
+  <td><input name="confURL" size="90" value="http://www.example.edu/test2007/" type="text"></td>
+</tr>
+<tr><td><big><b>Submission:</b></big></td><td><br></td>
+</tr>
+<tr><td style="text-align: right;">Camera&nbsp;ready&nbsp;Deadline:</td>
+  <td><input name="cameraDeadline" size="90" value="Thu, 15 Nov 2007 23:00:00 +0000 (UTC)" type="text"></td>
+</tr>  
+<tr><td style="text-align: right;">Submission&nbsp;Deadline:</td>
+  <td><input name="subDeadline" size="90" value="Sat, 15 Sep 2007 22:00:00 +0000 (UTC)" type="text"></td>
+</tr>  
+<tr><td style="text-align: right;">Pre-registraion&nbsp;Deadline:</td>
+  <td><input name=regDeadline size=45 type=text value="Sat, 8 Sep 2007 22:00:00 +0000 (UTC)">
+  (empty field means pre-registration is not required)<br>
+  Remember that <b>the software does not enforce these deadlines automatically.
+  </b></td>
+</tr>
+<tr><td style="text-align: right;">Categories:</td>
+  <td><textarea name="categories" rows="3" cols="70">foundations; secret-key cryptography; public-key cryptography; cryptographic protocols; implementation; applications</textarea><br>
+    A semi-colon-separated list of categories for the submissions
+    (empty list to forgo categories.)</td>
+</tr>
+<tr><td style="text-align: right;">Require&nbsp;Affiliations:</td>
+  <td><input name="affiliations" checked="checked" type="checkbox">
+      Check to require submitters to specify their affiliations</td>
+</tr>
+<tr><td style="text-align: right;">Anonymous&nbsp;Submissions:</td>
+  <td><input name="anonymous" type="checkbox">
+      Check to hide author names from the reviewers.
+      <input name="subFlags" value="on" type="hidden"></td>
+</tr>
+<tr><td style="text-align: right;">
+    Supported Formats:<br>(UNcheck to remove)
+    <input name="formats" value="on" type="hidden"></td>
+  <td>
+    <input name="keepFormats_pdf" checked="checked" type="checkbox">
+    <b>PDF</b> &nbsp;(.pdf, &nbsp;application/pdf)<br>
+    <input name="keepFormats_ps" checked="checked" type="checkbox">
+    <b>Postscript</b> &nbsp;(.ps, &nbsp;application/postscript)<br>
+  </td>
+</tr>
+<tr><td style="text-align: right;">Add supported formats:</td>
+  <td><textarea name="addFormats" rows="3" cols="70"></textarea><br>
+      A semi-colon-separated list of formats "<tt>Name1(ext1,MIME1);
+      Name2(ext2, MIME2)...</tt>"</td>
+</tr>
+<tr><td colspan="2" style="text-align: center;"> 
+<form action="index1.html" method="get">
+  <input value="         Submit         " type="submit"></form></td>
+</tr>
+</tbody></table>
+<hr>
+<div style="text-align: center;">
+[<a href="index1.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+</div>
+</body></html>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Writing Clear Conference Submissions</title>
+</head>
+
+<body>
+<CENTER>
+<H1>Writing Clear Conference Submissions</H1>
+<h3>Shai Halevi</h3>
+</CENTER>
+
+<h3><a name="Preface"></a>Preface</h3>
+This page offers some tips on how to write a clear confernce submission. These
+tips are just my own ideas about what I want to see in papers that I review.
+For an excellent resource on how to write papers, go read Oded Goldreich's
+essay at <a href="http://www.wisdom.weizmann.ac.il/~oded/writing.html">
+http://www.wisdom.weizmann.ac.il/~oded/writing.html</a>. 
+<br/><br/>
+
+
+My thesis is that to write clearly you must know what you want to say
+and you must think about your readers; the rest will follow. For the
+most part, this page contains many examples of these two principles.
+These examples are geared toward authors of papers in theoretical
+cryptography, but they are probably also relevant to other audiences.
+<br/><br/>
+
+
+<b>Two disclaimers:&nbsp;</b> First, I do not pretend to be an
+authority on writing papers. You, the reader of this page, should only
+take from the tips below whatever makes sense to you. Second, there is no
+evidence that a clear submission has a better chance of being accepted
+to a conference than a cluttered one. The mandate of a program
+committee is to select for presentation the papers that describe the
+most interesting advances in the area, not necessarily the best
+written ones. But having clearly written submissions can make it
+easier for the committee to do its job.
+
+<!-- ============================================================== -->
+<h2>1 &nbsp; Things to keep in mind</h2>
+<h3>1.1 &nbsp; Distill what you want to say</h3>
+
+The most important thing in writing a paper is to decide what is it
+that you want to say. The main point in writing a scientific paper is
+to teach the reader something new. You need to make it crystal-clear
+(to yourself, at least) exactly what this "something" is.
+<br/><br/>
+
+
+Try to summarize for yourself the main idea(s) in the paper as
+concisely as you can. Can you summarize it in one sentence? In one
+paragraph?  Imagine that your colleague (who is as fluent as you are
+in your area of research) just came back from vacation, and you want
+to tell her about your result in five minutes. You don't need to fill
+her up on background, just the new idea. How would you describe it
+then? Notice that the new idea can be anywhere from very specific to
+very conceptual.  A few examples of such bare-bone summaries are listed
+below (but don't take them too seriously).
+
+<ul> 
+<li type="circle">A specific obstacle in the security proof of the
+Inactive-Pooch system of Theo Retician can be eliminated if instead of
+trying to simulate all the threads you only simulate the "important
+ones" (where a thread is important if it sets X=0).
+<br/><br/></li>
+
+<li type="circle">The notion of security for Attrition-schemes as defined
+in Semi Nal's paper does not capture scenarios where the adversary can
+mount man-in-the-middle attack <i>while standing on the sidelines</i>.
+(You even have an attack on the provable-secure scheme from that paper
+that works along this line.) You define a stronger notion that captures
+the new aspect and show how it can be realized.
+<br/><br/></li>
+
+<li type="circle">The two seemingly unrelated concepts of L-functions
+and R-attacks are actually equivalent if you just look at them from this
+other direction. 
+<br/><br/></li>
+
+<li type="circle">You have a new method for Voluntary Sibling Separation
+that is more efficient than previous work. You get the improvement by
+plugging the new work of Al Gorithm instead of the usual negotiation
+phase.
+</li>
+</ul>
+
+<!-- ============================================================== -->
+<h3>1.2 &nbsp; Think of the audience</h3>
+Try to think who would you want to read your paper. For example, what
+background does a reader need to have in order to understand and/or
+appreciate the new result? If you find that one needs to know the
+entire history of civilization just to understand your terminology, can
+the presentation be altered so that the main ideas are understood without
+so much prior knowledge?<br/><br/>
+
+When writing the paper, make a conscious effort to see it through your
+reader's eyes. You may have been thinking on the subject for weeks, know
+exactly what goes where and have full knowledge of all the details. But
+there is no reason to think that the reader has the same intimate
+knowledge of all the relevant aspects. One way of simulating a reader
+is to write the paper a long time in advance, put it out of sight for
+a month or two, and then go back and read it. Unfortunately, this is
+rarely applicable to a conference submission. If there are several
+authors, it sometimes helps to read each other's parts.<br/><br/>
+
+In the context of a conference submission, most readers only have a
+few hours to read, understand, and evaluate your paper. They will need
+all the help that you can give them. Make it a priority to give them as
+much help as you can.
+
+<!-- ============================================================== -->
+<h2>2 &nbsp; The abstract and introduction</h2>
+
+It is very helpful to the reader if you can put the one-sentence
+summary of you idea already in the abstract. This may be hard to do,
+especially if the new idea is very technical and specific, but when
+possible it is well worth the effort. 
+Consider the first example from above, regarding Retician's Inactive-Pooch
+system. Although it is not possible to explain already in the abstract what
+is the problem in the proof and why simulating only the important threads
+helps, you may still be able to describe the main contribution of your
+work as follows:
+
+<blockquote><i>
+Inactive-Pooch systems are very useful [...] However, they tend to be
+quite inefficient. In particular, the famous scheme of Retician needs to
+send O(k) bits for every tick. In this work we improve this to polylog(k)
+bits per tick, by carefully modifying the proof of the main reduction in
+Retician's work.
+</i></blockquote>
+
+Although the reader cannot understand at this point exactly what you
+did, it is already clear that the contribution will not come by
+introducing a whole new scheme, but rather by giving a better analysis
+of the well known scheme of Retician. Moreover, a reader that makes it
+to the technical part would know where to look for the main technical
+contribution.<br/><br/>
+
+Next comes the introduction. Here you have another chance to explain
+what you do on a high level, and also why it is interesting. Keep in
+mind the new thing that you want to teach your readers. By the end of
+the introduction, the reader should know what is the new idea (even if
+not all the details). <br/><br/>
+
+It is sometimes possible to give all necessary
+ideas in the introduction. The rest of the paper then just goes through
+the motions of formalizing and proving everything, and most readers
+could (in principle) do it themselves after reading the introduction.
+Other times there are technical issues that are too involved to explain
+in the introduction. Even in this case, however, the introduction should
+give the reader some rough idea about what's coming next. Returning to
+our running example of Inactive-Pooch systems, you may give a
+high-level description of Retician's scheme, explaining that the
+scheme sends a new key for every tick, and these keys are the most
+communication-intensive components of the scheme. The reason that all
+these keys are needed is that the simulator in the main reduction must
+deal with each tick separately. However, you observe that there is no
+need to simulate everything. Give a forward pointer to the technical
+part, by saying that in the proof of Lemma 3 in Section 5 you show that
+if the simulator only simulates the "important" threads, then it is
+enough if the keys for the different ticks are t-wise independent
+(rather than completely independent) therefore getting <i>polylog(k)</i>
+bits per tick. <br/><br/>
+
+Here are a few other things to keep in mind while writing the introduction:
+<ul> 
+<li>Go super easy on notations. Explain as much as possible with plain
+English, and use notations only as a last resort. If you have in the
+introduction something like 
+<big>Adv</big><small><sub>A,B,T</sub><sup>CCA-PKT-RND5</sup></small>
+(t,q,r), you should re-think your presentation.
+<br/><br/></li>
+
+<li>
+Describe the relevant prior works, but skip the non-relevant ones.
+(E.g., there is no reason to describe the entire history of research
+into secure multi-party computation just because you describe an efficient
+distributed protocol for computing the XOR function.)
+<br/><br/></li>
+
+<li>
+Don't try to impress the reader with how complicated the problem is, or
+how hard you had to work to solve it. Most readers are not interested
+in how many versions of the definition or construction you went through
+before arriving at the current one.
+</li>
+</ul>
+
+<!-- ============================================================== -->
+<h2>3 &nbsp; The technical parts</h2>
+The thing to remember is to think of your readers while writing the
+technical parts.  Below are a few specific considerations.
+<ul>
+<li>
+Keep the reader informed about what's happening now and what's coming next.
+Describe the overall structure of any construction/proof before diving
+into the details. In every part, remind the reader what are the important
+issues in this part, what are you trying to do, what part does the next
+lemma plays in the big picture, etc. 
+<br/><br/></li>
+
+<li>Don't assume that the reader remembers (or even read) everything that
+was written in the paper upto this point. If some aspect is important,
+describe it more than once. (If it is very important, more than twice.)
+Put many forward and backward pointers in the paper. ("in the next
+section we show that...", "as discussed in Section 3, we need
+to have...", etc.)
+<br/><br/></li>
+
+<li>Remember your target audience. Explain in detail those things that the
+target audience is unfamiliar with (even if it is considered a basic
+result in some other field), and only mention in passing things that
+you believe are common knowledge.
+<br/><br/></li>
+
+<li>Go easy on notations. I find it easier to read "the advantage of an
+adversary that runs for t time, makes q queries and gets r replies" than
+<big>Adv</big><small><sub>A,B,T</sub><sup>CCA-PKT-RND5</sup></small>(t,q,r).
+If you must use the latter, then at least sprinkle some English
+explanations every so often. This holds in particular for super- and sub-scripting. Using 
+notations such as <i>P<small><sup>b</sup><sub>i,j,k,r</sub></small></i> is a
+sure way to lose your readers. (Especially if you have a typo and you
+write <i>t</i> instead of <i>r</i> in one of the subscripts.)
+Also, make sure that you explain every bit of notations. If you introduced
+a piece of notations four pages ago and now came back to it, it would help
+if you remind the reader what it means.
+<br/><br/></li>
+
+<li>Try to keep the presentation flowing without too much branching and
+detours.  The attention span of your reader is not infinite, so don't
+describe every little variation and every minute consideration to the
+fourth order. (Otherwise the reader will never make it to the next
+section, where you actually describe the crucial new observation that
+is the heart of the paper.)
+For the same reason, don't use too many footnotes. I personally prefer a
+separate Discussion section at the end to having a slew of footnotes all
+throughout the text. 
+</li>
+</ul>
+
+<h2>4 &nbsp; Summing up</h2>
+I've already said all that I had to say, so let me just repeat it. To
+write clearly you must be clear about what you want to say, and you must
+keep thinking about your readers while writing your paper. 
+<br/><br/><hr/>
+<small>Last modified: Jan 3, 2006</small>
+
+</body>
+</html>

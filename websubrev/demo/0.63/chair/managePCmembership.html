@@ -1,0 +1,318 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+<script language="Javascript" type="text/javascript">
+<!--
+function checkEmail( fld )
+{
+  fld.value = fld.value.replace(/^\s+/g,'').replace(/\s+$/g,''); // trim
+  var pat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
+  if((fld.value != "") && (pat.test(fld.value)==false)) {
+    alert("Not a valid email format");
+    fld.focus();
+    fld.select();
+    return false ;
+  }
+  return true ;
+}
+//-->
+</script>
+<style type="text/css">
+h1 { text-align: center; }
+.lightbg { background-color: rgb(235, 235, 235); } 
+.darkbg { background-color: lightgrey; } 
+</style><title>Manage PC Membership</title></head><body>
+<div style="text-align: center;">
+[<a href="index2.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+</div>
+<hr>
+<h1>Manage PC Membership</h1>
+
+Below is the list of program-committee members that have access to the
+review area of this site. To login to the site, a member must provide
+his/her email-address and a password. <i>Please go over this list and
+correct any errors</i>. Note the following:
+<ul>
+<li> Make sure that the names are formatted the way you want them to
+  appear on the reports and discussion boards. (E.g., you may prefer the
+  format "First M. Last" or "Last, First M.", or whatever.)<br>
+  <br></li>
+  
+<li> You can add members by putting a <b>semi-colon-separated</b>
+  list of new members in the text area at the bottom of the page.
+  The list must be of the form "<tt>Name1 &lt;email-address1&gt;; Name2 
+  &lt;email-address&gt;; ...</tt>"  Make sure that the names are formatted
+  the way you want them (and that <i>they do not include semi-colons</i>).
+  <br><br></li>
+
+<li> You can remove PC members by checking the <i>"Remove"</i> check-box.<br>
+  <br></li>
+
+<li> You can reset the passwords of PC members by checking the <i>"Reset 
+  Password"</i> checkbox. Also, changing the email address of a member
+  automatically resets his/her password.<br><br></li>
+
+<li>When you submit this form, an email message will be sent to any PC member
+  whose password was reset, informing him/her of the new password. The chair
+  address will be CCed on all these emails.</li>
+</ul>
+
+<form action="index2.html" enctype="multipart/form-data" method="post">
+
+<input name="reviewSite" value="on" type="hidden">
+<table cellpadding="3" cellspacing="0"><tbody>
+<tr class="darkbg">
+  <th colspan="5" style="text-align: center;"><big>Program Comittee</big></th>
+</tr>
+<tr class="darkbg">
+  <th style="text-align: center;"></th>
+  <th style="text-align: center;">Name</th>
+  <th style="text-align: center;">Email</th>
+  <th style="text-align: center;">Reset Pwd</th>
+  <th style="text-align: center;">Remove</th>
+</tr>
+<tr class="lightbg">
+  <td style="text-align: center;">CHAIR</td>
+  <td><input name="members[1][0]" size="30" value="TEST2007 Chair" style="width: 100%;" type="text">
+  </td>
+  <td><input name="members[1][1]" value="test2007@example.edu" size="35" onchange="return checkEmail(this)" style="width: 100%;" type="text">
+  </td>
+  <td style="text-align: center;">
+    <input name="members[1][2]" type="checkbox"></td>
+  <td style="text-align: center;"><img alt="(X)" src="../common/stop.GIF" width="12">
+    <input disabled="disabled" type="checkbox"></td>
+</tr>
+<tr class="darkbg">
+  <td style="text-align: center;"></td>
+  <td><input name="members[2][0]" size="30" value="David Beckham" style="width: 100%;" type="text">
+  </td>
+  <td><input name="members[2][1]" size="35" value="rev1@example.edu" onchange="return checkEmail(this)" style="width: 100%;" type="text">
+  </td>
+  <td style="text-align: center;">
+      <input name="members[2][2]" checked="checked" type="checkbox"></td>
+  <td style="text-align: center;"><img alt="(X)" src="../common/stop.GIF" width="12">
+      <input title="Check to remove David Beckham from the committee" name="mmbrs2remove[2]" type="checkbox">
+  </td>
+</tr>
+<tr class="lightbg">
+  <td style="text-align: center;"></td>
+  <td><input name="members[3][0]" size="30" value="Fabio Cannavaro" style="width: 100%;" type="text">
+  </td>
+  <td><input name="members[3][1]" size="35" value="rev2@example.edu" onchange="return checkEmail(this)" style="width: 100%;" type="text">
+  </td>
+  <td style="text-align: center;">
+      <input name="members[3][2]" checked="checked" type="checkbox"></td>
+  <td style="text-align: center;"><img alt="(X)" src="../common/stop.GIF" width="12">
+      <input title="Check to remove Fabio Cannavaro from the committee" name="mmbrs2remove[3]" type="checkbox">
+  </td>
+</tr>
+<tr class="darkbg">
+  <td style="text-align: center;"></td>
+  <td><input name="members[4][0]" size="30" value="Angelos Charisteas" style="width: 100%;" type="text">
+  </td>
+  <td><input name="members[4][1]" size="35" value="rev3@example.edu" onchange="return checkEmail(this)" style="width: 100%;" type="text">
+  </td>
+  <td style="text-align: center;">
+      <input name="members[4][2]" checked="checked" type="checkbox"></td>
+  <td style="text-align: center;"><img alt="(X)" src="../common/stop.GIF" width="12">
+      <input title="Check to remove Angelos Charisteas from the committee" name="mmbrs2remove[4]" type="checkbox">
+  </td>
+</tr>
+<tr class="lightbg">
+  <td style="text-align: center;"></td>
+  <td><input name="members[5][0]" size="30" value="Joy Fawcett" style="width: 100%;" type="text">
+  </td>
+  <td><input name="members[5][1]" size="35" value="rev4@example.edu" onchange="return checkEmail(this)" style="width: 100%;" type="text">
+  </td>
+  <td style="text-align: center;">
+      <input name="members[5][2]" checked="checked" type="checkbox"></td>
+  <td style="text-align: center;"><img alt="(X)" src="../common/stop.GIF" width="12">
+      <input title="Check to remove Joy Fawcett from the committee" name="mmbrs2remove[5]" type="checkbox">
+  </td>
+</tr>
+<tr class="darkbg">
+  <td style="text-align: center;"></td>
+  <td><input name="members[6][0]" size="30" value="Danielle Fotopoulos" style="width: 100%;" type="text">
+  </td>
+  <td><input name="members[6][1]" size="35" value="rev5@example.edu" onchange="return checkEmail(this)" style="width: 100%;" type="text">
+  </td>
+  <td style="text-align: center;">
+      <input name="members[6][2]" checked="checked" type="checkbox"></td>
+  <td style="text-align: center;"><img alt="(X)" src="../common/stop.GIF" width="12">
+      <input title="Check to remove Danielle Fotopoulos from the committee" name="mmbrs2remove[6]" type="checkbox">
+  </td>
+</tr>
+<tr class="lightbg">
+  <td style="text-align: center;"></td>
+  <td><input name="members[7][0]" size="30" value="Julie Foudy" style="width: 100%;" type="text">
+  </td>
+  <td><input name="members[7][1]" size="35" value="rev6@example.edu" onchange="return checkEmail(this)" style="width: 100%;" type="text">
+  </td>
+  <td style="text-align: center;">
+      <input name="members[7][2]" checked="checked" type="checkbox"></td>
+  <td style="text-align: center;"><img alt="(X)" src="../common/stop.GIF" width="12">
+      <input title="Check to remove Julie Foudy from the committee" name="mmbrs2remove[7]" type="checkbox">
+  </td>
+</tr>
+<tr class="darkbg">
+  <td style="text-align: center;"></td>
+  <td><input name="members[8][0]" size="30" value="Stylianos Giannakopoulos" style="width: 100%;" type="text">
+  </td>
+  <td><input name="members[8][1]" size="35" value="rev7@example.edu" onchange="return checkEmail(this)" style="width: 100%;" type="text">
+  </td>
+  <td style="text-align: center;">
+      <input name="members[8][2]" checked="checked" type="checkbox"></td>
+  <td style="text-align: center;"><img alt="(X)" src="../common/stop.GIF" width="12">
+      <input title="Check to remove Stylianos Giannakopoulos from the committee" name="mmbrs2remove[8]" type="checkbox">
+  </td>
+</tr>
+<tr class="lightbg">
+  <td style="text-align: center;"></td>
+  <td><input name="members[9][0]" size="30" value="Mia Hamm" style="width: 100%;" type="text">
+  </td>
+  <td><input name="members[9][1]" size="35" value="rev8@example.edu" onchange="return checkEmail(this)" style="width: 100%;" type="text">
+  </td>
+  <td style="text-align: center;">
+      <input name="members[9][2]" checked="checked" type="checkbox"></td>
+  <td style="text-align: center;"><img alt="(X)" src="../common/stop.GIF" width="12">
+      <input title="Check to remove Mia Hamm from the committee" name="mmbrs2remove[9]" type="checkbox">
+  </td>
+</tr>
+<tr class="darkbg">
+  <td style="text-align: center;"></td>
+  <td><input name="members[10][0]" size="30" value="Devvyn Hawkins" style="width: 100%;" type="text">
+  </td>
+  <td><input name="members[10][1]" size="35" value="rev9@example.edu" onchange="return checkEmail(this)" style="width: 100%;" type="text">
+  </td>
+  <td style="text-align: center;">
+      <input name="members[10][2]" checked="checked" type="checkbox"></td>
+  <td style="text-align: center;"><img alt="(X)" src="../common/stop.GIF" width="12">
+      <input title="Check to remove Devvyn Hawkins from the committee" name="mmbrs2remove[10]" type="checkbox">
+  </td>
+</tr>
+<tr class="lightbg">
+  <td style="text-align: center;"></td>
+  <td><input name="members[11][0]" size="30" value="Angela Hucles" style="width: 100%;" type="text">
+  </td>
+  <td><input name="members[11][1]" size="35" value="rev10@example.edu" onchange="return checkEmail(this)" style="width: 100%;" type="text">
+  </td>
+  <td style="text-align: center;">
+      <input name="members[11][2]" checked="checked" type="checkbox"></td>
+  <td style="text-align: center;"><img alt="(X)" src="../common/stop.GIF" width="12">
+      <input title="Check to remove Angela Hucles from the committee" name="mmbrs2remove[11]" type="checkbox">
+  </td>
+</tr>
+<tr class="darkbg">
+  <td style="text-align: center;"></td>
+  <td><input name="members[12][0]" size="30" value="Jena Kluegel" style="width: 100%;" type="text">
+  </td>
+  <td><input name="members[12][1]" size="35" value="rev11@example.edu" onchange="return checkEmail(this)" style="width: 100%;" type="text">
+  </td>
+  <td style="text-align: center;">
+      <input name="members[12][2]" checked="checked" type="checkbox"></td>
+  <td style="text-align: center;"><img alt="(X)" src="../common/stop.GIF" width="12">
+      <input title="Check to remove Jena Kluegel from the committee" name="mmbrs2remove[12]" type="checkbox">
+  </td>
+</tr>
+<tr class="lightbg">
+  <td style="text-align: center;"></td>
+  <td><input name="members[13][0]" size="30" value="Amy LePeilbet" style="width: 100%;" type="text">
+  </td>
+  <td><input name="members[13][1]" size="35" value="rev12@example.edu" onchange="return checkEmail(this)" style="width: 100%;" type="text">
+  </td>
+  <td style="text-align: center;">
+      <input name="members[13][2]" checked="checked" type="checkbox"></td>
+  <td style="text-align: center;"><img alt="(X)" src="../common/stop.GIF" width="12">
+      <input title="Check to remove Amy LePeilbet from the committee" name="mmbrs2remove[13]" type="checkbox">
+  </td>
+</tr>
+<tr class="darkbg">
+  <td style="text-align: center;"></td>
+  <td><input name="members[14][0]" size="30" value="Paolo Maldini" style="width: 100%;" type="text">
+  </td>
+  <td><input name="members[14][1]" size="35" value="rev13@example.edu" onchange="return checkEmail(this)" style="width: 100%;" type="text">
+  </td>
+  <td style="text-align: center;">
+      <input name="members[14][2]" checked="checked" type="checkbox"></td>
+  <td style="text-align: center;"><img alt="(X)" src="../common/stop.GIF" width="12">
+      <input title="Check to remove Paolo Maldini from the committee" name="mmbrs2remove[14]" type="checkbox">
+  </td>
+</tr>
+<tr class="lightbg">
+  <td style="text-align: center;"></td>
+  <td><input name="members[15][0]" size="30" value="Antonios Nikopolidis" style="width: 100%;" type="text">
+  </td>
+  <td><input name="members[15][1]" size="35" value="rev14@example.edu" onchange="return checkEmail(this)" style="width: 100%;" type="text">
+  </td>
+  <td style="text-align: center;">
+      <input name="members[15][2]" checked="checked" type="checkbox"></td>
+  <td style="text-align: center;"><img alt="(X)" src="../common/stop.GIF" width="12">
+      <input title="Check to remove Antonios Nikopolidis from the committee" name="mmbrs2remove[15]" type="checkbox">
+  </td>
+</tr>
+<tr class="darkbg">
+  <td style="text-align: center;"></td>
+  <td><input name="members[16][0]" size="30" value="Michael Owen" style="width: 100%;" type="text">
+  </td>
+  <td><input name="members[16][1]" size="35" value="rev15@example.edu" onchange="return checkEmail(this)" style="width: 100%;" type="text">
+  </td>
+  <td style="text-align: center;">
+      <input name="members[16][2]" checked="checked" type="checkbox"></td>
+  <td style="text-align: center;"><img alt="(X)" src="../common/stop.GIF" width="12">
+      <input title="Check to remove Michael Owen from the committee" name="mmbrs2remove[16]" type="checkbox">
+  </td>
+</tr>
+<tr class="lightbg">
+  <td style="text-align: center;"></td>
+  <td><input name="members[17][0]" size="30" value="Francesco Totti" style="width: 100%;" type="text">
+  </td>
+  <td><input name="members[17][1]" size="35" value="rev16@example.edu" onchange="return checkEmail(this)" style="width: 100%;" type="text">
+  </td>
+  <td style="text-align: center;">
+      <input name="members[17][2]" checked="checked" type="checkbox"></td>
+  <td style="text-align: center;"><img alt="(X)" src="../common/stop.GIF" width="12">
+      <input title="Check to remove Francesco Totti from the committee" name="mmbrs2remove[17]" type="checkbox">
+  </td>
+</tr>
+<tr class="darkbg">
+  <td style="text-align: center;"></td>
+  <td><input name="members[18][0]" size="30" value="Zinedine Zidane" style="width: 100%;" type="text">
+  </td>
+  <td><input name="members[18][1]" size="35" value="rev17@example.edu" onchange="return checkEmail(this)" style="width: 100%;" type="text">
+  </td>
+  <td style="text-align: center;">
+      <input name="members[18][2]" checked="checked" type="checkbox"></td>
+  <td style="text-align: center;"><img alt="(X)" src="../common/stop.GIF" width="12">
+      <input title="Check to remove Zinedine Zidane from the committee" name="mmbrs2remove[18]" type="checkbox">
+  </td>
+</tr>
+<tr class="lightbg">
+  <td style="text-align: center;">New<br>Members:</td>
+  <td colspan="4"><textarea name="mmbrs2add" style="width: 100%;"></textarea>
+      A <i><b>semi-colon-separated</b></i> list of email addresses:
+      "<tt>Name1 &lt;email1&gt;; Name2 &lt;email2&gt;;...</tt>" 
+  </td>
+</tr>
+<!-- ================= The Submit Button =================== -->
+<tr><td colspan="5">&nbsp;</td></tr>
+<tr><td colspan="5" style="text-align: center;">
+        <input value="Grant Access to Review Site" type="submit">
+    </td>
+</tr>
+</tbody></table>
+</form>
+<hr>
+<div style="text-align: center;">
+[<a href="index2.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+</div>
+
+</body></html>

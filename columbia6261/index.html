@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Homomorphic Encryption and Secure Computation, Columbia COMS E6261, Spring 2013</title>
+<style type="text/css">
+tr {vertical-align:text-top}
+th {text-align:right}
+</style>
+</head> 
+<!-- End of Header    --> 
+<body>
+<center>
+<h2>Columbia University, Computer Science<br/>Spring 2013, COMS E6261</h2>
+<h1>Homomorphic Encryption and Lattices</h1> 
+</center>
+<h4>Tuesdays 2:10-4:00pm, Mudd 1024<br/>
+Instructor: <a href="../index.html">Shai Halevi</a>,
+co-instructor: <a href="http://www.cs.columbia.edu/~tal/">Tal Malkin</a>,
+TA: <a href="http://www.cs.columbia.edu/~fernando/">Fernando Krell</a><br/>
+Office hours: Tal on Thursdays 2-4pm, Shai &amp; Fernando by request
+</h4>
+
+This class will cover results in cryptography,
+mostly from the last few years, related to homomorphic encryption
+schemes and other lattice-based cryptosystems. The format will mostly
+be regular lectures, but some lectures may also be given by
+students (if there is interest).
+
+<h4>Schedule</h4>
+<table border=1 cellpadding=2 cellspacing=1> 
+<tr><th>January&nbsp;22</th>
+<td><i>Introduction to Lattices.</i> 
+  <a href="http://www.cs.tau.ac.il/~odedr/teaching/lattices_fall_2004/ln/introduction.pdf">Lecture notes</a> from <a href="http://www.cs.tau.ac.il/~odedr/teaching/lattices_fall_2004/">Oded Regev's course</a> in Tel-Aviv.
+</td></tr>
+<tr><th>Januray&nbsp;29</th>
+<td><i>The Hermite normal form.</i>
+  Material contained in notes of
+  <a href="http://disopt.epfl.ch/files/content/sites/disopt/files/shared/IntPoints2009/lattices.pdf">lecture 4</a> and
+  <a href="http://disopt.epfl.ch/files/content/sites/disopt/files/shared/IntPoints2009/hnf.pdf">lecture 5</a>
+  from <a href="http://disopt.epfl.ch/page-10548.html">Gennady Shmonin's course</a> in EPFL.
+</td></tr>
+<tr><th>February&nbsp;5</th>
+<td><i>The LLL algorithm</i>, <a href="http://www.cs.tau.ac.il/~odedr/teaching/lattices_fall_2004/ln/lll.pdf"> lecture notes</a> from Oded Regev's course.
+</td></tr>
+<tr><th>February&nbsp;12</th>
+<td><i>Ajtai's worst-case/average-case connection.</i>
+The Small Integer Solution problem (SIS), Relation to worst-case
+SVP, SIVP, SIS-based collision-resistant hashing. <a href="http://www.cs.tau.ac.il/~odedr/teaching/lattices_fall_2004/ln/averagecase.pdf">Lecture notes</a> from Oded Regev's course</a>.
+</td></tr>
+<tr><th>February&nbsp;19</th>
+<td>&bullet; <i>Discrete Gaussians, Smoothing Parameter</i>, <a href="http://www.cs.tau.ac.il/~odedr/teaching/lattices_fall_2004/ln/averagecase.pdf">Lecture notes</a> from Oded Regev's course</a><br/>
+&bullet; <i>Leftover Hash Lemma</i>, <a href="http://people.csail.mit.edu/ronitt/COURSE/S08/drafts/22.pdf">Lecture notes</a> from <a href="http://people.csail.mit.edu/ronitt/COURSE/S08/">Ronitt Rubinfeld's course</a> in MIT.
+</td></tr>
+<tr><th>February&nbsp;26<br/>
+    <a href="lecture6-LWE.pdf">Class&nbsp;notes</a></th>
+<td><i>The Learning with Errors problem (LWE)</i>, random-self reducability, search-to-decision reduction, the Regev'05 cryptosystem.
+</td></tr>
+<tr><th>March&nbsp;12<br/>
+    <a href="lecture7-GPV.pdf">Class&nbsp;notes</a></th>
+<td><i>The Gentry-Peikert-Vaikuntanathan SIS-based signatures</i>
+   <a href="http://eprint.iacr.org/2007/432">[GPV08]</a>
+</td></tr>
+<tr><th>March&nbsp;26<br/>
+    <a href="lecture8-MP-trapdoor.pdf">Class&nbsp;notes</a></th>
+<td><i>The lattice trapdoor construction of Micciancio-Peikert</i>
+    <a href="http://eprint.iacr.org/2011/501">[MP12]</a>
+</td></tr>
+<tr><th>April&nbsp;2</th>
+<td><i>Yao garbled circuits.</i> See the 
+ <a href="http://eprint.iacr.org/2004/175">Lindel-Pinkas exposition and
+ proof [LP09]</a>.
+</td></tr>
+<tr><th>April&nbsp;9<br/>
+    <a href="ABE-Delegation-1.pdf">Class&nbsp;notes</a></th>
+<td><i>The Gorbunov-Vaikuntanathan-Wee LWE-based
+  Delegation &amp; Attribute-Based Ecnryption Scheme</i>
+  <a href="http://eprint.iacr.org/2013/337">[GVW13]</a>
+</td></tr>
+<tr><th>April&nbsp;12<br/>
+    <a href="lecture11-LWE-ABE.pdf">Class&nbsp;notes</a></th>
+<td>&bullet; Continue with [GVW13] <i>Attribute-Based Ecnryption</i><br/>
+&bullet; <i>LWE-based homomorphic encryption</i>
+</td></tr>
+<tr><th>April&nbsp;16<br/>
+    <a href="lecture12-LWE-HE.pdf">Class&nbsp;notes</a></th>
+<td>Continue <i>LWE-based homomorphic encryption</i> 
+[<a href="http://eprint.iacr.org/2011/344">BV11</a>,
+<a href="http://eprint.iacr.org/2011/277">BGV12</a>,
+<a href="http://eprint.iacr.org/2012/078">B12</a>]
+</td></tr>
+<tr><th>April&nbsp;23<br/>
+    <a href="lecture13-NTRU.pdf">Class&nbsp;notes</a></th>
+<td><i>Ideal Lattices, The NTRU cryptosystem</i>, 
+<a href="http://eprint.iacr.org/2013/004">[SS11]</a></td></tr>
+<tr><th>April&nbsp;30</th>
+<td>&bullet; Continue with <i>the NTRU cryptosystem</i>,
+<a href="http://eprint.iacr.org/2013/094">[LTV12]</a><br/>
+&bullet; <i>Multilinear maps from ideal lattices</i>
+<a href="http://eprint.iacr.org/2012/610">[GGH13]</a>
+(<a href="../pubs/MultilinearMaps-NTT.pptx">slides</a>)
+</td></tr>
+</table>
+
+<h4>Homework</h4>
+<ol>
+<li><a href="ps1.pdf">Problem-set #1</a>, due Feb 5.</li>
+<li><a href="ps2.pdf">Problem-set #2</a>, due Feb 19.</li>
+<li><a href="ps3.pdf">Problem-set #3</a>, due Mar 12.</li>
+<li><a href="ps4.pdf">Problem-set #4</a>, due Mar 26.</li>
+<li><a href="ps5.pdf">Problem-set #5</a>, due Apr 23.</li>
+<li><a href="ps6.pdf">Problem-set #6</a>, due May 7.</li>
+</ol>
+
+<h4>Handouts</h4>
+<ul>
+<li>March 12: <a href="LWE-hardness.pdf">Sketch of the LWE average-case to worst-case reducion</a></li>
+<li>March 12: <a href="easyLattice-MP12.pdf">The "easy lattce" from the Micciancio-Peikert trapdoor construction</a></li>
+</ul>
+
+<h3>PRE-REQUISITES:</h3>
+<p>The main pre-requisite is general familiarity with modern theory of
+cryptography, such as obtained by taking the class <i>4261 introduction
+to cryptography</i>.</p>
+<p>
+For example, students are assumed to be familiar with the notion of
+semantic-security of encryption schemes
+(CPA-security), know about standard hardness assumptions (e.g.,
+factoring), and be comfortable with reduction-based proofs of security.
+We also assume good command of linear algebra (e.g., matrices and
+their rank, the determinant, Gaussian elimination, Gram-Schmidt
+orthogonalization, etc.) To the extent that we need more advanced
+algebra, we will cover it in class. 
+</p>
+
+<h3>GRADING:</h3>
+<p>Grade will be based on a combination of class participation,
+homework, scribe notes, and maybe also a project or presentation
+of a paper.
+</p>
+
+<p>Scribe notes: We will need scribes for each lecture, the scribe
+notes should be a cleaned-up summary of the lecture (possibly with
+some additional details that were omitted in class).</p>
+
+<p>Project: In the second half of the class we may assign small
+projects instead of regular problem-sets, for example reading a
+recent paper and summarizing it in a report. </p>
+
+<p>Paper Presentation: We may have a few of the lectures
+given by students, on recent papers related to the general topic of
+the class. (No more than 3-4 of the classes.) Students who want to
+present a paper in class should contact the lecturer.</p>
+
+<h3>SYLLABUS:</h3>
+<p>Below is a very tentative course plan. There are likely to be changes to this plan as the semester goes on, especially toward the end.</p>
+ 
+<ul>
+<li><i>Weeks 1-2.</i>
+Introduction and course plan. Lattice basics: definitions, bases,
+duality, etc. Hard problems in lattices (Gap-)SVP, SIVP, BDD, etc.
+Basic lattice algorithms: Hermite-normal-form, the LLL algorithm
+and approximation of SVP/SIVP/BDD.<br/>
+<br/></li>
+
+<li><i>Weeks 3-4.</i>
+Lattice-based crypto, part 1: The Short-Integer-Solution problem
+(SIS), using it to get collision-resistant hashing, Ajtai/Micciancio-Regev
+reduction of SIVP-approximation to SIS. The Micciancio-Peikert trapdoor
+construction (EUROCRYPT 2012).<br/>
+<br/></li>
+
+<li><i>Weeks 5-7.</i>
+Lattice-based crypto, part 2: The Learning-With-Errors problem 
+(LWE, Regev 2005), Regev's LWE-based encryption scheme. Peikert's reduction of
+Gap-SVP to LWE (STOC 2009). Maybe GPV signatures and the dual Regev
+cryptosystem (Gentry-Peikert-Vaikuntanathan STOC 2008).<br/>
+<br/></li>
+
+<li><i>Week 8.</i>
+A short detour: Secure computation and Yao garbled circuits.<br/>
+<br/>
+
+<li><i>Week 9.</i>
+More LWE-based crypto: Attribute-based encryption, functional
+encryption, reusable garbled circuits (the new works of <a
+href="http://eprint.iacr.org/2012/521">Gorbunov et al.</a> and
+<a href="http://eprint.iacr.org/2012/733">Goldwasser et al.)</a><br/>
+<br/></li>
+
+<li><i>Week 10.</i>
+LWE-based homomorphic encryption: Based on
+(Gentry STOC 2009), (Brakerski-Vaikuntanathan FOCS 2011),
+(Brakerski-Gentry-Vaikuntanathan ITCS 2012), 
+(Brakerski CRYPTO 2012).<br/>
+<br/></li>
+
+<li><i>Weeks 11-12.</i>
+Ideal lattices: Introduction, definitions, properties.
+Micciancio's reduction of Ideal-SIVP to Ideal-SIS  
+(FOCS 2002), maybe hashing from ideal-SIS (Peikert-Rosen TCC 2006,
+Lyubashevsky-Micciancio ICALP 2006), maybe Ideal-LWE 
+(Lyubashevsky-Peikert-Regev EUROCRYPT 2010). Maybe some
+ideal-lattice cryptanalysis<br/>
+<br/></li>
+
+<li><i>Week 13.</i>
+Homomorphic encryption from ideal lattices: efficiency with packed
+ciphertexts (Smart-Vercauteren 2011), (Gentry-Halevi-Smart
+EUROCRYPT/CRYPTO 2012), NTRU-based (multi-key) homomorphic
+encryption (L&oacute;pez-Alt, Tromer, Vaikuntanathan STOC 2012).<br/>
+<br/></li>
+
+<li><i>Week 14.</i>
+Multi-linear maps from ideal lattices (Garg-Gentry-Halevi 2012),
+and applications for attribute-based encryption and similar
+(Garg-Gentry-Halevi 2012, Sahai-Waters 2012).
+</li>
+</ol>
+
+</body> 
+</html>
+

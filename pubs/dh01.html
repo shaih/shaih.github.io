@@ -1,0 +1,70 @@
+<HTML>
+<TITLE>Incremental codes</TITLE>
+
+<!-- how to make comments -->
+
+<a name="DH01-abstract"/> 
+
+<H2>Incremental codes</H2>
+<hr/>
+
+<b>Authors:</b> 
+Yevgeniy Dodis, and Shai Halevi. 
+
+<P>
+<b> Reference:</b> 
+<I> APPROX 2001</I>, LNCS 2129, pages 75-89. Springer-Verlag, 2001. 
+</P>
+
+<P>
+<b> Abstract: </b> 
+We introduce the notion of <i>incremental</i> codes. Unlike a regular
+code of a given rate, which is an unordered set of elements with a
+large minimum distance, an incremental code is an ordered vector of
+elements each of whose prefixes is a good regular code (of the
+corresponding rate).  Additionally, while the quality of a regular
+code is measured by its minimum distance, we measure the quality of an
+incremental code <i>C</i> by its <i>competitive ratio</i>, <i>A</i>:
+the minimum distance of each prefix of <i>C</i> has to be at most
+a factor of <i>A</i> smaller than the minimum distance of the best
+regular code of the same rate.</P>
+
+<P>
+We first consider incremental codes over an arbitrary compact metric
+space <i>M</i>, and construct a 2-competitive code for <i>M</i>.  
+When <i>M</i> is finite, the construction takes time <i>O(|M|^2)</i>, 
+exhausts the entire space, and is NP-hard to improve in general. 
+We then concentrate on two specific spaces: the real interval [0,1] 
+and, most importantly, the Hamming space <i>F^n</i>. For the interval 
+[0,1] we construct an optimal (infinite) code of competitive ratio 
+<i>ln(4) ~ 1.386</i>. 
+For the Hamming space <i>F^n</i> (where the generic 2-competitive
+constructive is not efficient), we show the following. If <i>|F| >= n</i>,
+we construct optimal (and efficient) 1-competitive code that exhausts
+<i>F^n</i> (has rate 1). For small alphabets (<i>|F|</i> < <i>n</i>), 
+we show that 1-competitive codes do not exist and provide several efficient
+constructions of codes achieving constant competitive ratios. In
+particular, our best construction has rate <i>(1-o(1))</i> and competitive
+ratio <i>(2+o(1))</i>, essentially matching the bounds in the generic
+construction.
+</P>
+
+<P>
+<b> Keywords: </b>
+Codes, Competetive ratio. 
+</P> 
+
+<P> 
+<b> Availability: </b> 
+Paper available as <a href="http://www.research.ibm.com/people/s/shaih/pubs/dh01.ps.gz">Compressed PostScript</a> 
+(113 Kbyte). 
+</P> 
+
+<P>
+<HR>
+<address> 
+<a href="http://alum.mit.edu/www/shaih/">
+Shai Halevi's home page.</a> 
+</address>
+</P>
+</HTML>

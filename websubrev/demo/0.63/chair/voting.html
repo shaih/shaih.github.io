@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<style type="text/css">
+h1 { text-align: center;}
+tr { vertical-align: top; }
+</style><title>Setup/Manage Voting</title>
+<script language="Javascript" type="text/javascript">
+<!--
+function voteOnChk(fld,i) {
+  if (fld.value!="") {
+    var prms = document.getElementById("votePrms");
+    prms.voteOnWhat[i].checked=true;
+    return false;
+  }
+}
+function gradeChk(fld) {
+  if (fld.value!="") {
+    var prms = document.getElementById("votePrms");
+    prms.voteType[1].checked=true;
+    return false;
+  }
+}
+//-->
+</script>
+</head><body>
+<div style="text-align: center;">
+[<a href="index1.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+</div>
+<hr>
+<h1>Setup/Manage Voting</h1>
+<h2>Vote Parameters: Invited Speakers</h2>
+There are two types of votes that you can set-up:
+<ul>
+<li>One is simple "Choose vote"
+in which you specify a list of submissions and every PC member needs to
+choose some number of them. For example, "Choose up to three of the
+submissions in 'Maybe Reject' category to move back to the 'Discuss' pile."
+<br><br></li>
+<li>The other type is a "Grade vote" in which you specify a list of submissions
+and every PC member needs to grade these submissions on some scale. For
+example, "Grade each of the remaining submissions in the 'Discuss' category
+on a scale of zero to three."
+<small>(Technically, a "Choose vote" is a special case of a "Grade vote"
+with the scale being 0-1, but the interface that the PC member sees for
+a "Choose vote" is slightly simpler than for a "Grade vote".)</small>
+</li>
+</ul>
+In either type of vote, the tally is the sum of votes that each submission
+received. (In the "Choose vote" this is the number of PC members that chose
+that submission.)<br>
+<br>
+<form action="voting1.html" enctype="multipart/form-data" method="post" ID="votePrms">
+<b>Title:</b>&nbsp; <input name="voteTitle" size="60" value="Invited Speakers" type="text"> (used to distinguish this ballot from others)<br>
+<b>Deadline:</b> <input name="voteDeadline" size="56" value="July 20, 2007" type="text"> (displayed on the voting page)<br>
+<br>
+<b>Instructions for PC members</b> (displayed on the voting page):<br>
+<textarea name="voteInstructions" rows="7" cols="80">Choose two of the following candidates for invited speakers</textarea>
+
+<h3>Vote type</h3>
+<input name="voteType" value="Choose" checked="checked" type="radio">
+A simple "Choose vote"<br>
+<input name="voteType" value="Grade" type="radio">
+A "Grade vote" on a scale of 0 to
+<input name="voteMaxGrade" size="1" value="1" type="text" onkeyup="return gradeChk(this);">
+(max-grade cannot be more than 9).<br>
+<br>
+Every PC member has "voting budget" of 
+<input name="voteBudget" size="1" value="2" type="text"> (empty or zero
+for unlimited budget). For a "Choose vote", the budget is the number of
+submissions that the PC member can choose. For a "Grade vote", it
+is the sum of all grades that this PC member can assign.
+
+<h3>What is included in this vote?</h3>
+<b>Note:</b> PC members can only vote on submissions after you set their
+"discuss" flags from the <a href="overview.html#progress">progress overview
+page</a>. Until then they can only participate in "votes on other things"
+as per the third option below.<br>
+<br>
+<input name="voteOnWhat" value="all" type="radio">
+Include all submissions.
+<br>
+<input name="voteOnWhat" value="some" type="radio">
+Include only the submissions that are specified below
+(<a href="../documentation/chair.html#votes" target="_blank">more info</a>):
+<br>
+<table><tbody>
+<tr><td></td>
+    <td style="text-align: right;">&nbsp; &nbsp;submissions in the:</td>
+    <td><input name="voteOnAC" type="checkbox"  onchange="return voteOnChk(this,1);">'Accept' category,</td>
+    <td><input name="voteOnMA" type="checkbox"  onchange="return voteOnChk(this,1);">'Maybe Accept' category,</td>
+</tr>
+<tr><td></td><td></td>
+    <td><input name="voteOnDI" type="checkbox"  onchange="return voteOnChk(this,1);">'Discuss' category,</td>
+    <td><input name="voteOnNO" type="checkbox"  onchange="return voteOnChk(this,1);">'None' category,</td>
+</tr>
+<tr><td></td><td></td>
+    <td><input name="voteOnMR" type="checkbox"  onchange="return voteOnChk(this,1);">'Maybe Reject' category,</td>
+    <td><input name="voteOnRE" type="checkbox"  onchange="return voteOnChk(this,1);">'Reject' category</td>
+</tr>
+<tr><td> &nbsp; &nbsp; </td>
+    <td style="text-align: right;">..and also these submission IDs:</td>
+    <td colspan="2"><input name="voteOnThese" value="" size="80" type="text" onkeyup="return voteOnChk(this,1);"><br>comma-separated list of submission-IDs</td>
+</tr>
+</tbody></table>
+<br>
+<input name="voteOnWhat" value="other" checked="checked" type="radio">
+Vote on things other than submissions (e.g., invited speaker):
+<textarea name="voteItems" rows="5" cols="80" onkeyup="return voteOnChk(this,2);">Franz Beckenbauer; Johan Cruijff; Diego Maradona; Pele; Zinedine Zidane</textarea><br>
+A <b>semi-colon separated</b> list of items to vote on. For example, to let
+the PC members choose their main course for the PC dinner, you can use a line
+such as <tt>"Maine Lobster; Australian barramundi; Squab breast; Medallions of
+Millbrook venison; Lamb rack 'au sautoir'"</tt>.<br>
+<br><b>Note:</b>
+If you modify the list of submission-IDs or the list of "other things" in
+mid-vote, make sure that you <i>do not modify the order of items</i>, since
+the software identifies vote-items with their position in the list. 
+For example, swapping the order of two items will result in each of them
+being assigned the tally of the other. <br>
+<br>
+<input name="voteId" value="1" type="hidden">
+<input name="setup" value="Set/Change Vote Parameters" type="submit">
+</form>
+<hr>
+<div style="text-align: center;">
+[<a href="index1.html">Administer</a>] 
+[<a href="../review/index2.html">Review</a>] 
+[<a href="viewLog.html">Log file</a>] 
+[<a href="../review/password.html">Change password</a>] 
+[<a href="../documentation/chair.html">Documentation</a>] 
+</div>
+
+</body></html>
