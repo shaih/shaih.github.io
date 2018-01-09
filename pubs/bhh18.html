@@ -1,0 +1,60 @@
+<HTML>
+<head>
+<TITLE>Supporting Private Data on Hyperledger Fabric with Secure Multiparty Computation</TITLE>
+</head>
+<body>
+<!-- how to make comments -->
+<a name="BHH18-abstract"/> 
+
+<H2>Supporting Private Data on Hyperledger Fabric with Secure Multiparty Computation</H2>
+<hr/>
+
+<b>Authors:</b> 
+Fabrice Benhamouda (IBM), Shai Halevi (IBM), and Tzipora Halevi (Brooklyn College)
+
+<P>
+<b>Abstract: </b> 
+Hyperledger Fabric is a "permissioned" blockchain architecture,
+providing a consistent distributed ledger, shared by a set of "peers."
+As with every blockchain architecture, the core principle of
+Hyperledger Fabric is that all the peers must have the same view of
+the shared ledger, making it challenging to support <i>private
+data</i> for the different peers.  Extending Hyperledger Fabric to
+support private data (that can influence transactions) would open the
+door to many exciting new applications, in areas from healthcare to
+commerce, insurance, finance, and more.</P>
+
+<P>In this work we explored adding private-data support to Hyperledger
+Fabric using secure multiparty computation (MPC). Specifically, in our
+solution the peers store on the chain encryption of their private
+data, and use secure MPC whenever such private data is needed in a
+transaction. This solution is very general, allowing in principle to
+base transactions on any combination of public and private data.</P>
+
+<P>We created a demo of our solution over Hyperledger Fabric v1.0,
+implementing a bidding system where sellers can list assets on the
+ledger with a secret reserve price, and bidders publish their bids on
+the ledger but keep secret the bidding price itself. We implemented a
+smart contract (aka "chaincode") that runs the auction on this secret
+data, using a simple secure-MPC protocol that was built using the
+emp-toolkit library. The chaincode itself was written in Go, and we
+used the SWIG library to make it possible to call our protocol
+implementation in C++.</P>
+
+<P>We identified two basic services that should be added to Hyperledger
+Fabric to support our solution, and are now working on implementing
+them.
+</P>
+
+<P> 
+<b> Availability: </b> 
+Paper available as <a href="BHH18.pdf">PDF</a> (253 Kbyte). 
+</P> 
+
+<HR>
+<address> 
+<a href="http://alum.mit.edu/www/shaih/">
+Shai Halevi's home page.</a> 
+</address>
+</body>
+</HTML>
