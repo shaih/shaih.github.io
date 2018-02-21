@@ -1,0 +1,72 @@
+<!doctype html>
+<html><head>
+<title>The MARS cipher</title>
+<meta name="owner" content="shaih@us.ibm.com">
+<meta name="review" content="030218">
+</head>
+<!-- End of Header    -->
+<body>
+<H1><img src="nsglogo.gif" alt="Research"></H1><br>
+<h2>The MARS cipher - IBM submission to AES</h2>
+
+May 19, 2000: Here is the latest version of our
+<A HREF="final-comments.pdf">"final comments"</A>. Also, here are two
+technical notes: one about <A HREF="linear.pdf">linear analysis</A>
+and the other about <A HREF="key-agil.pdf">key-agility</A>.
+<hr>
+
+<P>
+August 11, 1999: 
+MARS was chosen as a finalist in the AES selection process. A 
+suggested "tweak" in the key-setup routine of MARS was accepted 
+by NIST.  A  <A HREF="key-setup.txt">pseudocode</A> of the new 
+key-setup routine is available here. Also, you can find here the 
+<A HREF="test-vectors/index.html">new test vectors</A> for MARS.
+
+<hr>
+<!-- This is a comment line -->
+<p>
+MARS is a shared-key (symmetric) block cipher, supporting 128-bit blocks 
+and variable key size. It is designed to take advantage of the powerful 
+operations supported in today's computers, resulting in a much improved 
+security/performance tradeoff over existing ciphers.  
+As a result, MARS offers better security than triple DES while running 
+significantly faster than single DES. 
+<p>
+The current C implementation runs at rates of about 65 Mbit/sec. on a 
+200 MHz Pentium-Pro, and 85 Mbit/sec. on a 200 MHz PowerPC. In hardware, 
+MARS can achieve a 10X speedup factor. Still, both hardware and software 
+implementations of MARS are remarkably compact, and easily fit on a 
+smartcard and in other limited-resource environments. 
+<p>
+The combination of high security, high speed, and flexibility, makes MARS 
+an excellent choice for the encryption needs of the information world well 
+into the next century. 
+<p>
+The following information is available:
+<UL>
+<LI> A detailed description of <A HREF="mars.pdf">MARS</A>. 
+
+<LI> A <A href="mars-short.pdf">shorter document</a> that contains a
+  simpler description of the algorithm.
+
+<LI> <A HREF="errata.html">Errata list</A> for the documentation on 
+NIST's CD-ROM. 
+
+<LI><img src="new.gif" alt="News">
+<A HREF="mars-hardware.pdf">High-Speed MARS Hardware</A> 
+by A.Satoh, N.Ooba, K.Takano and E.D'Avignon, 
+to appear in the Third AES Conference. 
+
+<LI> <A HREF="mars-smartcards.pdf">A Cautionary Note Regarding Evaluation of 
+AES Candidates on Smart-Cards</A> by S. Chari, C. Jutla, J.R. Rao, P. Rohatgi, 
+presented at the Second AES Conference in Rome. 
+
+</UL>
+
+<p>
+<hr>
+
+[<A href="http://www.research.ibm.com">Research home page</a> | <A HREF="http://www.ibm.com/"><B>IBM home page</B></A> ] 
+</body>
+ </html>

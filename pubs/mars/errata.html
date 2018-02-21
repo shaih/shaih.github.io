@@ -1,0 +1,79 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="owner" content="shaih@watson.ibm.com">
+   <meta name="review" content="071798">
+   <meta name="GENERATOR" content="Mozilla/4.7 [en] (X11; U; AIX 4.3) [Netscape]">
+   <title>The MARS document: Errata</title>
+<!-- End of Header    -->
+</head>
+<body bgcolor="#EEEEEE">
+
+<h1>
+<img SRC="nsglogo.gif" ALT="The MARS document: Errata" ></h1>
+
+<h2>
+The MARS document: Errata</h2>
+<!-- This is a comment line -->This page contains a list of errors in the
+version of the MARS document on NIST's CD-ROM.
+<hr>
+Errata in the revised document (from August 20, 1999):
+<p>There are errors in the desciption of the key-setup procedure.
+<ul>
+<li>
+The formula for the linear transformation in item 2(a) on Page 20, as well
+as in line 12 of the pseudo-code on Page 21, should be</li>
+
+<ul>T[i]= T[i] xor ((T[i-7 mod 15] xor T[i-2 mod 15])&lt;&lt;&lt;3) xor
+(4i+j)<br>
+<BR></ul>
+
+<li>
+Line 10 of the pseudo-code on Page 21, should be</li>
+
+<ul>for j = 0 to 3
+<br>&nbsp;</ul>
+</ul>
+
+<hr>Errata in the original document:
+<ul>
+<li>
+Subsubsection 2.5.1 (Decryption) should be Subsection 2.6.</li>
+
+<li>
+In the description of the S-box design (Subsection 2.6, Page 18), the formula
+for generating the pseudorandom S-boxes should be <i>S[5i+j] = SHA1(5i
+| c1 | c2 | c3)</i></li>
+
+<li>
+The description in Step 4(b) of the key expansion procedure (Subsection
+2.7, Page 21) is not clear enough. The text should read:</li>
+
+<ul>"<i>[...] Then we reset to 0 the 1's in M which correspond to the "end-points
+of runs of 0's or 1's in w", and also the two low order bits. More precisely,
+the i'th bit of M is reset to 0 if i &lt; 2, or if the i'th bit of w differs
+from either the (i+1)'th or the (i-1)'th bits. For the top-most bit, i=31,
+we assume that the (i+1)'th bit of w is 0.</i>"</ul>
+
+<li>
+Similarly, at the end of Line 26 in the key expansion pseudo code (Page
+22), it should say</li>
+
+<ul>"<i>(for l = 31, assume w(l+1) = 0)</i>"</ul>
+
+<li>
+The caption under Figure 12 (Page 48) should say "<i>Third attempt to devise
+a characteristic of the keyed transformation.</i>"</li>
+
+<li>
+The description of the Carter-Wegman MAC at the end of Subsection 5.2 (Page
+58) is missing a reference to the paper. The reference is</li>
+
+<ul>M. Wegman. and L. Carter. New hash functions and their use in authentication
+and set equality. <i>J. of Computer and System Sciences,</i> vol. 22, 1981,
+pp. 265-279.</ul>
+</ul>
+<p>[<a href="http://www.research.ibm.com">Research home page</a> | <b><a href="http://www.ibm.com/">IBM home page</a></b> ]
+</body>
+</html>

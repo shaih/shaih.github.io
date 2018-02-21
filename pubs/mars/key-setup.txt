@@ -1,0 +1,48 @@
+  Key-Expansion(input: k[], n; output: K[])
+  -----------------------------------------
+   1. n is the number of words in the original key buffer k[], (4 <= n <= 14)
+   2. K[] is the expanded key array, consisting of 40 words
+   3. T[] is a temporary array, consisting of 15 words, T[0] .. T[14]
+   4. B[] is a fixed table of four words
+
+   5. // Initialize B[] 
+   6. B[]= {0xa4a8d57b, 0x5b5d193b, 0xc8a8309b, 0x73f9a978}
+
+   7. // Initialize T[] with the key data
+   8. T[0..n-1] = k[0..n-1],  T[n] = n,  T[n+1..14] = 0
+
+   9. for j=0 to 3 do            // compute 10 words of K[] in each iteration
+  10.    // Do linear transformation
+  11.    for i=0 to 14 do 
+  12.        T[i]= T[i] xor ((T[i-7 mod 15] xor T[i-2 mod 15])<<<3) xor (4i+j)
+
+  13.    // Do four rounds of stirring
+  14.    repeat four times 
+  15.       for i = 0 to 14 do
+  16.           T[i] = (T[i] + S[low 9 bits of T[i-1 mod 15]]) <<< 9
+  17.    end-repeat
+
+  18.    // Store next 10 key words into K[]
+  19.    for i = 0 to 9
+  20.        K[10*j+i] = T[4*i mod 15]
+  21. end-for
+
+  22. // Modify multiplication key-words
+  23. for i = 5, 7, ... 35 do
+  24.     j = least two bits of K[i]
+  25.     w = K[i] with both of the least two bits set to 1
+
+  26.     // Generate a bit-mask M (if K[i] should not be modified then M=0)
+  27.     M_l=1 iff w_l belongs to a sequence of 10 consecutive 0's or 1's 
+  28.           in w, and also 2 <= l <= 30 and w_{l-1} = w_l = w_{l+1}
+
+  29.     // Select a pattern from the fixed table and rotate it
+  30.     r = least five bits of K[i-1]                 // rotation amount
+  31.     p = B[j] <<< r
+
+  32.     // Modify K[i] with p under the control of the mask M
+  33.     K[i] = w xor (p and M)
+  34. end-for  
+
+
+
