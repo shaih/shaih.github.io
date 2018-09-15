@@ -1,0 +1,63 @@
+<HTML>
+<head>
+  <TITLE>Initial Public Offering (IPO) on Permissioned Blockchain using Secure Multiparty Computation</TITLE>
+</head>
+<body>
+<!-- how to make comments -->
+<a name="BHH18-abstract"/> 
+
+<H2>Initial Public Offering (IPO) on Permissioned Blockchain using Secure Multiparty Computation</H2>
+<hr/>
+
+<b>Authors:</b> 
+Fabrice Benhamouda (IBM),
+Angelo DeCaro (IBM),
+Shai Halevi (IBM),
+Tzipora Halevi (Brooklyn College),
+Charanjit jutla (IBM),
+Yacov Manevich (IBM),
+and Qi Zhang (IBM)
+
+<P>
+<b>Abstract: </b> 
+In this work, we design secure multiparty computation capabili-
+ties into the permissioned blockchain architecture of Hyperledger
+Fabric and use them to implement the clearing price mechanism
+for IPOs. Fabric is a platform for "blockchain for business,"
+providing a robust mechanism for a set of "peers" to jointly maintain a
+distributed immutable ledger. As with any blockchain, using confi-
+dential data on the ledger is a challenge, and we use cryptographic
+secure multiparty computation (MPC) to address this challenge.
+The use of secure MPC to enable confidential data on blockchains
+was proposed before, but this approach only now begins to find its
+way to real-life systems. In particular, ours is the first attempt to
+integrate it in a complex blockchain environment such as Fabric.
+<p>
+To enable this approach, we integrated mechanisms into Fabric
+to let the peers access local information such as their respective
+keys, and also send messages to each other while executing smart
+contracts. We added to Fabric a library that implements the required
+cryptographic tools, and made it accessible from the smart contract.
+We then designed an efficient cryptographic protocol for the IPO
+clearing price mechanism, and used our integrated system to run
+it on Fabric. Although not fully optimized yet, the performance
+of the resulting implementation is more than fast enough for this
+particular application, ranging from 8 to 23 seconds to execute an
+IPO sale.</p>
+
+<p>
+<b>Keywords.</b> Blockchain, Confidentiality, Hyperledger Fabric, Inte-
+gration, IPO, Secure Multiparty Computation</p>
+
+<P> 
+<b> Availability: </b> 
+Paper available as <a href="BDH+18.pdf">PDF</a>, 1.2 Mbyte.
+</P> 
+
+<HR>
+<address> 
+<a href="..">
+Shai Halevi's home page.</a> 
+</address>
+</body>
+</HTML>
