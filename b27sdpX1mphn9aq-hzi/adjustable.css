@@ -1,0 +1,78 @@
+// ----
+// libsass (v3.3.6)
+// ----
+
+// =========================================================================
+//
+//  PRECISE CONTROL OVER RESPONSIVE TYPOGRAPHY FOR SASS
+//  ---------------------------------------------------
+//  Indrek Paas @indrekpaas
+//
+//  Inspired by Mike Riethmuller's Precise control over responsive typography
+//  http://madebymike.com.au/writing/precise-control-responsive-typography/
+//
+//  `strip-unit()` function by Hugo Giraudel
+//  
+//  11.08.2016 Remove redundant `&` self-reference
+//  31.03.2016 Remove redundant parenthesis from output
+//  02.10.2015 Add support for multiple properties
+//  24.04.2015 Initial release
+//
+// =========================================================================
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+
+  @media screen and (min-width: $min-vw) {
+    @each $property in $properties {
+      #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+    }
+  }
+
+  @media screen and (min-width: $max-vw) {
+    @each $property in $properties {
+      #{$property}: $max-value;
+    }
+  }
+}
+
+// Usage:
+// ======
+
+// /* Single property */
+// html {
+//   @include fluid-type(font-size, 320px, 1366px, 14px, 18px);
+// }
+
+// /* Multiple properties with same values */
+// h1 {
+//   @include fluid-type(padding-bottom padding-top, 20em, 70em, 2em, 4em);
+// }
+
+////////////////////////////////////////////////////////////////////////////
+
+h1.adjustable {
+  @include fluid-type(font-size, 576px, 1200px, 28px, 48px);
+}
+h2.adjustable {
+  @include fluid-type(font-size, 576px, 1200px, 20px, 40px);
+}
+h4.adjustable {
+  @include fluid-type(font-size, 576px, 1200px, 18px, 28px);
+}
+@media screen and (max-width: 576px) {
+  h1.adjustable { font-size: 28px; }
+  h2.adjustable { font-size: 24px; }
+  h4.adjustable { font-size: 20px; }
+}
+@media screen and (min-width: 1200px) {
+  h1.adjustable { font-size: 48px; }
+  h2.adjustable { font-size: 40px; }
+  h4.adjustable { font-size: 28px; }
+}
