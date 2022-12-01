@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>Public Challenges for Fully-Homomorphic Encryption</title>
+</head>
+
+<body>
+<h1 style="text-align: center;">Public Challenges for Fully-Homomorphic Encryption</h1>
+<h2 style="text-align: center;">Craig Gentry and Shai Halevi</h2>
+
+<p><font color="red"><b>Update, Oct-2011:</b></font> The SSSP challenges were solved by Moon Sung Lee from the National Institute for Mathematical Sciences in Korea. The solutions are:
+<br/>
+Large: <tt>1925 1299 1920 394 1845 1755 1274 730 295 1359 843 1984 1252 426 114</tt>
+<br/>
+Medium: <tt>409 450 530 472 76 492 251 360 492 409 462 171 142 304 394</tt>
+<br/>
+Small: <tt>393 376 208 119 210 383 244 404 66 432 459 483 338 99 119</tt>
+</p>
+<p>
+
+<h2 style="text-align: center;">August 2010</h2>
+
+In STOC 2009 Gentry described a construction of a <a target=_blank href="http://en.wikipedia.org/wiki/Homomorphic_encryption">fully-homomorphic encryption scheme</a>, whose security is based on the assumed hardness of some problems related to integer lattices <a href="#G09">[G09]</a>. The first published attempt at implementing (a variant of) this scheme was described by Smart and Vercauteren in PKC 2010 <a href="#SV10">[SV10]</a>. Smart and Vercauteren implemented the underlying "somewhat homomorphic" scheme, but were not able to implement the bootstrapping functionality that is needed to get the complete scheme to work. Later in 2010, Gentry and Halevi described an implementation of a variant similar to the one from [SV10], were they succeeded in implementing the entire scheme, including the bootstrapping functionality <a href="#GH10">[GH10]</a>.</p>
+
+<p>
+From this page you can download challenges for breaking the Gentry-Halevi implementation. The challenges are offered in three security levels, ranging from "small" challenges (corresponding to lattices in dimension 2048), through "medium" (in dimension 8192) to "large" (in dimension 32768). We also provide on this page a "toy" challenge (in dimension 512), which is provided together with its solution. The "toy" challenge is meant to help people test their attack strategies. In each of the three security levels we offer two challenges:</p>
+<ul>
+<li>The main challenge consists of a complete public key of the fully-homomorphic encryption, breaking this challenge would mean that the scheme in that dimension is insecure.
+</li>
+<li><p>The second challenge is meant to examine specifically the hardness of the sparse-subset-sum problem (SSSP), which is used for "squashing" the decryption procedure. This challenge consists of the public- and secret-keys of the underlying "somewhat homomorphic" scheme, as well as the SSSP instance which is part of the public key of the fully-homomorphic scheme.</p>
+<p>
+Using the notations from [GH10], these SSSP challenges include the key elements <i>d, r, w</i> for the underlying "somehwat homomorphic" scheme, and also all the <i>x_i</i>'s that implicitly define the SSSP instances. (Of course, these challenges do not include the circular encryption of the secret key bits, since it could be decrypted using the secret key of the underlying scheme.)</p></li> 
+</ul>
+<p>
+The solution to these challenges consist of the indexes of the elements that are part of the sparse subset-sum, i.e., the SSSP solution. In all the challenges, the sparse subset consists of exactly 15 elements, the challenge is considered "solved" as soon as ten of these indexes are published.
+Our current guess is that the "small" challenges should be breakable in weeks or months, but the "large" ones take perhaps as much effort to break as factoring RSA-1024.</p>
+
+<ul>
+<li> Download here the <a href="https://drive.google.com/file/d/13ASooEe5D9ng_iNR1UbahOdhxY-UuXLU/view?usp=sharing">code</a> that was used to generate these challenges. This is C++ code, which was written on top of <a href="http://www.shoup.net/ntl/" target=_blank>Shoup's NTL library</a> version 5.5.2 (which was slightly modified to support hexadecimal integer I/O). 
+</li>
+<li> Click here for the <a href="https://drive.google.com/file/d/1sXo0hOOqM19Fu-bEg-ceOLmza794LOxa/view?usp=sharing">toy challnge</a> (19 MB).
+</li>
+<li>Click here for the <a href="https://drive.google.com/file/d/1-2bvLY8XVuqsDMLfyIe5phKoxjRqev9t/view?usp=sharing">main small challnge</a> (76 MB) and the <a href="https://drive.google.com/file/d/1TG4xPmc6pvcYMxlMo-_LKYeCUUPb0zTD/view?usp=sharing">small SSSP challenge</a> (2 MB).
+</li>
+<li> Click here for the <a href="https://drive.google.com/file/d/11TOpKA4KTPnOKOrQT9gcTEYdMFWbEeeB/view?usp=sharing">main medium challnge</a> (309 MB) and the <a href="https://drive.google.com/file/d/1S0OytoYENYiVDjh-NcMWNDM4DD8Oc7uL/view?usp=sharing">medium SSSP challenge</a> (8 MB).
+</li>
+<li> Click here for the <a href="https://drive.google.com/file/d/15X2pykDiPw-vb_KltpG9xQyhoL9HxNhZ/view?usp=sharing">main large challnge</a> (2.4 GB) and <a href="https://drive.google.com/file/d/1OnZ6dntE1LOP8I3Fy7PlF5KLmATq0LJa/view?usp=sharing">large SSSP challenge</a> (31 MB).
+</li>
+</ul>
+
+<h3>Format</h3>
+<p>The format of these challenges is defined by the following piece of C++ code, which was used to output them to disk. See more details in the files <tt>fhe.h</tt> and <tt>fhe-utils.cc</tt> that are included with the code above. This code is written using Shoup's NTL library  version 5.5.2, which was slightly modified to support hexadecimal integer I/O. Specifically the two files <tt>ZZ.h</tt> and <tt>ZZ.c</tt> were modified, and they are included with the code above.</p>
+<pre>
+class PKblock {
+ public:
+  ZZ x;         // the sequence of elements is xi = x * R^i mod det
+  long idx;     // index of the xi that belongs to the sparse subset
+  [...]
+};
+
+class FHEkeys {
+ public:
+  FHEparams prms;   // Parameters
+  ZZ det, root, w;  // Public/secret key for underlying "somehwat" scheme
+  std::vector&lt;PKblock&gt; pkBlocks;  // The squeash-enabling parts
+  vec_ZZ ctxts;     // "compact" encryption of secret-key bits
+  [...]
+};
+
+void FHEkeys::outputKeys(std::ostream&amp; s, int outIdxs, int outW)
+{
+ // output all the parameters
+  s << prms.secprm;        // unsigned long secprm;
+  s << " " << prms.mu;     // double mu;
+  s << " " << prms.s;      // unsigned long s;
+  s << " " << prms.S;      // unsigned long S;
+  s << " " << prms.p;      // unsigned long p;
+  s << " " << prms.t;      // unsigned long t;
+  s << " " << prms.logn;   // unsigned long logn;
+  s << " " << prms.logR;   // unsigned long logR;
+  s << " " << prms.noise;  // unsigned long noise;
+
+  // The det, root, and w of the underlying scheme
+  s << "\n" << det;        // ZZ det, root, w;
+  s << "\n" << root;
+  if (outW) s << "\n" << w;
+
+  // The arithmetic progressions
+  for (int i=0; i&lt;pkBlocks.size(); i++) { 
+    s << "\n" << pkBlocks[i].x;
+    if (outIdxs) s << " " << pkBlocks[i].idx;
+  }
+  // finally the encrypted secret-key bits
+  if (outIdxs || !outW) s << "\n" << ctxts;
+}
+</pre>
+<p>
+The "main challenges" that include complete public keys were produced by calling <tt>keys.outputKeys(cout,0,0)</tt>, and the SSSP challenges were produced by calling <tt>keys.outputKeys(cout,0,1)</tt>. (The "toy" challenge with the solution was produced by calling <tt>keys.outputKeys(cout,1,1)</tt>.)</p>
+
+<p>The challenges were generated on an IBM System x3500 server, featuring a quad-core Intel Xeon E5450 running at 3GHz, with 12MB L2 cache and 24GB of RAM.</p>
+
+<h2>Bibliography</h2>
+<p>
+<a name="G09"><b>[G09]</b> Craig Gentry.</a> 
+ <a target=_blank href="http://domino.research.ibm.com/comm/research_projects.nsf/pages/security.homoenc.html">Fully homomorphic encryption using ideal lattices</a>. In <i>STOC 2009</i>, pages 169-178. ACM, 2009.</p>
+<p>
+<a name="GH10"><b>[GH10]</b> Craig Gentry and Shai Halevi.</a> 
+<a target=_blank href="fhe-implementation.html">Implementing Gentry's Fully-Homomorphic Encryption Scheme</a>. Manuscript, 2010.</p>
+<p>
+<a name="SV10"><b>[SV10]</b> Nigel Smart and Frederik Vercauteren.</a>
+<a target=_blank href="http://eprint.iacr.org/2009/571">Fully Homomorphic Encryption with Relatively Small Key and Ciphertext Sizes</a>. In <i>PKC 2010</i>,
+LNCS volume 6056, pages 420-443. Springer, 2010.</p>
+<hr/>
+</body>
+</html>
