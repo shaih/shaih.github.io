@@ -1,0 +1,178 @@
+#!/usr/bin/env python3
+"""
+Computation of committee sizes for secrets-on-blockchain
+Modify the parameters at the bottom of the file
+"""
+
+import math
+from typing import Callable, Tuple
+from scipy.stats import binom, poisson
+
+# alpha = total fraction of corrupted party
+# n = size of committee (or target size with Poisson)
+# t = threshold used (see paper)
+
+# USE_POISSON
+# False = Computation using a randomness beacon => binomial (choice of the paper)
+# True  = Computation using sortition using Poisson approximation
+USE_POISSON = False
+
+
+# ==============
+# Core functions
+# ==============
+
+def binary_search(f: Callable[[int], float], max_val: float, start: int, end: int) -> int:
+    """
+    Find the max integer i between start and end so that f(i) <= max_val
+    Assumes that f is non-decreasing
+    start/end included in search
+    """
+    while start != end:
+        mid = int((start + end + 1) / 2)
+        if f(mid) <= max_val:
+            start = mid
+        else:
+            end = mid - 1
+    return start
+
+
+def liveness_error(n: int, t: int, alpha: float, a: int) -> float:
+    """
+    Return the liveness error for alpha total fraction corrupted
+    and packing parameter a
+    """
+    # Pr[number honest parties selected < 2*t + 2*a - 1]
+    # = Pr[number hones parties selected <= 2*t + 2*a - 2]
+
+    if USE_POISSON:
+        return poisson(n * (1 - alpha)).cdf(2 * t + 2 * a - 2)
+    else:
+        return binom(n, 1 - alpha).cdf(2 * t + 2 * a - 2)
+
+
+def safety_error(n: int, t: int, alpha: float) -> float:
+    """
+    Return the safety error for alpha total fraction corrupted
+    """
+    # Pr[number of corrupted parties selected > t]
+
+    if USE_POISSON:
+        return poisson(n * alpha).sf(t)
+    else:
+        return binom(n, alpha).sf(t)
+
+
+def threshold_and_safety_error_for_liveness(n: int, max_liveness_error: float,
+                                            alpha_safety: float, alpha_liveness: float, a: int) \
+        -> Tuple[int, float]:
+    """
+    Find the optimal threshold t and associated safety error
+    to achieve the given liveness error
+    """
+    # find t for liveness to hold
+    t = binary_search(lambda t: liveness_error(n, t, alpha_liveness, a), max_liveness_error, 1, n)
+    # return the associated safety error
+    return t, float(safety_error(n, t, alpha_safety))
+
+
+def find_nt(max_n: int, max_liveness_error: float, max_safety_error: float,
+            alpha_liveness: float, alpha_safety: float, a: int) -> Tuple[int, int]:
+    """
+    Find the optimal number of parties n and threshold t
+    to achieve the given max_liveness_error and max_safety_error
+    assuming a fraction alpha_safety of malicious parties for safety
+    and a fraction alpha_liveness of malicious parties for liveness
+
+    The packing parameter is a. a=1 is no packing
+    """
+    # we first search for the minimum n such that the safety error is below max_safety_error
+    # note that we use negative n here because we want the min and binary_search looks for the max
+    n = -1 * binary_search(
+        lambda n: threshold_and_safety_error_for_liveness(
+            -n, max_liveness_error, alpha_safety=alpha_safety, alpha_liveness=alpha_liveness, a=a
+        )[1],
+        max_safety_error, -max_n, -1
+    )
+
+    t, _ = threshold_and_safety_error_for_liveness(
+        n, max_liveness_error, alpha_safety=alpha_safety, alpha_liveness=alpha_liveness, a=a
+    )
+
+    return n, t
+
+
+# =============
+def print_setting(max_n: int, max_liveness_error: float, max_safety_error: float,
+                  alpha_liveness: float, alpha_safety: float, a: int) -> None:
+    """
+    See function find_nt
+    """
+    n, t = find_nt(max_n, max_liveness_error, max_safety_error,
+                   alpha_safety=alpha_safety, alpha_liveness=alpha_liveness, a=a)
+    print(f"use Poisson (paper=False): {USE_POISSON}")
+    print(f"number of parties:         n = {n}")
+    print(f"threshold for safety:      t = {t}")
+    print(f"packing parameter:         a = {a}")
+    print(f"corrupt fraction liveness: alpha = {round(alpha_liveness * 100, 2)} %")
+    print(f"corrupt fraction safety:   alpha = {round(alpha_safety * 100, 2)} %")
+    err = float(liveness_error(n, t, alpha_liveness, a))
+    print(f"liveness error:            {err:.2e} = 2^{round(math.log(err, 2), 2)}")
+    err = float(safety_error(n, t, alpha_safety))
+    print(f"safety error:              {err:.2e} = 2^{round(math.log(err, 2), 2)}")
+
+    # find percentage of corrupt people so safety error goes down to max_safety_error2
+    # max_safety_error2 = 2**-40
+    print("safety errors for higher alpha:")
+    max_safety_error2 = 2 ** -10
+
+    alpha2 = 1e-4 * binary_search(
+        lambda alpha: safety_error(n, t, alpha / 1e4),
+        max_safety_error2,
+        0, 1e4
+    )
+    delta = (alpha_safety - alpha2) / 8
+    for i in range(8):
+        alpha = alpha_safety - (i + 1) * delta
+        err = float(safety_error(n, t, alpha))
+        print(f"  for alpha = {round(alpha * 100, 2):02.2f} %:    "
+              f" {err:.2e} = 2^{round(math.log(err, 2), 1)}")
+
+
+# ============================
+def main():
+    # ==========
+    # Parameters
+    # ==========
+
+    a1 = 64  # packing parameter for optimistic setting
+    a2 = 40  # packing parameter for pessimistic setting
+
+    max_n = 2 ** 12  # upper bound for the search for n
+
+    alpha_safety = 0.2  # total fraction of corrupted parties, for safety - denoted f in the paper
+
+    alpha_liveness1 = 0.05  # total fraction of corrupted parties, for liveness (optimistic)
+    alpha_liveness2 = 0.2  # total fraction of corrupted parties, for liveness (pessimistic)
+
+    max_liveness_error1 = 0.005  # 99.5%, optimistic setting
+    max_liveness_error2 = 2 ** -11  # 99.95%, pessimistic setting
+
+    max_safety_error = 2 ** -80
+
+    # =======
+    # Display
+    # =======
+
+    print("Optimistic Setting:")
+    print_setting(max_n, max_liveness_error1, max_safety_error, alpha_liveness1, alpha_safety, a1)
+    print("=========================================================")
+    print()
+    print("Pessimistic Setting:")
+    print_setting(max_n, max_liveness_error2, max_safety_error, alpha_liveness2, alpha_safety, a2)
+    print("=========================================================")
+    print()
+
+
+if __name__ == "__main__":
+    main()
